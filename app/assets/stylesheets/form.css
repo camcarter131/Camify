@@ -1,0 +1,45 @@
+.main-form-div {
+    
+    display: flex;
+    justify-content: center;
+    height: 100%
+}
+
+.login-signup-form {
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 50%;
+    height: 90%;
+}
+
+input {
+    width: 100%;
+
+}
+
+li {
+    flex: display;
+    padding: 20px;
+    align-items: center;
+}
+
+#login-submit-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  justify-content: center;
+
+}
+
+

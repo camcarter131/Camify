@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const Greeting = ({currentUser, logout}) => {
     if (currentUser) {
         return(
-            <div>
-                <h2>Welcome {currentUser.displayed_name}!</h2>
+            <div className="main-greeting-div">
+                <h2 classname="welcome">Welcome {currentUser.displayed_name}!</h2>
                 <button onClick={logout}>Logout</button>
             </div>
         )

@@ -27,31 +27,31 @@ class SessionForm extends React.Component {
     render() {
 
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <div className="form-div">
-                        <label>Username:
-                            <input type="text" value={this.state.username} onChange={this.update("username")}/>
-                        </label>
-                    </div>
-                    <div className="form-div">
-                        <label> Email:
-                            <input type="text" value={this.state.email} onChange={this.update("email")}/>
-                        </label>
-                    </div>
-                    <div className="form-div">
-                        <label> Password:
-                            <input type="password" value={this.state.password} onChange={this.update("password")}/>
-                        </label>
-                    </div>
-                    <div className="form-div">
-                        <label> What should we call you?
-                            <input type="text" value={this.state.displayed_name} onChange={this.update("displayed_name")}/>
-                        </label>
-                    </div>
-                    <div className="form-div">
-                        <input type="submit" value={this.props.formType} />
-                    </div>
+            <div className="main-form-div">
+                <form className="login-signup-form" onSubmit={this.handleSubmit}>
+                    <fieldset>
+                        <ul>
+                            <li>
+                                <input type="text" value={this.state.username}
+                                placeholder="Username" onChange={this.update("username")} />
+                            </li>
+                            <li>
+                                <input type="text" value={this.state.email}
+                                placeholder="Email" onChange={this.update("email")} />
+                            </li>
+                            <li>
+                                <input type="password" value={this.state.password}
+                                placeholder="Password" onChange={this.update("password")} />
+                            </li>
+                            <li>
+                                <input type="text" value={this.state.displayed_name}
+                                placeholder="What should we call you?" onChange={this.update("displayed_name")} />  
+                            </li>
+                            <li>
+                                <input id="login-submit-button" type="submit" value={this.props.formType} />
+                            </li>
+                        </ul>
+                    </fieldset>
                 </form>
             </div>
         )

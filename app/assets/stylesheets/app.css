@@ -1,0 +1,12 @@
+.app-div {
+    flex: display;
+    justify-content: center;
+    background-color: blue;
+    height: 10%;
+} 
+
+.Camify {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 50px;
+}

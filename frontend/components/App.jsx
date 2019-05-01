@@ -7,9 +7,9 @@ import LogInFormContainer from './session_form/login_form_container';
 
 
 const App = () => (
-    <div>
-        <header>
-            <h1>Camify</h1>
+    <div className="app-div">
+        <header className="main-header">
+            <h1 className="Camify">Camify</h1>
             <GreetingContainer />
         </header>
         <Route exact path="/login" component={LogInFormContainer} />

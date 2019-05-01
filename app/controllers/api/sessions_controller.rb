@@ -8,7 +8,7 @@ class Api::SessionsController < ApplicationController
             render "api/users/show"
         else
             render json: ["Invalid username/password combination"], status: 422
-        end
+        end 
     end
 
     def destroy
