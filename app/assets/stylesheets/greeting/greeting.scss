@@ -1,4 +1,15 @@
  .main-greeting-div {
-    flex: display;
+    display: flex;
     background-color: yellow;
+
  }
+
+ .main-header {
+    display: flex;
+    flex-direction: column;
+ }
+
+ .logo-div {
+   display: flex;
+   background-image: image-url("spotify_logo.png");
+}
