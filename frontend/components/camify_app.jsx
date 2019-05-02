@@ -9,12 +9,9 @@ import Splash from './splash';
  
 const App = () => (
     <div className="app-div">
-        <header className="main-header">
-            <h1 className="Camify">Camify</h1>
-            <GreetingContainer />
-        </header>
-        <Route exact path="/login" component={LogInFormContainer} />
-        <Route exact path="/signup" component={SignUpFormContainer} />
+        <GreetingContainer />
+        <Route id="login-signup" exact path="/login" component={LogInFormContainer} />
+        <Route id="login-signup" exact path="/signup" component={SignUpFormContainer} />
         <Route exact path="/" component={Splash} />
     </div>
 );

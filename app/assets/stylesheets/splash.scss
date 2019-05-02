@@ -1,0 +1,75 @@
+#splash-button {
+  background-color: $green;
+  border: none;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  margin: 4px 2px;
+  justify-content: center;
+  font-weight: bold;
+  height: 16px;
+}
+        
+#splash-div {
+    margin: 4px 2px;
+    font-weight: bold;
+}
+
+#splash-lower {
+    margin: 4px 2px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    // background-image: image-url("hero-burst.svg");
+    background:linear-gradient(180deg,rgba(235, 44, 155, 0.65),rgba(175, 127, 54, 0.80)), image-url("hero-burst.svg");
+}
+
+#small-text {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+#big-text {
+    display: flex;
+    align-items: center;
+    padding-top: 120px;
+    font-size: 65px;
+}
+
+#splash-link {
+    display: flex;
+    align-items: center;
+    padding-bottom: 120px;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+
+}
+
+.topnav {
+    background: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    width: 100%;
+    position: fixed;
+    height: 10%;
+}
+
+.topnav a:hover {
+  color: $green;
+}

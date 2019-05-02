@@ -1,12 +1,20 @@
 .app-div {
     flex: display;
     justify-content: center;
-    background-color: blue;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
     height: 10%;
 } 
 
 .Camify {
     font-weight: bold;
     display: inline-block;
+    color: black;
     font-size: 50px;
+}
+
+#login-signup {
+    color: black;
 }
