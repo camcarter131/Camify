@@ -8,7 +8,7 @@ const Greeting = ({currentUser, logout}) => {
                 <header className="main-header">
                     <h1 className="Camify">Camify</h1>
                 </header>
-                <h2 classname="welcome">Welcome {currentUser.displayed_name}!</h2>
+                <h2 className="welcome">Welcome {currentUser.displayed_name}!</h2>
                 <button onClick={logout}>Logout</button>
             </div>
         )
