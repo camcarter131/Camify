@@ -4,12 +4,44 @@
 
  }
 
- .main-header {
+ .header-div {
     display: flex;
     flex-direction: column;
+    height: 220px;
+
  }
 
- .logo-div {
-   display: flex;
-   background-image: image-url("spotify_logo.png");
+
+#Camify {
+    font-weight: bold;
+    color: black;
+    font-size: 42px;
 }
+
+#login-logo {
+   background-image: image-url("download3.png");
+   height: 50px;
+   width: 75px;
+   background-size: contain;
+   margin-right: auto;
+   margin-left: 12%;
+}
+
+ #camify-logo-link {
+   display: flex;
+   // flex-direction: column;
+   align-items: center;
+   height: 1000px;
+ }
+
+ .header-sub-div {
+    display: flex;
+   align-items: center;
+    justify-content: center;
+ }
+
+ #header-sub-sub-div{
+    display: flex;
+    padding-top: 150px;
+    justify-content: center;
+ }

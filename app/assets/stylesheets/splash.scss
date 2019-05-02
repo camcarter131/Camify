@@ -24,7 +24,7 @@
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    height: 600px;
+    height: 1000px;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
@@ -36,30 +36,39 @@
 #small-text {
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 #big-text {
     display: flex;
     align-items: center;
-    padding-top: 120px;
-    font-size: 65px;
+    padding-top: 300px;
+    font-size: 80px;
 }
 
 #splash-link {
     display: flex;
     align-items: center;
-    padding-bottom: 120px;
+    padding-bottom: 300px;
 }
 
 .topnav a {
   float: right;
   color: #f2f2f2;
-  text-align: center;
+  // text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  height: 20px;
+}
 
+.splash-logo {
+   background-image: image-url("download3.png");
+   height: 60px;
+   width: 60px;
+   background-size: contain;
+   margin-right: auto;
+   margin-left: 12%;
 }
 
 .topnav {
@@ -68,6 +77,22 @@
     width: 100%;
     position: fixed;
     height: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+  
+#topnav-link {
+    display: flex;
+    align-items: center;
+}
+
+.last {
+  margin-right: 12%
+}
+
+div > logo {
+  justify-content: flex-start;
 }
 
 .topnav a:hover {

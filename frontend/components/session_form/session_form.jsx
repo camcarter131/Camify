@@ -1,4 +1,5 @@
 import React from 'react';
+import GreetingContainer from '../greeting/greeting_container';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -27,9 +28,10 @@ class SessionForm extends React.Component {
     render() {
 
         return (
-            <div className="main-form-div">
-                <form className="login-signup-form" onSubmit={this.handleSubmit}>
-                    <fieldset>
+            <div>
+                <GreetingContainer />
+                <div className="main-form-div">
+                    <form className="login-signup-form" onSubmit={this.handleSubmit}>
                         <ul>
                             <li>
                                 <input type="text" value={this.state.username}
@@ -51,8 +53,8 @@ class SessionForm extends React.Component {
                                 <input id="login-submit-button" type="submit" value={this.props.formType} />
                             </li>
                         </ul>
-                    </fieldset>
-                </form>
+                    </form>
+                </div>
             </div>
         )
     }

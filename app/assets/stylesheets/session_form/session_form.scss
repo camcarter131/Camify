@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     height: 100%;
-    padding-top: 200px;
+    padding-top: 20px;
 }
 
 .login-signup-form {
@@ -12,17 +12,20 @@
     /* justify-content: center; */
     align-items: center;
     width: 50%;
-    height: 90%;
+    height: 400px;
 }
 
 input {
+
     width: 100%;
 }
 
 li {
     flex: display;
-    padding: 20px;
+    padding: 10px;
     align-items: center;
+    height: 15%;
+    width: 100%;
 }
 
 #login-submit-button {

@@ -13,22 +13,36 @@ const Splash = () => {
     return (
         <div id="splash-div">
             <div className="topnav">
-                <a href="#">Premium</a>
-                <a href="#">Help</a>
-                <a href="#">Download</a>
-                <a href="#">Sign up</a>
-                <a href="#">Log In</a>
+                <div className="splash-logo"></div>
+                <div id="topnav-link">
+                    <a href="#">Premium</a> 
+                </div>
+                <div id="topnav-link">
+                    <a href="#">Help</a>
+                </div>
+                <div id="topnav-link">
+                    <a href="#">Download</a>
+                </div>
+                <div id="topnav-link">
+                    <a href="#">Sign up</a>
+                </div>
+                <div id="topnav-link" className="last" >
+                    <a href="#">Log In</a>
+                </div>
             </div>
+                 
+                
+                
             <div id="splash-lower">
                 <div id="big-text">
-                    Music for everyone.
+                    Music.
                 </div>
                 <div id="small-text">
-                    Millions of songs. No credit card needed.
+                    Dozens of songs. Then maybe a couple more songs.
                        
                 </div>  
                 <div id="splash-link">
-                    <Link id="splash-button" to="/signup">GET SPOTIFY FREE</Link>
+                    <Link id="splash-button" to="/signup">GET CAMIFIED NOW</Link>
                 </div>
               
             </div>      
