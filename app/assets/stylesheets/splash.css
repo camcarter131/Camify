@@ -1,0 +1,47 @@
+#splash-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  justify-content: center;
+
+}
+
+#splash-div {
+    /* color: white; */
+    justify-content: center;
+    display: block;
+    font-size: 20px;
+    margin: 4px 2px;
+}
+#splash-div > h1 {
+    font-size: 50px;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.topnav a:hover {
+  color: #4CAF50;
+}
+
+.topnav a.active {
+  /* background-color: #4CAF50;
+  color: white; */
+}
