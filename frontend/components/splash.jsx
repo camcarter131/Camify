@@ -6,7 +6,9 @@ const Splash = () => {
     return (
         <div id="splash-div">
             <div className="topnav">
-                <div className="splash-logo"></div>
+                <div className="splash-logo">
+                    <Link id="upper-left-logo" to="/"></Link>
+                </div>
                 <div id="topnav-link">
                     <a href="#">Premium</a> 
                 </div>

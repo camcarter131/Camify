@@ -29,7 +29,6 @@ export const signup = user => dispatch => (
 );
 
 export const logout = () => dispatch => {
-    console.log('rerenj');
     return (
         SessionAPIUtil.logout().then(user => dispatch(logoutCurrentUser()))
     )
