@@ -24,10 +24,10 @@ const Splash = () => {
                     <a href="#">Download</a>
                 </div>
                 <div id="topnav-link">
-                    <a href="#">Sign up</a>
+                    <Link to="/signup">Sign up</Link>
                 </div>
                 <div id="topnav-link" className="last" >
-                    <a href="#">Log In</a>
+                    <Link to="/login">Log In</Link>
                 </div>
             </div>
                  

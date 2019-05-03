@@ -21,15 +21,6 @@ const Greeting = ({currentUser, logout}) => {
                         <Link id="login-logo" to="/"></Link><Link id="Camify" to="/">Camify</Link>
                     </div>
                 </div>
-                <div className="header-sub-div">
-                    <Link className="login-signup-link" to="/signup">Signup</Link>
-                </div>
-                <div className="header-sub-div">
-                    <Link className="login-signup-link" to="/login">Login</Link>
-                </div>
-                <div className="header-sub-div">
-                    <Link className="login-signup-link" to="/login">Demo</Link>
-                </div>
             </div>
         )
     }

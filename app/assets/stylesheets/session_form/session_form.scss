@@ -28,11 +28,16 @@ li {
     width: 100%;
 }
 
+ul {
+    width: 280px;
+}
+
 #login-submit-button {
   background-color: $green;
   border: none;
   color: white;
-  border-radius: 15px;
+  font-weight: bold;
+  border-radius: 25px;
   padding: 20px;
   text-align: center;
   text-decoration: none;
@@ -43,4 +48,60 @@ li {
 
 }
 
+.switch-to-signup {
+    display: flex;
+    justify-content: center;
+
+}
+
+.switch-to-login {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+
+#switch-to-login-link {
+    text-decoration: none;
+    color: $green;
+
+}
+
+#switch-to-signup-text {
+    padding-top: 20px;
+}
+
+#switch-to-signup-button {
+    background-color: transparent;
+    border-width: 2px;
+    border-color: rgba(49, 45, 45, 0.884);
+    color: rgba(49, 45, 45, 0.884);
+    font-weight: bold;
+    border-radius: 25px;
+    padding-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    justify-content: center;
+    width: 100%;
+}
+
+#demo-button {
+    background-color: $blue;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    justify-content: center;
+    width: 100%;
+}
 
