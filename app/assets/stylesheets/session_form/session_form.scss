@@ -75,16 +75,15 @@ ul {
     background-color: transparent;
     border-width: 2px;
     border-color: rgba(49, 45, 45, 0.884);
+    border-style: double;
     color: rgba(49, 45, 45, 0.884);
     font-weight: bold;
     border-radius: 25px;
-    padding-top: 10px;
     text-align: center;
     text-decoration: none;
     display: flex;
     align-items: center;
     font-size: 16px;
-    margin: 4px 2px;
     justify-content: center;
     width: 100%;
 }

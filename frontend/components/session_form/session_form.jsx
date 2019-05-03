@@ -1,5 +1,6 @@
 import React from 'react';
 import GreetingContainer from '../greeting/greeting_container';
+import Errors from '../errors';
 import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
@@ -15,6 +16,10 @@ class SessionForm extends React.Component {
         this.demoLogin = this.demoLogin.bind(this);
     }
 
+    componentWillMount() {
+        this.props.errors.session = [];
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
@@ -26,21 +31,12 @@ class SessionForm extends React.Component {
         e.preventDefault();
         let demoUsername = 'harden13';
         let demoPassword = 'password';
-        let demoDisplayedName = 'James Harden';
-        let demoEmail = 'the_beard@rockets.com';
         let demoUser = {
-            demoUsername,
-            demoPassword,
-            demoDisplayedName,
-            demoEmail
+            username: demoUsername,
+            password: demoPassword
         };
         this.props.processForm(demoUser);
     }
-
-    switchToSignup() {
-
-    }
-
 
 
     update(field) {
@@ -112,7 +108,7 @@ class SessionForm extends React.Component {
                                 <Link to="/signup"></Link>
                             </span> */}
                             {/* <button onClick={<Link to="/signup"></Link>} id="switch-to-signup-button">SIGN UP FOR SPOTIFY</button> */}
-                            <Link id="switch-to-signup-button" to="/signup">SIGN UP FOR SPOTIFY</Link>
+                            <Link id="switch-to-signup-button" to="/signup">SIGN UP FOR CAMIFY</Link>
                         </li>
                         <li>
                             <button onClick={this.demoLogin} id="demo-button">DEMO</button>
@@ -124,27 +120,11 @@ class SessionForm extends React.Component {
         );
     }
 
-    renderErrors() {
-            <div>
-                {this.props.errors.session[0]}
-            </div>
-    }
-
-    renderNothing() {
-            <div>
-
-            </div>
-    }
-
     render() {
-        const { errors } = this.props;
         return (
-
             <div>
                 <GreetingContainer />
-                {console.log("EFNWFWFN")}
-                {console.log(this.props.errors.session)}
-                {/* {errors.length > 0 ? this.renderErrors() : this.renderNothing()} */}
+                <Errors session={this.props.errors.session}/>
                 {(this.props.formType === 'SIGN UP')? this.signup() : this.login()}
             </div>
         )
