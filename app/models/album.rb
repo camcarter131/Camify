@@ -12,5 +12,9 @@
 
 class Album < ApplicationRecord
     validates :name, :artist_id, :release_year, presence: true
+
+    belongs_to :artist
+
+    has_many :songs
 end
   

@@ -11,4 +11,9 @@
 
 class PlaylistSong < ApplicationRecord
     validates :song_id, :playlist_id, presence: true
+
+    has_one :song 
+
+    has_one :playlist
 end
+ 
