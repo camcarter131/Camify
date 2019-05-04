@@ -1,12 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Home from "./home/home";
+import Library from './library/library';
+import Search from './search/search';
 
-const Main = () => {
+const Main = ({ mostRecentClicked }) => {
 
-    return (
-        <Home />
-    )
+    if (mostRecentClicked === 'home') {
+        return <Home/>;
+    } else if (mostRecentClicked === 'library') {
+        return <Library />;
+    } else if (mostRecentClicked === 'search') {
+        return <Search />;
+    }
+    
 };
 
 export default Main;

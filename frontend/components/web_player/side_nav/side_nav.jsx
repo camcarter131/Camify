@@ -15,7 +15,7 @@ class SideNav extends React.Component {
                         <a href="#">Search</a>
                     </div>
                     <div className="side-nav-link" id="library" >
-                        <a href="#">Your Library</a>
+                        <Link to="/collections/tracks">Your Library</Link>
                     </div>
                     <div className="side-nav-link" id="logout" >
                         <Link to="/login" onClick={logout}>Logout</Link>

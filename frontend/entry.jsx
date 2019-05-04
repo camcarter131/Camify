@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { configureStore } from './store/store';
 import Root from './components/root';
-import { logout } from '../frontend/actions/session_actions'
+import { logout } from '../frontend/actions/session_actions';
+import { create, remove } from '../frontend/actions/playlists_actions';
+import { receiveAllSongs } from '../frontend/actions/songs_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
  
@@ -20,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         store = configureStore();
     }
     window.store = store;
-    window.logout = logout;
+    window.receiveAllSongs = receiveAllSongs;
     window.dispatch = store.dispatch
     window.getState = store.getState;
     const root = document.getElementById("root");
