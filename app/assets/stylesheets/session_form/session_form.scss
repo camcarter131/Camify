@@ -14,12 +14,31 @@
     justify-content: center;
     width: 50%;
     height: 400px;
+    padding-top: 22px;
+}
+
+#or {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+    border-top: 1px solid #d9dadc;
+    width: 100%;
+    margin: 15px 0;
 }
 
 input {
     width: 100%;
     height: 41px;
     text-indent: 10px;
+}
+
+input.login {
+    height: 34px;
+    width: 450px;
 }
 
 li {
@@ -32,11 +51,17 @@ li {
 }
 
 #input-list {
-    width: 426px;
+    width: 450px;
     height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+#demo-button-div {
+    width: 450px;
+    height: 48px;
+    display: flex;
+    justify-content: center
 }
 
 #login-submit-button {
@@ -52,6 +77,23 @@ li {
   margin: 4px 2px;
   justify-content: center;
   width: 320px;
+
+}
+
+#login-submit-button2 {
+  background-color: $green;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  margin: 4px 2px;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
 
 }
 
@@ -75,7 +117,16 @@ li {
 }
 
 #switch-to-signup-text {
+
     padding-top: 20px;
+    font-size: 18px;
+
+}
+
+li.text-border {
+    border-top: rgb(204, 204, 204);
+    border-style: solid;
+    border-top-width: thin;
 }
 
 #switch-to-signup-button {
@@ -90,9 +141,10 @@ li {
     text-decoration: none;
     display: flex;
     align-items: center;
-    font-size: 16px;
+    font-size: 14px;
     justify-content: center;
     width: 100%;
+    height: 48px;
 }
 
 #demo-button {
@@ -101,14 +153,14 @@ li {
     color: white;
     font-weight: bold;
     border-radius: 25px;
-    padding: 20px;
     text-align: center;
     text-decoration: none;
     display: block;
-    font-size: 16px;
+    font-size: 14px;
     margin: 4px 2px;
     justify-content: center;
     width: 100%;
+    height: 48px;
 }
 
 #sign-up-msg {
@@ -119,5 +171,17 @@ li {
     justify-content: center;
     align-items: center;
     height: 48px;
+}
+
+#login-msg {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    font-size: 16px;
+    padding-bottom: 5px;
 }
 

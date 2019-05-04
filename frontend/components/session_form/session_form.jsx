@@ -54,19 +54,19 @@ class SessionForm extends React.Component {
                     </div>
                     <div id="input-list">
                         <li>
-                            <input type="text" value={this.state.username}
+                            <input className="signup" type="text" value={this.state.username}
                                 placeholder="Username" onChange={this.update("username")} />
                         </li>
                         <li>
-                            <input type="text" value={this.state.email}
+                            <input className="signup" type="text" value={this.state.email}
                                 placeholder="Email" onChange={this.update("email")} />
                         </li>
                         <li>
-                            <input type="password" value={this.state.password}
+                            <input className="signup" type="password" value={this.state.password}
                                 placeholder="Password" onChange={this.update("password")} />
                         </li>
                         <li>
-                            <input type="text" value={this.state.displayed_name}
+                            <input className="signup" type="text" value={this.state.displayed_name}
                                 placeholder="What should we call you?" onChange={this.update("displayed_name")} />
                         </li>
                         <li>
@@ -89,35 +89,37 @@ class SessionForm extends React.Component {
         return (
             <div className="main-form-div">
                 <form className="login-signup-form" onSubmit={this.handleSubmit}>
-                    <ul>
+                    <div id='login-msg'>
+                        To continue, log in to Camify.
+                    </div>
+                    <div id="demo-button-div">
+                        <button onClick={this.demoLogin} id="demo-button">DEMO LOGIN</button>
+                    </div>
+                    <div id='or'>
+                        OR
+                    </div>
+                    <div id="input-list">
                         <li>
-                            <input type="text" value={this.state.username}
+                            <input className="login" type="text" value={this.state.username}
                                 placeholder="Username" onChange={this.update("username")} />
                         </li>
                         <li>
-                            <input type="password" value={this.state.password}
+                            <input className="login" type="password" value={this.state.password}
                                 placeholder="Password" onChange={this.update("password")} />
                         </li>
                         <li>
-                            <input id="login-submit-button" type="submit" value={this.props.formType} />
+                            <input id="login-submit-button2" type="submit" value={this.props.formType} />
                         </li>
-                        <li>
+                        <li className="text-border">
                             <span className="switch-to-signup" id="switch-to-signup-text">
                                 Don't have an account?
                             </span>
                         </li>
                         <li>
-                            {/* <span className="switch-to-signup" id="switch-to-signup-button">
-                                <Link to="/signup"></Link>
-                            </span> */}
-                            {/* <button onClick={<Link to="/signup"></Link>} id="switch-to-signup-button">SIGN UP FOR SPOTIFY</button> */}
                             <Link id="switch-to-signup-button" to="/signup">SIGN UP FOR CAMIFY</Link>
                         </li>
-                        <li>
-                            <button onClick={this.demoLogin} id="demo-button">DEMO</button>
-                        </li>
 
-                    </ul>
+                    </div>
                 </form>
             </div>
         );
