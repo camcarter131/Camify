@@ -1,0 +1,38 @@
+
+
+#home-main {
+    padding-left: $side_nav_width;
+    padding-bottom: $play_bar_height;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding-top: $home_library_header_height;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background:linear-gradient(180deg,rgb(129, 20, 48),rgba(100, 32, 35, 0.685));
+}
+
+#home-link {
+    display: flex;
+    align-items: center;
+    padding-bottom: 300px;
+}
+
+#home-button {
+  background-color: $green;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  margin: 4px 2px;
+  justify-content: center;
+  font-weight: bold;
+  height: 16px;
+}

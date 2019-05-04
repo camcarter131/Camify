@@ -1,11 +1,18 @@
 @import "./reset";
 @import "./colors";
+@import "./sizing";
 @import "./splash";
 @import "./camify_app";
 @import "./session_form/session_form";
 @import "./greeting/greeting";
 @import "./static_pages";
 @import "./errors";
+@import "./web_player/main/home.scss";
+@import "./web_player/main/library.scss";
+@import "./web_player/main/search.scss";
+@import "./web_player/play_bar.scss";
+@import "./web_player/side-nav.scss";
+
 
 
 

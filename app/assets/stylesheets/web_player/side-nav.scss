@@ -1,0 +1,33 @@
+ #side-nav {
+  height: 100%;
+  width: $side_nav_width;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+}
+
+.side-nav-link a {
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    height: 20px;
+}
+
+.side-nav-menu {
+    background: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    width: $side_nav_width;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+}

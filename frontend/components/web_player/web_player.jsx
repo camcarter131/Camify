@@ -1,12 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Splash from '../splash';
-import Home from './home/home'
+import Main from './main/main'
+import PlayBar from './playbar/playbar';
+import SideNavContainer from './side_nav/side_nav_container';
 
-const WebPlayer = ( {user, logout} ) => {
+const WebPlayer = ({ user }) => {
     return (
         user ? (
-            <Home user={user} logout={logout}/>
+            <div>
+                <SideNavContainer />
+                <Main/>
+                <PlayBar/>
+            </div>
         )
         : <Splash />
     )
