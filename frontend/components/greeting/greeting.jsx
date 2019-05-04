@@ -13,12 +13,12 @@ const Greeting = ({currentUser, logout}) => {
                 <button onClick={logout}>Logout</button>
             </div>
         )
-    } else {
+    } else { 
         return (
             <div className="header-div">
                 <div className="header-sub-div" id="camify-logo-link">
                     <div id="header-sub-sub-div">
-                        <Link id="login-logo" to="/"></Link><Link id="Camify" to="/">Camify</Link>
+                        <Link id="login-logo" to="/"></Link><Link id="Camify" to="/"> Camify</Link>
                     </div>
                 </div>
             </div>

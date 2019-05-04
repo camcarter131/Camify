@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 class SessionForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
+        this.state = { 
             username: "",
             password: "",
             displayed_name: "",
@@ -49,7 +49,10 @@ class SessionForm extends React.Component {
         return (
             <div className="main-form-div">
                 <form className="login-signup-form" onSubmit={this.handleSubmit}>
-                    <ul>
+                    <div id="sign-up-msg">
+                        Sign up with your email address
+                    </div>
+                    <div id="input-list">
                         <li>
                             <input type="text" value={this.state.username}
                                 placeholder="Username" onChange={this.update("username")} />
@@ -75,7 +78,7 @@ class SessionForm extends React.Component {
                                     to="/login">&nbsp;&nbsp;Log in</Link>
                             </span>
                         </li>
-                    </ul>
+                    </div>
                 </form>
             </div>
 
