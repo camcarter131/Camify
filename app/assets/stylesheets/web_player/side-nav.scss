@@ -1,29 +1,31 @@
  #side-nav {
   height: 100%;
   width: $side_nav_width;
-  color: white;
+  color: #B3B3B3;
   position: fixed;
   top: 0;
   left: 0;
   overflow-x: hidden;
   transition: 0.5s;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 90px;
+  background-color: rgba(0,0,0,.8);
+//   z-index: 2;
 }
 
 .side-nav-link a {
-    color: #f2f2f2;
+    color: #B3B3B3;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 14px;
     height: 20px;
 }
 
 .side-nav-menu {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     font-weight: bold;
     width: $side_nav_width;
-    position: fixed;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -31,3 +33,57 @@
     flex-direction: column;
 
 }
+
+.side-nav-header {
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#Camify-logged-in{
+    font-weight: bold;
+    color: #fff;
+    font-size: 26px;
+    text-decoration: none;
+    height: 46px;
+    padding-right: 20px;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#login-logo-logged-in {
+   background-image: image-url("download3.png");
+   height: 42px;
+   width: 42px;
+   background-size: contain;
+}
+
+#logout-div {
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logout-div a{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    text-decoration: none;
+    color: #B3B3B3;
+}
+
+#avatar-div {
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+

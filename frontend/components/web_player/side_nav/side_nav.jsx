@@ -6,7 +6,10 @@ class SideNav extends React.Component {
     render() {
         const { user, logout } = this.props;
         return (
-            <div id="side-nav">
+            <div id="side-nav"> 
+                <div className="side-nav-header">
+                    <Link id="login-logo-logged-in" to="/"></Link><Link id="Camify-logged-in" to="/"> Camify</Link>
+                </div>
                 <div className="side-nav-menu">
                     <div className="side-nav-link" id="home">
                         <a href="#">Home</a>
@@ -17,13 +20,13 @@ class SideNav extends React.Component {
                     <div className="side-nav-link" id="library" >
                         <Link to="/collections/tracks">Your Library</Link>
                     </div>
-                    <div className="side-nav-link" id="logout" >
-                        <Link to="/login" onClick={logout}>Logout</Link>
-                    </div>
-                    <div className="side-nav-link" id="avatar" >
-                        <span>{user.displayed_name}</span>
-                        <a href="#">Avatar</a>
-                    </div>
+                </div>
+                <div id="logout-div">
+                    <Link to="/login" onClick={logout}>Logout</Link>
+                </div>
+                <div id="avatar-div">
+                    <div>Avatar&nbsp;</div>
+                    <span>{user.displayed_name}</span>
                 </div>
             </div>
         );
