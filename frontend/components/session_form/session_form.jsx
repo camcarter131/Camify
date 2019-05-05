@@ -110,16 +110,18 @@ class SessionForm extends React.Component {
                         <li>
                             <input id="login-submit-button2" type="submit" value={this.props.formType} />
                         </li>
+                    </div>
+                    <div id='second-div'>
                         <li className="text-border">
-                            <span className="switch-to-signup" id="switch-to-signup-text">
+                            <div className="switch-to-signup" id="switch-to-signup-text">
                                 Don't have an account?
-                            </span>
+                            </div>
                         </li>
                         <li>
                             <Link id="switch-to-signup-button" to="/signup">SIGN UP FOR CAMIFY</Link>
                         </li>
-
                     </div>
+                    
                 </form>
             </div>
         );

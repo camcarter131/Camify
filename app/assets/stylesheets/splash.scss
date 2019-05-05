@@ -11,9 +11,10 @@
   margin: 4px 2px;
   justify-content: center;
   font-weight: bold;
-  height: 16px;
+  height: 9px;
+  width: 253px;
 }
-        
+         
 #splash-div {
     font-weight: bold;
 }
@@ -22,32 +23,33 @@
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    height: 1000px;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
     color: white;
     // background-image: image-url("hero-burst.svg");
-    background:linear-gradient(180deg,rgba(235, 44, 155, 0.65),rgba(175, 127, 54, 0.80)), image-url("hero-burst.svg");
+    background:linear-gradient(0deg,rgba(235, 44, 155, 0.65),rgba(219, 197, 69, 0.836)), image-url("hero-burst.svg");
 }
 
 #small-text {
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 18px;
+    padding-top: 18px;
+    padding-bottom: 23px;
 }
 
 #upper-left-logo{
-  height: 60px;
-  width: 60px;
-  padding: 0px;
 }
+
 
 #big-text {
     display: flex;
     align-items: center;
     padding-top: 300px;
     font-size: 80px;
+    font-weight: 900;
+    font-family: Circular, Helvetica, Arial, sans-serif;
 }
 
 #splash-link {
@@ -57,32 +59,34 @@
 }
 
 .topnav a {
-  float: right;
-  color: #f2f2f2;
+  float: right !important;
+  // color: #f2f2f2;
+  color: #D9DADC;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
-  height: 20px;
+  font-size: 16px;
+  height: 10px;
 }
 
 .splash-logo {
    background-image: image-url("download3.png");
-   height: 60px;
-   width: 60px;
+   height: 40px;
+   width: 40px;
    background-size: contain;
    margin-right: auto;
-   margin-left: 12%;
+   margin-left: 10%;
 }
 
 .topnav {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     font-weight: bold;
     width: 100%;
     position: fixed;
-    height: 10%;
+    height: 80px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    float: right;
 }
   
 #topnav-link {
@@ -91,7 +95,7 @@
 }
 
 .last {
-  margin-right: 12%
+  margin-right: 5%
 }
 
 div > logo {
