@@ -5,7 +5,7 @@ import SongsContainer from './songs/songs_container';
 
 class Library extends React.Component {
 
-    render() {
+    render() { 
 
         return ( 
             <div id="library-main">

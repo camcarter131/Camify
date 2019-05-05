@@ -53,26 +53,26 @@ class SessionForm extends React.Component {
                         Sign up with your email address
                     </div>
                     <div id="input-list">
-                        <li>
+                        <li className="session-li">
                             <input className="signup" type="text" value={this.state.username}
                                 placeholder="Username" onChange={this.update("username")} />
                         </li>
-                        <li>
+                        <li className="session-li">
                             <input className="signup" type="text" value={this.state.email}
                                 placeholder="Email" onChange={this.update("email")} />
                         </li>
-                        <li>
+                        <li className="session-li">
                             <input className="signup" type="password" value={this.state.password}
                                 placeholder="Password" onChange={this.update("password")} />
                         </li>
-                        <li>
+                        <li className="session-li">
                             <input className="signup" type="text" value={this.state.displayed_name}
                                 placeholder="What should we call you?" onChange={this.update("displayed_name")} />
                         </li>
-                        <li>
+                        <li className="session-li">
                             <input id="login-submit-button" type="submit" value={this.props.formType} />
                         </li>
-                        <li>
+                        <li className="session-li">
                             <span className="switch-to-login">
                                 Already have an account? <Link id="switch-to-login-link" 
                                     to="/login">&nbsp;&nbsp;Log in</Link>
@@ -99,25 +99,25 @@ class SessionForm extends React.Component {
                         OR
                     </div>
                     <div id="input-list">
-                        <li>
+                        <li className="session-li">
                             <input className="login" type="text" value={this.state.username}
                                 placeholder="Username" onChange={this.update("username")} />
                         </li>
-                        <li>
+                        <li className="session-li">
                             <input className="login" type="password" value={this.state.password}
                                 placeholder="Password" onChange={this.update("password")} />
                         </li>
-                        <li>
+                        <li className="session-li">
                             <input id="login-submit-button2" type="submit" value={this.props.formType} />
                         </li>
                     </div>
                     <div id='second-div'>
-                        <li className="text-border">
+                        <li className="session-li" id="text-border">
                             <div className="switch-to-signup" id="switch-to-signup-text">
                                 Don't have an account?
                             </div>
                         </li>
-                        <li>
+                        <li className="session-li">
                             <Link id="switch-to-signup-button" to="/signup">SIGN UP FOR CAMIFY</Link>
                         </li>
                     </div>

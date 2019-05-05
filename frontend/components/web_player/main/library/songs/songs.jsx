@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Song from './song';
 
-class Songs extends React.Component {
+class Songs extends React.Component { 
     
     componentDidMount() {
         this.props.receiveAllSongs();
