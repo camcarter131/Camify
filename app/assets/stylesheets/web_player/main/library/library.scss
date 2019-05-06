@@ -7,7 +7,6 @@
     display: flex;
     flex-direction: column;
     height: auto;
-    width: 100%;
     justify-content: space-around;
     align-items: center;
     color: white;
@@ -84,18 +83,16 @@ li.nav-li {
 }
 
 #new-playlist-btn {
-  background-color: $green;
-  border: none;
-  color: white;
-  border-radius: 25px;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none; 
-  display: block;
-  font-size: 14px;
-  margin: 4px 2px;
-  justify-content: center;
-  font-weight: bold;
-  height: 16px;
+    background-color: $green;
+    border: none;
+    color:#fff;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none; 
+    display: block;
+    font-size: 11px;
+    padding: 7px 22px;
+    justify-content: center;
+    font-weight: normal;
 }
 

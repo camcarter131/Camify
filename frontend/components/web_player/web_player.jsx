@@ -5,17 +5,14 @@ import Main from './main/main'
 import PlayBar from './playbar/playbar';
 import SideNavContainer from './side_nav/side_nav_container';
 
-const WebPlayer = ({ user }) => {
+const WebPlayer = ({ home_lib_search }) => {
     let mostRecentClicked = 'library';
     return (
-        user ? (
-            <div>
-                <SideNavContainer />
-                <Main mostRecentClicked={mostRecentClicked}/>
-                <PlayBar/>
-            </div>
-        )
-        : <Splash />
+        <div>
+            <SideNavContainer />
+            <Main mostRecentClicked={mostRecentClicked} home_lib_search={home_lib_search}/>
+            <PlayBar/>
+        </div>
     )
 };
 

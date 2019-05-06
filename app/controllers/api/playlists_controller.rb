@@ -7,22 +7,22 @@ class Api::PlaylistsController < ApplicationController
         else
             render json: ["Please enter a valid name"], status: 422
         end 
-    end
+    end 
 
     def show
         @playlist = Playlist.find(params[:id])
         render json: :show;
     end
 
+    def index
+        @playlists = Playlist.all;
+    end
+
     def destroy
         @playlist = Playlist.find(params[:id])
-        if @playlist
-            # How to delete playlist from db?
-            # also must delete rows from playlist_song table
-            render "api/playlists/show"
-        else
-            render json: ["No playlist"], status: 404
-        end
+        @playlist.destroy
+        render json: :index
+ 
     end
 
     def playlist_params

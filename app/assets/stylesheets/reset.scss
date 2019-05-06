@@ -21,6 +21,10 @@ time, mark, audio, video {
     background: transparent;
 }
 
+a { 
+    outline: none;
+}
+
 /* make sure to set some focus styles for accessibility */
 :focus {
     outline: 0;

@@ -5,13 +5,13 @@ import Library from './library/library';
 import LibraryContainer from './library/library_container';
 import Search from './search/search';
 
-const Main = ({ mostRecentClicked }) => {
+const Main = ({ home_lib_search }) => {
 
-    if (mostRecentClicked === 'home') {
+    if (home_lib_search === 'browse') {
         return <Home/>;
-    } else if (mostRecentClicked === 'library') {
-        return <Library />;
-    } else if (mostRecentClicked === 'search') {
+    } else if (home_lib_search === 'collection') {
+        return <LibraryContainer/>;
+    } else if (home_lib_search === 'search') {
         return <Search />;
     }
     

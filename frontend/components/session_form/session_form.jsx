@@ -4,7 +4,7 @@ import Errors from '../errors';
 import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
-    constructor(props) {
+    constructor(props) { 
         super(props);
         this.state = { 
             username: "",
@@ -23,7 +23,7 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user).then(() => this.props.history.push("/collection/playlists"));
 
     }
 
@@ -35,7 +35,7 @@ class SessionForm extends React.Component {
             username: demoUsername,
             password: demoPassword
         };
-        this.props.processForm(demoUser);
+        this.props.processForm(demoUser).then(() => this.props.history.push("/collection/playlists"));
     }
 
 

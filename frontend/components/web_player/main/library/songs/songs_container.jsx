@@ -7,7 +7,7 @@ const msp = state => ({
 });
 
 const mdp = dispatch => ({
-    receiveAllSongs: () => dispatch(receiveAllSongs)
+    receiveAllSongs: () => dispatch(receiveAllSongs())
 });
 
 export default connect(msp, mdp)(Songs);

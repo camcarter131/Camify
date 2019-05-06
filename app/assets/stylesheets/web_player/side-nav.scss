@@ -1,5 +1,4 @@
  #side-nav {
-  height: 100%;
   width: $side_nav_width;
   color: #B3B3B3;
   position: fixed;
@@ -9,9 +8,8 @@
   transition: 0.5s;
   display: flex;
   flex-direction: column;
-  padding-bottom: 90px;
   background-color: rgba(0,0,0,.8);
-//   z-index: 2;
+  height: calc(100vh - 90px);
 }
 
 .side-nav-link a {
@@ -20,7 +18,14 @@
     text-decoration: none;
     font-size: 14px;
     height: 20px;
+    outline: none;
 }
+
+#home.side-nav-link {
+    
+}
+
+
 
 .side-nav-menu {
     background: rgba(0, 0, 0, 0.8);
@@ -29,7 +34,7 @@
     height: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: 0 24px;
     flex-direction: column;
 
 }
@@ -38,8 +43,7 @@
     background: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
-    justify-content: center;
-
+    padding: 0 24px;
 }
 
 #Camify-logged-in{
@@ -66,24 +70,27 @@
 #logout-div {
     background: rgba(0, 0, 0, 0.8);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    padding: 0 24px;
 }
 
 #logout-div a{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     font-size: 14px;
     text-decoration: none;
     color: #B3B3B3;
+    padding-bottom: 15px;
 }
 
 #avatar-div {
     background: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
     font-size: 14px;
     color: #FFFFFF;
+    border-top: 1px solid #404040;
+    padding: 15px 24px;
 }
 

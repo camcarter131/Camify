@@ -2,10 +2,12 @@ import { connect } from 'react-redux';
 import WebPlayer from './web_player';
 import { logout } from '../../actions/session_actions';
 
-const msp = state => {
+const msp = (state, ownProps) => {
+    let home_lib_search = ownProps.match.params.main;
     let userId = state.session.id;
     return ({
-        user: state.entities.users[userId]
+        user: state.entities.users[userId],
+        home_lib_search
     })
 };
 

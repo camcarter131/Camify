@@ -5,6 +5,14 @@ export const create = playlist => (
         data: { playlist }
     })
 );
+ 
+export const receiveAllPlaylists = () => (
+    $.ajax({
+        url: "api/playlists",
+        method: "GET"
+    })
+); 
+
 
 export const remove = id => (
     $.ajax({

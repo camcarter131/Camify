@@ -8,5 +8,5 @@ export const songsReducer = (state = {}, action) => {
             return merge({}, state, action.songs)
         default:
             return state;
-    }
+    } 
 };
