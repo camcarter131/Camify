@@ -6,12 +6,19 @@ class PlaylistModal extends React.Component {
         this.state = {
             playlistName: ""
         }
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     update(field) {
         return e => (
             this.setState({ [field]: e.target.value })
         );
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.create({ name: this.state.playlistName, user_id: this.props.currentUserId })
+        .then(() => {this.props.history.push("/")})
     }
 
     // handleCreate(playlistName) {
@@ -43,7 +50,7 @@ class PlaylistModal extends React.Component {
                 <div className="modal-buttons">
                     <button id="cancel-playlist-btn" onClick={handleClose}>CANCEL</button>
                     <button id="create-playlist-btn" 
-                    onClick={() => (create({name:this.state.playlistName, user_id:currentUserId}))} >CREATE</button>
+                    onClick={this.handleSubmit} >CREATE</button>
                 </div>
             </div>
         );

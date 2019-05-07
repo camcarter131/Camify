@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Playlist = ({ playlist, remove, name }) => {
-    return (
+    return ( 
         <div className="playlist-div">
             {/* <li className="playlist-li"> */}
                 <button className="playlist-btn">
