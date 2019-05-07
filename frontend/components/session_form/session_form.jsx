@@ -96,7 +96,8 @@ class SessionForm extends React.Component {
                         <button onClick={this.demoLogin} id="demo-button">DEMO LOGIN</button>
                     </div>
                     <div id='or'>
-                        OR
+                        {/* <div id="or-text">OR</div> */}
+                        <strong class="divider">OR</strong>
                     </div>
                     <div id="input-list">
                         <li className="session-li">
@@ -107,19 +108,19 @@ class SessionForm extends React.Component {
                             <input className="login" type="password" value={this.state.password}
                                 placeholder="Password" onChange={this.update("password")} />
                         </li>
-                        <li className="session-li">
+                        <li className="session-li" id="login-li">
                             <input id="login-submit-button2" type="submit" value={this.props.formType} />
                         </li>
                     </div>
                     <div id='second-div'>
-                        <li className="session-li" id="text-border">
+                        <div className="session-div" id="text-border">
                             <div className="switch-to-signup" id="switch-to-signup-text">
                                 Don't have an account?
                             </div>
-                        </li>
-                        <li className="session-li">
+                        </div>
+                        <div className="session-div">
                             <Link id="switch-to-signup-button" to="/signup">SIGN UP FOR CAMIFY</Link>
-                        </li>
+                        </div>
                     </div>
                     
                 </form>

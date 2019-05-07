@@ -20,7 +20,7 @@
 #or {
     display: flex; 
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     height: 48px;
     font-size: 12px;
     color: black;
@@ -28,6 +28,28 @@
     border-top: 1px solid #d9dadc;
     width: 450px;
     margin: 15px 0;
+}
+
+.session-div {
+    display: flex;
+    align-items: flex-end;
+}
+
+#login-li {
+    padding-top: 18px;
+}
+
+.divider {
+    background: #fff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 0 20px;
+}
+
+#or-text {
+    margin-left: 20px;
+    margin-right: 20px;
+
 }
 
 input {
@@ -191,4 +213,5 @@ li#text-border {
     flex-direction: column;
     justify-content: center;
     width: 100%;
+    padding-top: 60px;
 }
