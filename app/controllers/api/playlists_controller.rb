@@ -11,7 +11,7 @@ class Api::PlaylistsController < ApplicationController
 
     def show
         @playlist = Playlist.find(params[:id])
-        render json: :show;
+        render "api/playlists/show"
     end
 
     def index

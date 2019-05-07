@@ -4,10 +4,13 @@ import { logout } from '../../actions/session_actions';
 
 const msp = (state, ownProps) => {
     let home_lib_search = ownProps.match.params.main;
+    let playlistId = ownProps.match.params.id;
     let userId = state.session.id;
+
     return ({
         user: state.entities.users[userId],
-        home_lib_search
+        home_lib_search,
+        playlistId
     })
 };
 

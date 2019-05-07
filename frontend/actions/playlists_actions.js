@@ -3,6 +3,8 @@ import * as PlaylistsAPIUtil from '../util/playlists_api_util';
 export const CREATE_PLAYLIST = 'CREATE_PLAYLIST';
 export const REMOVE_PLAYLIST = 'REMOVE_PLAYLIST';
 export const RECEIVE_PLAYLISTS = 'RECEIVE_PLAYLISTS';
+export const RECEIVE_PLAYLIST = 'RECEIVE_PLAYLIST';
+
 // export const REMOVE_SONG = 'REMOVE_SONG';
 // export const ADD_SONG = 'ADD_SONG';
 
@@ -13,7 +15,7 @@ export const createPlaylist = playlist => ({
     playlist
 }); 
 
-export const removePlaylist = id => ({
+export const removePlaylist = id => ({ 
     type: REMOVE_PLAYLIST,
     id
 });
@@ -21,6 +23,11 @@ export const removePlaylist = id => ({
 export const receivePlaylists = (playlists) => ({
     type: RECEIVE_PLAYLISTS,
     playlists
+});
+
+export const receiveOnePlaylist = (playlist) => ({
+    type: RECEIVE_PLAYLIST,
+    playlist
 });
 
 // -------------------------------------------------------------- //
@@ -36,3 +43,7 @@ export const remove = id => dispatch => (
 export const receiveAllPlaylists = () => dispatch => (
     PlaylistsAPIUtil.receiveAllPlaylists().then(playlists => dispatch(receivePlaylists(playlists)))
 );
+
+export const receivePlaylist = id => dispatch => (
+    PlaylistsAPIUtil.receivePlaylist(id).then(playlist => dispatch(receiveOnePlaylist(playlist)))
+)

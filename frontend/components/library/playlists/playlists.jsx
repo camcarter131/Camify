@@ -16,12 +16,13 @@ class Playlists extends React.Component {
                     key={playlist.id}
                     playlist={playlist}
                     remove={this.props.remove}
+                    name={this.props.name}
                 />
             );
         });
 
         return (
-            <div id='playlist-list-div'>
+            <div id='playlist-div'>
                 {playlists}
             </div>
         );

@@ -13,6 +13,14 @@ export const receiveAllPlaylists = () => (
     })
 ); 
 
+export const receivePlaylist = id => (
+    $.ajax({
+        url: `api/playlists/${id}`,
+        method: "GET"
+    })
+)
+window.receivePlaylist = receivePlaylist;
+
 
 export const remove = id => (
     $.ajax({

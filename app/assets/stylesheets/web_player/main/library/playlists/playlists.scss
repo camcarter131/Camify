@@ -1,7 +1,14 @@
- #playlist-list-div {
-    //  height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
- }
+#playlist-div {
+   //  height: auto;
+   width: 100%;
+   display: flex;
+   justify-content: space-evenly;
+   flex-flow: row wrap;
+}
+
+#playlist-div::after {
+   content: '';
+   width: 212px;
+
+}
+

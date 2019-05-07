@@ -23,43 +23,49 @@ class Library extends React.Component {
         this.setState({ show: false });
     }
 
-    render() { 
-
-        return ( 
+    playlists() {
+        return (
             <div id="library-main">
                 <PlaylistModalContainer show={this.state.show} handleClose={this.hidePlaylistModal}>
                     <p>Modal</p>
                     <p>Data</p>
                 </PlaylistModalContainer>
                 <div id='nav-button-container'>
-                        <div id="nav-div">
-                            <li className ="nav-li">
-                                <div className="nav-li-div">
-                                    <Link className="lib-link">PLAYLISTS</Link>  
-                                </div>
-                            </li>
-                            <li className="nav-li">
-                                <div className="nav-li-div">
-                                    <Link className="lib-link">SONGS</Link>
-                                </div>
-                            </li>
-                            <li className="nav-li">
-                                <div className="nav-li-div">
-                                    <Link className="lib-link">ALBUMS</Link>
-                                </div>
-                            </li>
-                            <li className="nav-li"> 
-                                <div className="nav-li-div">
-                                    <Link className="lib-link">ARTISTS</Link>
-                                </div>
-                            </li>
-                        </div>
+                    <div id="nav-div">
+                        <li className="nav-li">
+                            <div className="nav-li-div">
+                                <Link className="lib-link">PLAYLISTS</Link>
+                            </div>
+                        </li>
+                        <li className="nav-li">
+                            <div className="nav-li-div">
+                                <Link className="lib-link">SONGS</Link>
+                            </div>
+                        </li>
+                        <li className="nav-li">
+                            <div className="nav-li-div">
+                                <Link className="lib-link">ALBUMS</Link>
+                            </div>
+                        </li>
+                        <li className="nav-li">
+                            <div className="nav-li-div">
+                                <Link className="lib-link">ARTISTS</Link>
+                            </div>
+                        </li>
+                    </div>
                     <div id="new-playlist-btn-div">
                         <button id="new-playlist-btn" onClick={this.showPlaylistModal}>NEW PLAYLIST</button>
                     </div>
-                </div>  
-                <PlaylistsContainer/>
+                </div>
+                <PlaylistsContainer />
             </div>
+        )
+
+    }
+
+    render() { 
+        return(
+            this.playlists()
         )
     }
 }
