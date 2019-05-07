@@ -8,6 +8,7 @@ const Splash = () => {
             <div className="topnav">
                 <div className="splash-logo">
                     <Link id="upper-left-logo" to="/"></Link>
+                    <Link id="Camify-splash" to="/"> Camify</Link>
                 </div>
                 <div id="topnav-link">
                     <Link to="/signup">Sign up</Link>

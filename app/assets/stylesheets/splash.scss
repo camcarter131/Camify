@@ -40,6 +40,7 @@
 }
 
 #upper-left-logo{
+  outline: none;
 }
 
 
@@ -75,6 +76,23 @@
    background-size: contain;
    margin-right: auto;
    margin-left: 10%;
+   display: flex;
+   align-items: center;
+  //  flex-direction: column;
+}
+
+#Camify-splash {
+    font-weight: bold;
+    color:#fff;
+    font-size: 24px;
+    text-decoration:  none;
+    height: 46px;
+    padding-left: 13px;
+    padding-bottom: 14px;
+    display: flex;
+    align-items: center;
+    outline: none;
+
 }
 
 .topnav {

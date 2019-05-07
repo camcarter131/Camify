@@ -20,13 +20,9 @@ class PlaylistModal extends React.Component {
         this.props.create({ name: this.state.playlistName, user_id: this.props.currentUserId })
         .then(() => {this.props.history.push("/")})
     }
-
-    // handleCreate(playlistName) {
-    //     create({ name: playlistName, user_id: this.props.currentUserId })
-    // }
-
+    
     render() {
-        const { handleClose, show, create, currentUserId } = this.props;
+        const { handleClose, show } = this.props;
         const showHideClassName = show ? "modal display-block" : "modal display-none";
         return (
             <div className={showHideClassName}>

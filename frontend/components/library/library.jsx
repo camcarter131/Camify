@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Songs from './songs/songs';
 import SongsContainer from './songs/songs_container';
 import PlaylistsContainer from './playlists/playlists_container';
-import PlaylistModal from './playlist_modal/playlist_modal'
 import PlaylistModalContainer from './playlist_modal/playlist_modal_container'
 
 class Library extends React.Component {

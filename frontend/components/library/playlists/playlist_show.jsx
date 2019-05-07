@@ -1,5 +1,5 @@
 import React from 'react';
-import DeletePlaylistModal from '../delete_playlist_modal/delete_playlist_modal';
+import DeletePlaylistModalContainer from '../delete_playlist_modal/delete_playlist_modal_container';
 import Playlists from './playlists';
 
 class PlaylistShow extends React.Component {
@@ -48,7 +48,7 @@ class PlaylistShow extends React.Component {
         if (playlist === undefined) return null;
         return (
             <div id='playlist-show'>
-                <DeletePlaylistModal handleClose={this.hideDeleteModal} playlist={playlist} remove={remove} show={this.state.show} />
+                <DeletePlaylistModalContainer handleClose={this.hideDeleteModal} playlist={playlist} remove={remove} show={this.state.show} />
                 <div id="playlist-header-all">
                     <div id='playlist-show-header-btn'>
                         <button className="playlist-btn-show">

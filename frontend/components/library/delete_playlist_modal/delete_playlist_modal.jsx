@@ -1,6 +1,17 @@
 import React from 'react';
 
 class DeletePlaylistModal extends React.Component {
+    constructor(props) {
+        super(props) 
+        this.handleDelete = this.handleDelete.bind(this);
+    }
+
+    handleDelete(e) {
+        e.preventDefault();
+        this.props.remove(this.props.playlist.id).then(() => {
+            this.props.history.push("/")
+        })
+    }
 
     render() {
         const { remove, playlist, show, handleClose } = this.props;
@@ -20,7 +31,7 @@ class DeletePlaylistModal extends React.Component {
                 <div className="modal-buttons">
                     <button id="cancel-playlist-btn" onClick={handleClose}>CANCEL</button>
                     <button id="create-playlist-btn"
-                        onClick={() => remove(playlist.id)} >DELETE</button>
+                        onClick={this.handleDelete} >DELETE</button>
                 </div>
             </div>
         );

@@ -43,16 +43,20 @@ a.dropdown {
     background-color: #282828;
     font-weight: normal;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 a.dropdown:hover {
     background-color: #333;
+    color: #FFFFFF;
 }
 
 div.dropdown {
     display: flex;
     flex-direction: column;
     z-index: 1;
+    width: 158px;
 }
 
 .playlist-btn-show {
