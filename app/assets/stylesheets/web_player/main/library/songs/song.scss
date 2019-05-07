@@ -10,6 +10,31 @@
 .song-div{
     display: flex;
     align-content: center;
-    justify-content: center;
+    // justify-content: center;
     height: auto;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.song-div:hover {
+    background-color: rgba(0,0,0,.6);
+    transition: .4s;
+}
+
+
+.song-ellipses {
+    content: "\f12c";
+    font-size: 24px;
+    font-family: glue1-spoticon;
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-top: 0px;
+    padding-bottom: 11px;
 }

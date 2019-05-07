@@ -15,7 +15,7 @@ import Search from './search/search';
  
 const App = () => (
     <div className="app-div">
-
+ 
         <SideNavContainer />
         <Switch>
             {/* <ProtectedRoute ></ProtectedRoute> */}
@@ -23,7 +23,7 @@ const App = () => (
             <AuthRoute id="login-signup" exact path="/signup" component={SignUpFormContainer} />
 
             <ProtectedRoute exact path="/browse/featured" component={Home} />
-            <ProtectedRoute exact path="/collection/playlists" component={LibraryContainer} />            
+            <ProtectedRoute exact path="/collection/:type" component={LibraryContainer} />            
             <ProtectedRoute exact path="/search" component={Search} /> 
             <ProtectedRoute exact path="/playlists/:id" component={PlaylistShowContainer} />
 

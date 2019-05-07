@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom';
 import Song from './song';
 
 class Songs extends React.Component { 
+    constructor(props) {
+        super(props);
+    }
     
     componentDidMount() {
         this.props.receiveAllSongs();
     }
+
 
     render() {
         const songs = this.props.songs.map(song => {

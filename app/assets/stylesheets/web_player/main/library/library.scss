@@ -23,16 +23,17 @@ li.nav-li {
 }
 
 
-.lib-link {
+a.lib-link {
     color: #b3b3b3;
     letter-spacing: .015em;
     font-size: 12px;
     text-decoration: none;
     display: flex;
     align-items: center;
+    outline: none;
 }
 
-.lib-link:hover {
+a.lib-link:hover {
     color: white;
     transition: .4s;
 }

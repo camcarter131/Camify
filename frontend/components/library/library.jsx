@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Songs from './songs/songs';
 import SongsContainer from './songs/songs_container';
 import PlaylistsContainer from './playlists/playlists_container';
 import PlaylistModalContainer from './playlist_modal/playlist_modal_container'
+
+import { Route, Switch } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from '../../util/route_util';
 
 class Library extends React.Component {
 
@@ -33,12 +35,12 @@ class Library extends React.Component {
                     <div id="nav-div">
                         <li className="nav-li">
                             <div className="nav-li-div">
-                                <Link className="lib-link">PLAYLISTS</Link>
+                                <Link to="/collection/playlists" className="lib-link">PLAYLISTS</Link>
                             </div>
                         </li>
                         <li className="nav-li">
-                            <div className="nav-li-div">
-                                <Link className="lib-link">SONGS</Link>
+                            <div className="nav-li-div"> 
+                                <Link to="/collection/tracks" className="lib-link">SONGS</Link>
                             </div>
                         </li>
                         <li className="nav-li">
@@ -56,7 +58,12 @@ class Library extends React.Component {
                         <button id="new-playlist-btn" onClick={this.showPlaylistModal}>NEW PLAYLIST</button>
                     </div>
                 </div>
-                <PlaylistsContainer />
+                <Switch>
+                    <ProtectedRoute exact path="/collection/playlists" component={PlaylistsContainer} />
+                    <ProtectedRoute exact path="/collection/tracks" component={SongsContainer} />
+
+                </Switch>
+                
             </div>
         )
 

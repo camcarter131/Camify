@@ -3,7 +3,7 @@ import Songs from './songs';
 import { receiveAllSongs } from '../../../actions/songs_actions';
 
 const msp = state => ({
-    songs: Object.values(state.entities.songs)
+    songs: Object.values(state.entities.songs) 
 });
 
 const mdp = dispatch => ({

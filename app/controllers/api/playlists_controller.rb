@@ -4,11 +4,11 @@ class Api::PlaylistsController < ApplicationController
         @playlist = Playlist.new(playlist_params)
         if @playlist.save!
             render "api/playlists/show"
-        else
+        else 
             render json: ["Please enter a valid name"], status: 422
         end 
     end 
-
+ 
     def show
         @playlist = Playlist.find(params[:id])
         render "api/playlists/show"
@@ -25,6 +25,8 @@ class Api::PlaylistsController < ApplicationController
  
     end
 
+    private 
+    
     def playlist_params
         params.require(:playlist).permit(:name, :user_id)
     end

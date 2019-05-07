@@ -8,7 +8,7 @@ const msp = state => {
     let name = state.entities.users[userId].displayed_name;
     return ({
         playlists: Object.values(state.entities.playlists),
-        name
+        name 
     })
 };
 

@@ -1,0 +1,55 @@
+
+
+
+#playlist-modal-icon {
+    height: 64px;
+    width: 64px;
+}
+.playlist-modal-div{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+    height: 200px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+}
+
+a.playlist-modal-link {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    outline: none;
+}
+
+a#playlist-modal-name-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFF;
+    padding-top: 12px;
+    padding-bottom: 4px;
+    height: auto;
+
+}
+
+a#user-modal-name-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: normal;
+    color: #fff;
+    opacity: .6;
+    // z-index: 2;
+    height: auto;
+
+}
+
+.playlist-modal-btn {
+    height: 178.5px;
+    width: 178.5px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+}
