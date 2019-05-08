@@ -9,7 +9,7 @@ const msp = (state, ownProps) => {
     let name = state.entities.users[userId].displayed_name;
     let songs = state.entities.songs;
     // debugger
-    return ({
+    return ({ 
         playlist,
         playlistId,
         name,

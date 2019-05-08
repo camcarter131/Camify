@@ -60,6 +60,9 @@ class Library extends React.Component {
                         <button id="new-playlist-btn" onClick={this.showPlaylistModal}>NEW PLAYLIST</button>
                     </div>
                 </div>
+                <div id="lib-spacing">
+                    
+                </div>
                 <Switch>
                     <ProtectedRoute exact path="/collection/playlists" component={PlaylistsContainer} />
                     <ProtectedRoute exact path="/collection/tracks" component={SongsContainer} />

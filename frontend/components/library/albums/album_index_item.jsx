@@ -7,8 +7,12 @@ class AlbumIndexItem extends React.Component {
     render() {
         const { album } = this.props;
         return (
-            <div className="song-div">
-                {album.name}
+            <div className="album-div">
+                <button className="album-btn">
+                    <img id="album-photo" src={album.photoUrl}></img>
+                </button>
+                <Link className="album-link" id="album-name-link" to={`/albums/${album.id}`}>{album.name}</Link>
+                <Link className="album-link" id="album-artist-name-link" >artist here</Link>
             </div>
         );
     }

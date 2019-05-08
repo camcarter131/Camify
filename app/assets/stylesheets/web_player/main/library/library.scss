@@ -4,14 +4,15 @@
     padding-left: $side_nav_width;
     padding-bottom: $play_bar_height;
     font-weight: bold;
-    display: flex;
+    // display: flex;
     flex-direction: column;
     height: auto;
     min-height: 911px;
     justify-content: space-around;
     align-items: center;
     color: white;
-    background:linear-gradient(270deg,rgb(129, 20, 48),rgba(100, 32, 35, 0.685));
+    // background:linear-gradient(270deg,rgb(129, 20, 48),rgba(100, 32, 35, 0.685));
+    background-image: linear-gradient(to right bottom, rgb(48, 105, 105), rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
 } 
 
 li.nav-li {
@@ -76,7 +77,9 @@ a.lib-link:hover {
     justify-content: center;
     align-items: center;
     padding: 30px;
+    padding-bottom: 20px;
     height: auto;
+    width: 70%;
 }
 
 #new-playlist-btn-div {
@@ -97,5 +100,9 @@ a.lib-link:hover {
     padding: 7px 22px;
     justify-content: center;
     font-weight: normal;
+}
+
+#lib-spacing {
+    height: 23px;
 }
 

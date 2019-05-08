@@ -8,6 +8,7 @@ import LibraryContainer from './library/library_container';
 import SideNavContainer from './side_nav/side_nav_container';
 import PlayBarContainer from './playbar/playbar_container';
 import PlaylistShowContainer from './library/playlists/playlist_show_container';
+import ArtistShowContainer from './library/artists/artist_show_container';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Search from './search/search';
@@ -26,6 +27,7 @@ const App = () => (
             <ProtectedRoute exact path="/collection/:type" component={LibraryContainer} />            
             <ProtectedRoute exact path="/search" component={Search} /> 
             <ProtectedRoute exact path="/playlists/:id" component={PlaylistShowContainer} />
+            <ProtectedRoute exact path="/artists/:id" component={ArtistShowContainer} />
 
             <AuthRoute exact path="/" component={Splash} />
 

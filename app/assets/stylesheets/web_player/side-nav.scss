@@ -8,7 +8,8 @@
   transition: 0.5s;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0,0,0,.8);
+//   background-color: rgba(0,0,0,.8);
+  background-color: rgba(0,0,0,0);
   height: calc(100vh - 90px);
 }
 
@@ -109,3 +110,4 @@ img#user-photo {
     display: flex;
     align-items: center;
 }
+

@@ -1,0 +1,49 @@
+.artist-show-div {
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 911px;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    // background: linear-gradient(270deg, #811430, rgba(100, 32, 35, 0.685));
+    background-image: linear-gradient(to right bottom, rgb(46, 39, 40), rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
+}
+
+#artist-name {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -.005em;
+    font-weight: var(--glue-font-weight-black);
+    color: #fff;
+    text-transform: none;
+    // position: relative;
+    // position: absolute;
+}
+
+#artist-show-body {
+    width: 100%;
+    padding-left: $side_nav_width;
+    padding-bottom: $play_bar_height;
+}
+
+.artist-header {
+    // background: linear-gradient(transparent -30%,#181818);
+    display: flex;
+    // background-size: cover;
+    justify-content: center;
+    padding-left: $side_nav_width;
+    padding-bottom: $play_bar_height;
+    // background-image: url()
+}
+
+#artist-show-photo {
+    // z-index: ;
+    background: linear-gradient(transparent -30%,#181818);
+    width: 100%;
+    // z-index: -1;
+    // position: absolute;
+    // position: relative;
+}

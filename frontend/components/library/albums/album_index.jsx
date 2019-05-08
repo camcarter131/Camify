@@ -20,7 +20,7 @@ class AlbumIndex extends React.Component {
         });
 
         return (
-            <div id='song-list-div'>
+            <div id='album-index-div'>
                 {albums}
             </div>
         );

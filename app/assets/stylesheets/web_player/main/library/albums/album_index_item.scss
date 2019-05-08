@@ -1,9 +1,4 @@
-
-#playlist-icon {
-    height: 64px;
-    weight: 64px;
-}
-.playlist-div{
+.album-div{
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -12,14 +7,19 @@
 
 }
 
-a.playlist-link {
+a.album-link {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     outline: none;
 }
 
-a#playlist-name-link {
+#album-photo {
+    height: 100%;
+    width: 100%;
+}
+
+a#album-name-link {
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
@@ -29,7 +29,7 @@ a#playlist-name-link {
 
 }
 
-a#user-name-link {
+a#album-artist-name-link {
     text-decoration: none;
     font-size: 14px;
     font-weight: normal;
@@ -39,10 +39,13 @@ a#user-name-link {
 
 }
 
-.playlist-btn {
+.album-btn {
     height: 212px;
     width: 212px;
+    // height: 100%;
+    // width: 100%;
     background-color: #222;
     color: #fff;
     border: none;
+    padding: 0px;
 }

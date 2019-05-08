@@ -12,7 +12,8 @@
     justify-content: space-around;
     align-items: center;
     color: white;
-    background:linear-gradient(270deg,rgb(30, 15, 112),rgba(52, 74, 145, 0.795));
+    // background:linear-gradient(270deg,rgb(30, 15, 112),rgba(52, 74, 145, 0.795));
+    background-image: linear-gradient(to right bottom, rgb(55, 29, 30), rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
 } 
 
 #home-link {
@@ -51,12 +52,4 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#nav-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    height: 12%;
 }

@@ -52,7 +52,7 @@ class PlaylistShow extends React.Component {
         if (playlist === undefined) return null;
         // console.log(this.props);
         // debugger
-        return (
+        return ( 
             <div id='playlist-show'>
                 <DeletePlaylistModalContainer handleClose={this.hideDeleteModal} playlist={playlist} remove={remove} show={this.state.show} />
                 <div id="playlist-header-all">

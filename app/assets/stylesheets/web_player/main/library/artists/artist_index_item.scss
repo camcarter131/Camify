@@ -1,9 +1,4 @@
-
-#playlist-icon {
-    height: 64px;
-    weight: 64px;
-}
-.playlist-div{
+.artist-div{
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -12,14 +7,20 @@
 
 }
 
-a.playlist-link {
+a.artist-link {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     outline: none;
 }
 
-a#playlist-name-link {
+#artist-photo {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+a#artist-name-link {
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
@@ -29,7 +30,7 @@ a#playlist-name-link {
 
 }
 
-a#user-name-link {
+a#artist-artist-name-link {
     text-decoration: none;
     font-size: 14px;
     font-weight: normal;
@@ -39,10 +40,14 @@ a#user-name-link {
 
 }
 
-.playlist-btn {
+.artist-btn {
     height: 212px;
     width: 212px;
+    // height: 100%;
+    // width: 100%;
     background-color: #222;
     color: #fff;
     border: none;
+    padding: 0px;
+    border-radius: 50%;
 }

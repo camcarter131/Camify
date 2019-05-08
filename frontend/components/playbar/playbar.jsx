@@ -6,7 +6,17 @@ const PlayBar = ({user}) => {
     if (user) {
         return (
             <div id="play-bar">
-                PlayBar
+                <div id="play-bar-left"></div>
+                <div id="play-bar-center"></div>
+                    <div id="controls">
+                        <div id="buttons">
+
+                        </div>
+                        <div id="bar">
+
+                        </div>
+                    </div>
+                <div id="play-bar-right"></div>
             </div>
         );
     } else {

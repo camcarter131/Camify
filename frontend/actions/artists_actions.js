@@ -9,7 +9,7 @@ export const receiveArtists = (artists) => ({
 });
 
 export const receiveArtist = (artist) => ({
-    type: RECEIVE_ARTIST,
+    type: RECEIVE_ARTIST, 
     artist
 });
 
