@@ -12,8 +12,8 @@
 class PlaylistSong < ApplicationRecord
     validates :song_id, :playlist_id, presence: true
 
-    has_one :song 
+    belongs_to :song 
 
-    has_one :playlist
+    belongs_to :playlist
 end
  

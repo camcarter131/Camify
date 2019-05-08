@@ -8,7 +8,7 @@ import { addSongToPlaylist } from '../../../actions/playlist_songs_actions';
 const msp = (state, ownProps) => {
     return ({
         playlists: Object.values(state.entities.playlists),
-        show: ownProps.show,  
+        show: ownProps.show,   
         song: ownProps.song,
         handleClose: ownProps.handleClose
     })

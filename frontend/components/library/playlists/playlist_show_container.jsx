@@ -7,18 +7,20 @@ const msp = (state, ownProps) => {
     let playlist = state.entities.playlists[playlistId];
     let userId = state.session.id;
     let name = state.entities.users[userId].displayed_name;
+    let songs = state.entities.songs;
     // debugger
     return ({
         playlist,
         playlistId,
-        name
+        name,
+        songs
     })
 };
 
 const mdp = dispatch => {
     return ({
         receivePlaylist: id => dispatch(receivePlaylist(id)),
-        remove: id => dispatch(remove(id))
+        remove: id => dispatch(remove(id)),
     });
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import DeletePlaylistModalContainer from '../delete_playlist_modal/delete_playlist_modal_container';
 import Playlists from './playlists';
+import PlaylistSongs from './playlist_songs';
 
 class PlaylistShow extends React.Component {
 
@@ -19,6 +20,7 @@ class PlaylistShow extends React.Component {
 
     componentDidMount() {
         this.props.receivePlaylist(this.props.playlistId)
+        // this.props.receiveAllPlaylistSongs();
         // debugger
     } 
 
@@ -42,10 +44,14 @@ class PlaylistShow extends React.Component {
     hideDeleteModal() {
         this.setState({ show: false });
     }
-
+ 
     render() {
-        const { playlist, name, remove } = this.props;
+        // debugger
+        const { songs, playlist, name, remove } = this.props;
+        if (songs === undefined) return null;
         if (playlist === undefined) return null;
+        // console.log(this.props);
+        // debugger
         return (
             <div id='playlist-show'>
                 <DeletePlaylistModalContainer handleClose={this.hideDeleteModal} playlist={playlist} remove={remove} show={this.state.show} />
@@ -85,10 +91,8 @@ class PlaylistShow extends React.Component {
                             
                         </div>
                     </div>
-                </div>
-                <div id="playlist-songs">
-                    songs
-                </div>
+                </div>       
+                <PlaylistSongs songs={songs}/>
             </div>
         )
     }

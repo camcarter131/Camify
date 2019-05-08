@@ -10,7 +10,7 @@ class Songs extends React.Component {
     componentDidMount() {
         this.props.receiveAllSongs();
     }
-
+ 
 
     render() {
         const songs = this.props.songs.map(song => {

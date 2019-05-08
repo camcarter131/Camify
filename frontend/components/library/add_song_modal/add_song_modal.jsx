@@ -8,9 +8,11 @@ class AddSongModal extends React.Component {
 
     componentDidMount() {
         this.props.receiveAllPlaylists();
-    }
+    } 
 
     render() { 
+        // if (this.props.playlists.length === 0) return null;
+      
         const playlists = this.props.playlists.map(playlist => {
             return (
                 <PlaylistInModalContainer

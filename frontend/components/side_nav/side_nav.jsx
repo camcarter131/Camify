@@ -39,8 +39,10 @@ class SideNav extends React.Component {
                         <Link to="/login" onClick={logout}>Logout</Link>
                     </div>
                     <div id="avatar-div">
-                        <div>Avatar&nbsp;</div>
-                        <span>{user.displayed_name}</span>
+                        <div id="user-photo"><img id="user-photo" src={user.photoUrl}></img>&nbsp;</div>
+                        <div id="user-name">
+                            {user.displayed_name}
+                        </div>
                     </div>
                 </div>
             );

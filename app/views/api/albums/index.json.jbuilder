@@ -1,0 +1,1 @@
+json.partial! "api/albums/albums", albums: @albums 

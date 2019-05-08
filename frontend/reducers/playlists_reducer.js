@@ -14,7 +14,7 @@ export const playlistsReducer = (state = {}, action) => {
         case RECEIVE_PLAYLISTS:
             return merge({}, state, action.playlists)
         case RECEIVE_PLAYLIST:
-            nextState[action.playlist.id] = action.playlist;
+            nextState[action.payload.playlist.id] = action.payload.playlist;
             return nextState;
         default: 
             return state;

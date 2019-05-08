@@ -92,5 +92,20 @@
     color: #FFFFFF;
     border-top: 1px solid #404040;
     padding: 15px 24px;
+    // height: 20%;
 }
 
+img#user-photo {
+    border-radius: 50%;
+}
+
+#user-photo {
+    height: 80px;
+    width: 120px;
+    
+}
+
+#user-name {
+    display: flex;
+    align-items: center;
+}

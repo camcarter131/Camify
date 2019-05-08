@@ -11,7 +11,7 @@ export const removeSongFromPlaylist = id => (
         url: `api/playlist_songs/${id}`,
         method: "DELETE"
     })
-);
+); 
 
 export const receiveAllPlaylistSongs = () => (
     $.ajax({
@@ -19,4 +19,5 @@ export const receiveAllPlaylistSongs = () => (
         method: "GET"
     })
 );
+
 

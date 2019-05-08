@@ -6,14 +6,13 @@ export const playlistSongsReducer = (state = {}, action) => {
     const nextState = merge({}, state);
     switch (action.type) {
         case ADD_SONG:
-            // debugger
             nextState[action.playlistSong.id] = action.playlistSong;
             return nextState;
         case REMOVE_SONG:
             delete nextState[action.id];
             return nextState;
         case RECEIVE_PLAYLIST_SONGS:
-            return merge({}, state, action.playlistSongs)
+            return merge(nextState, action.playlistSongs)
         default:
             return state;
     }
