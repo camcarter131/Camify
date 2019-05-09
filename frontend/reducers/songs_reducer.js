@@ -6,9 +6,11 @@ export const songsReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_SONGS:
-            return merge({}, state, action.songs)
+            // return merge({}, state, action.songs)
+            return action.songs;
         case RECEIVE_PLAYLIST:
-            return merge({}, state, action.payload.songs)
+            // return merge({}, state, action.payload.songs)
+            return action.payload.songs || {};
         default:
             return state;
     } 

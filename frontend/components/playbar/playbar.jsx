@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 
 const PlayBar = ({ user, song, isPlaying, playSong }) => {
-
+    let audio = document.getElementById("react-player");
     if (user) { 
         return (
             <div id="play-bar">
-                {isPlaying ? (<ReactPlayer id="react-player" url= {song.songFile} playing />
+                {isPlaying ? (<ReactPlayer id="react-player" url= {song.songFile} playing={isPlaying} 
+                    controls={true} playbackRate={1} loop={true}
+                />
                 ) : 
                     (null)
                 }

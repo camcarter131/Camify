@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Song from './song';
+import SongIndexItem from './song_index_item';
 
-class Songs extends React.Component { 
+class SongIndex extends React.Component { 
     constructor(props) {
         super(props);
     }
@@ -10,13 +10,12 @@ class Songs extends React.Component {
     componentDidMount() {
         this.props.receiveAllSongs();
     }
- 
 
     render() {
         const { playSong } = this.props;
-        const songs = this.props.songs.map(song => {
+        const songs = this.props.songs.map(song => { 
             return (
-                <Song
+                <SongIndexItem
                     key={song.id}
                     song={song}
                     playSong={playSong}
@@ -32,4 +31,4 @@ class Songs extends React.Component {
     }
 };
 
-export default Songs;
+export default SongIndex;

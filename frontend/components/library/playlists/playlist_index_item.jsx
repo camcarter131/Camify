@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Playlist = ({ playlist, remove, name }) => { 
+const PlaylistIndexItem = ({ playlist, remove, name }) => { 
     return ( 
         <div className="playlist-div">
             <button className="playlist-btn">
@@ -10,10 +10,16 @@ const Playlist = ({ playlist, remove, name }) => {
                     </path>
                 </svg>
             </button>
+            {/* <button class="cover-art-playback" dir="ltr"><svg class="icon-play" viewBox="0 0 85 100">
+                    <path fill="currentColor" d="M81 44.6c5 3 5 7.8 0 10.8L9 98.7c-5 3-9 .7-9-5V6.3c0-5.7 4-8 9-5l72 43.3z">
+                        <title>PLAY</title>
+                    </path>
+                </svg>
+            </button> */}
             <Link className="playlist-link" id="playlist-name-link" to={`/playlists/${playlist.id}`}>{playlist.name}</Link>
             <Link className="playlist-link" id="user-name-link" >{name}</Link>
         </div>
     );
 };
 
-export default Playlist; 
+export default PlaylistIndexItem; 

@@ -37,6 +37,7 @@
     justify-content: space-between;
     padding: 0 24px;
     flex-direction: column;
+    height: auto;
 
 }
 
@@ -45,6 +46,9 @@
     display: flex;
     align-items: center;
     padding: 0 24px;
+    padding-top: 24px;
+    height: auto;
+    padding-bottom: 18px;
 }
 
 #Camify-logged-in{
@@ -74,6 +78,9 @@
     display: flex;
     align-items: flex-end;
     padding: 0 24px;
+    padding-top: 100%;
+    height: auto;
+    // flex-grow: 1;
 }
 
 #logout-div a{
@@ -94,7 +101,12 @@
     color: #FFFFFF;
     border-top: 1px solid #404040;
     padding: 15px 24px;
-    // height: 20%;
+    height: auto;
+    // margin-bottom: auto;
+    // flex-grow: 1;
+    // position: fixed;
+    // // left: 0;
+    // bottom: $play_bar_height;
 }
 
 img#user-photo {
@@ -102,8 +114,8 @@ img#user-photo {
 }
 
 #user-photo {
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     
 }
 
@@ -113,3 +125,76 @@ img#user-photo {
     padding-left: 7px;
 }
 
+.ellipsis-one-line {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 1px;
+    margin-right: -1px;
+    font-size: 14px;
+    font-weight: normal;
+    height: auto;
+    padding-top: 8px;
+    width: 170px;
+    display: block;
+    line-height: normal;
+}
+
+#recently-played {
+    background: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+    width: $side_nav_width;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    height: auto;
+    flex-direction: column;
+    padding-top: 35px;
+    padding-bottom: 80px;
+
+}
+
+#recently-played-header {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: .015em;
+    font-weight: normal;
+    color: #b3b3b3;
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    color: #fff;
+    opacity: .6;
+    padding-top: 1px;
+    display: block;
+}
+
+.recently-played-type {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: .015em;
+    font-weight: normal;
+    color: #b3b3b3;
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    color: #fff;
+    opacity: .6;
+    padding-top: 3px;
+    display: block;
+
+}
+
+
+.side-nav-link {
+    height: 40px;
+    display: flex;
+}
+
+.icon-img {
+    padding-top: 10px;
+}
+
+.recently-played-item {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: auto;
+}

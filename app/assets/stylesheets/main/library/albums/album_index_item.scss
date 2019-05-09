@@ -1,26 +1,35 @@
-.artist-div{
+.album-div{
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     padding-bottom: 30px;
-
+    -webkit-filter: brightness(100%);
 }
 
-a.artist-link {
+.album-div:hover {
+    -webkit-filter: brightness(70%);
+    transition: all .2s ease;
+}
+
+
+
+
+a.album-link {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     outline: none;
 }
 
-#artist-photo {
+#album-photo {
     height: 100%;
     width: 100%;
-    border-radius: 50%;
 }
 
-a#artist-name-link {
+
+
+a#album-name-link {
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
@@ -30,7 +39,7 @@ a#artist-name-link {
 
 }
 
-a#artist-artist-name-link {
+a#album-artist-name-link {
     text-decoration: none;
     font-size: 14px;
     font-weight: normal;
@@ -40,7 +49,7 @@ a#artist-artist-name-link {
 
 }
 
-.artist-btn {
+.album-btn {
     height: 212px;
     width: 212px;
     // height: 100%;
@@ -49,5 +58,11 @@ a#artist-artist-name-link {
     color: #fff;
     border: none;
     padding: 0px;
-    border-radius: 50%;
+    -webkit-filter: brightness(100%);
+    box-shadow: 3px 3px 15px rgb(0, 0, 0);
+}
+
+.playlist-btn:hover {
+    -webkit-filter: brightness(70%);
+    transition: all .2s ease;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SongsContainer from './songs/songs_container';
-import PlaylistsContainer from './playlists/playlists_container';
+import SongIndexContainer from './songs/song_index_container';
+import PlaylistIndexContainer from './playlists/playlist_index_container';
 import PlaylistModalContainer from './playlist_modal/playlist_modal_container'
 import ArtistIndexContainer from './artists/artist_index_container';
 import AlbumIndexContainer from './albums/album_index_container';
@@ -64,8 +64,8 @@ class Library extends React.Component {
                     
                 </div>
                 <Switch>
-                    <ProtectedRoute exact path="/collection/playlists" component={PlaylistsContainer} />
-                    <ProtectedRoute exact path="/collection/tracks" component={SongsContainer} />
+                    <ProtectedRoute exact path="/collection/playlists" component={PlaylistIndexContainer} />
+                    <ProtectedRoute exact path="/collection/tracks" component={SongIndexContainer} />
                     <ProtectedRoute exact path="/collection/artists" component={ArtistIndexContainer} />
                     <ProtectedRoute exact path="/collection/albums" component={AlbumIndexContainer} />
                 </Switch>

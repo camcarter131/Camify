@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Songs from './songs';
+import SongIndex from './song_index';
 import { receiveAllSongs } from '../../../actions/songs_actions';
 import { playSong } from '../../../actions/UI_actions';
 
@@ -12,4 +12,4 @@ const mdp = dispatch => ({
     playSong: (song) => dispatch(playSong(song))
 });
 
-export default connect(msp, mdp)(Songs);
+export default connect(msp, mdp)(SongIndex);

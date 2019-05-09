@@ -3,12 +3,30 @@ import PlaylistInModalContainer from '../add_song_modal/playlist_in_modal_contai
 
 class AddSongModal extends React.Component {
     constructor(props) {
-        super(props)
+        super(props) 
+        this.state = {getPlaylists: false};
+    } 
+
+    // shouldComponentUpdate(nextProps) {
+    //     // debugger
+    //     return (nextProps.show != this.props.show)
+    // }
+
+    // component
+
+    componentDidMount() {
+        // if (this.state.getPlaylists) 
+        this.props.receiveAllPlaylists();
     }
 
-    shouldComponentUpdate(nextProps) {
-        (nextProps.show === true) ? this.props.receiveAllPlaylists() : null;
-    }
+    // componentDidUpdate(prevProps) {
+    //     // debugger
+    //     // this.props.receiveAllPlaylists();
+    //     if (this.props.show) this.setState({getPlaylists: true})
+
+    //     // console.log(this.props.playlists);
+    //     // if (this.props.show) {
+    // }
 
     render() { 
         // if (this.props.playlists.length === 0) return null;

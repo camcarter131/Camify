@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import AddSongModalContainer from '../add_song_modal/add_song_modal_container';
 import ReactPlayer from 'react-player';
 
-class Song extends React.Component{ 
+class SongIndexItem extends React.Component{ 
 
     constructor(props) {
         super(props);
@@ -11,7 +11,7 @@ class Song extends React.Component{
             show: false,
             displayMenu: false,
             play: false
-        };
+        }; 
  
         this.showDropdownMenu = this.showDropdownMenu.bind(this);
         this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
@@ -58,10 +58,15 @@ class Song extends React.Component{
         const { song, playSong } = this.props;
         return (
             <div className="song-div">
-                <AddSongModalContainer song={song} show={this.state.show} handleClose={this.hideModal} />
-                <button className="song-play-btn" onClick={() => playSong(song)}>Play/Pause</button>               
-                {song.name}
-                <button onClick={this.showDropdownMenu} className="song-ellipses">&hellip;</button>
+                {(this.state.show) ? <AddSongModalContainer song={song} show={this.state.show} handleClose={this.hideModal} />: null}
+                
+                <button className="song-play-btn" onClick={() => playSong(song)}></button>     
+                <div id="song-name">   
+                    {song.name}
+                </div>          
+                <div id="song-ellipses-div">
+                    <button onClick={this.showDropdownMenu} className="song-ellipses">&hellip;</button>
+                </div>
                 {this.state.displayMenu ? (
                     <div className="dropdown">
                         <a onClick={this.showModal} className="dropdown">Add to playlist</a>
@@ -75,4 +80,4 @@ class Song extends React.Component{
     }
 }
 
-export default Song; 
+export default SongIndexItem; 

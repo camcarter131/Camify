@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Playlist from './playlist';
+import PlaylistIndexItem from './playlist_index_item';
 
-class Playlists extends React.Component {
+class PlaylistIndex extends React.Component {
 
     componentWillMount() { 
         this.props.receiveAllPlaylists();
@@ -12,7 +12,7 @@ class Playlists extends React.Component {
         
         const playlists = this.props.playlists.map(playlist => {
             return ( 
-                <Playlist
+                <PlaylistIndexItem
                     key={playlist.id}
                     playlist={playlist}
                     remove={this.props.remove}
@@ -29,4 +29,4 @@ class Playlists extends React.Component {
     }
 };
 
-export default Playlists;
+export default PlaylistIndex;

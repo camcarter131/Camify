@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Playlists from './playlists';
+import PlaylistIndex from './playlist_index';
 import { receiveAllPlaylists, remove } from '../../../actions/playlists_actions';
 
 const msp = state => {
@@ -17,4 +17,4 @@ const mdp = dispatch => ({
     remove: id => dispatch(remove(id))
 });
 
-export default connect(msp, mdp)(Playlists); 
+export default connect(msp, mdp)(PlaylistIndex); 

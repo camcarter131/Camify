@@ -1,7 +1,9 @@
 import React from 'react';
 import DeletePlaylistModalContainer from '../delete_playlist_modal/delete_playlist_modal_container';
-import Playlists from './playlists';
+import PlaylistIndex from './playlist_index';
 import PlaylistSongs from './playlist_songs';
+// import BeatLoader from 'react-spinners/BeatLoader';
+import GridLoader from 'react-spinners/GridLoader';
 
 class PlaylistShow extends React.Component {
 
@@ -19,9 +21,8 @@ class PlaylistShow extends React.Component {
     };
 
     componentDidMount() {
+        // debugger
         this.props.receivePlaylist(this.props.playlistId)
-        // this.props.receiveAllPlaylistSongs();
-        // debugger 
     } 
 
     showDropdownMenu(e) {
@@ -47,11 +48,18 @@ class PlaylistShow extends React.Component {
  
     render() {
         // debugger
-        const { songs, playlist, name, remove } = this.props;
+        const { songs, playlist, name, remove, playSong, loading } = this.props;
+        // debugger
+        if (loading) return (
+            <div id="loader">
+                <GridLoader id="beatloader"
+                    color={'#DFE2E1'}
+                    loading={loading} />
+            </div>
+        );
         if (songs === undefined) return null;
         if (playlist === undefined) return null;
-        // console.log(this.props);
-        // debugger
+        let num_songs = Object.values(songs).length;
         return ( 
             <div id='playlist-show'>
                 <DeletePlaylistModalContainer handleClose={this.hideDeleteModal} playlist={playlist} remove={remove} show={this.state.show} />
@@ -72,7 +80,11 @@ class PlaylistShow extends React.Component {
                             <span id='by'>By&nbsp;</span><span id='author'>{name}</span>
                         </div>
                         <div id='playlist-show-info'>
-                            <span>0 SONGS</span>
+                            <span>
+                                {(num_songs != 1) ? 
+                                    `${num_songs} SONGS` :
+                                    `${num_songs} SONG`}
+                            </span>
                         </div>
                         <div id='playlist-show-buttons'>
                             <button id="playlist-play-btn">PLAY</button>
@@ -92,7 +104,7 @@ class PlaylistShow extends React.Component {
                         </div>
                     </div>
                 </div>       
-                <PlaylistSongs songs={songs}/>
+                <PlaylistSongs songs={songs} playSong={playSong} />
             </div>
         )
     }

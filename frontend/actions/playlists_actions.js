@@ -4,6 +4,7 @@ export const CREATE_PLAYLIST = 'CREATE_PLAYLIST';
 export const REMOVE_PLAYLIST = 'REMOVE_PLAYLIST';
 export const RECEIVE_PLAYLISTS = 'RECEIVE_PLAYLISTS';
 export const RECEIVE_PLAYLIST = 'RECEIVE_PLAYLIST';
+export const START_LOADING = 'START_LOADING';
 
 // export const REMOVE_SONG = 'REMOVE_SONG';
 // export const ADD_SONG = 'ADD_SONG';
@@ -30,6 +31,10 @@ export const receiveOnePlaylist = (payload) => ({
     payload
 });
 
+export const startLoading = () => ({
+    type: START_LOADING
+});
+
 // -------------------------------------------------------------- //
 
 export const create = playlist => dispatch => (
@@ -44,6 +49,7 @@ export const receiveAllPlaylists = () => dispatch => (
     PlaylistsAPIUtil.receiveAllPlaylists().then(playlists => dispatch(receivePlaylists(playlists)))
 );
 
-export const receivePlaylist = id => dispatch => (
-    PlaylistsAPIUtil.receivePlaylist(id).then(playlist => dispatch(receiveOnePlaylist(playlist)))
-)
+export const receivePlaylist = id => dispatch => {
+    dispatch(startLoading()); 
+    return PlaylistsAPIUtil.receivePlaylist(id).then(playlist => dispatch(receiveOnePlaylist(playlist)))
+}

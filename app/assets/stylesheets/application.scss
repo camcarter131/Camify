@@ -7,26 +7,25 @@
 @import "./greeting/greeting";
 @import "./static_pages";
 @import "./errors";
-@import "./web_player/main/home/home.scss";
-@import "./web_player/web_player.scss";
-@import "./web_player/main/library/library.scss";
-@import "./web_player/main/library/songs/song.scss";
-@import "./web_player/main/library/songs/songs.scss";
-@import "./web_player/main/library/playlists/playlists.scss";
-@import "./web_player/main/library/playlists/playlist.scss";
-@import "./web_player/main/library/playlists/playlist_show.scss";
-@import "./web_player/main/library/add_song_modal/playlist_in_modal.scss";
-@import "./web_player/main/library/add_song_modal/add_song_modal.scss";
-@import "./web_player/main/search.scss";
-@import "./web_player/play_bar.scss";
-@import "./web_player/side-nav.scss";
-@import "./web_player/main/library/playlist_modal/playlist_modal.scss";
-@import "./web_player/main/library/artists/artist_show.scss";
-@import "./web_player/main/library/artists/artist_index.scss";
-@import "./web_player/main/library/artists/artist_index_item.scss";
-@import "./web_player/main/library/albums/album_show.scss";
-@import "./web_player/main/library/albums/album_index.scss";
-@import "./web_player/main/library/albums/album_index_item.scss";
+@import "./main/home/home.scss";
+@import "./main/library/library.scss";
+@import "./main/library/songs/song_index_item.scss";
+@import "./main/library/songs/song_index.scss";
+@import "./main/library/playlists/playlist_index.scss";
+@import "./main/library/playlists/playlist_index_item.scss";
+@import "./main/library/playlists/playlist_show.scss";
+@import "./main/library/add_song_modal/playlist_in_modal.scss";
+@import "./main/library/add_song_modal/add_song_modal.scss";
+@import "./main/search.scss";
+@import "./play_bar.scss";
+@import "./side-nav.scss";
+@import "./main/library/playlist_modal/playlist_modal.scss";
+@import "./main/library/artists/artist_show.scss";
+@import "./main/library/artists/artist_index.scss";
+@import "./main/library/artists/artist_index_item.scss";
+@import "./main/library/albums/album_show.scss";
+@import "./main/library/albums/album_index.scss";
+@import "./main/library/albums/album_index_item.scss";
 
 
 
