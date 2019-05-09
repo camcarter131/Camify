@@ -14,9 +14,11 @@ class Song < ApplicationRecord
     validates :name, :album_id, :duration, presence: true
 
     belongs_to :album
-
+ 
     has_many :playlists,
     through: :playlist_song
+
+    has_one_attached :song_file
 
 end
  

@@ -9,7 +9,7 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
-
+ 
 class Album < ApplicationRecord
     validates :name, :artist_id, :release_year, presence: true
 

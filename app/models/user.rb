@@ -11,7 +11,7 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #
-
+ 
 class User < ApplicationRecord
     validates :username, :displayed_name, :email, :password_digest, :session_token, presence: true
     validates :username, :email, uniqueness: true

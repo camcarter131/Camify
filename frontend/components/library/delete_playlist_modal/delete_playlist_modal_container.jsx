@@ -7,7 +7,7 @@ import { create } from '../../../actions/playlists_actions';
 const msp = (state, ownProps) => {
     return ({
         show: ownProps.show,
-        playlist: ownProps.playlist,
+        playlist: ownProps.playlist, 
         remove: ownProps.remove,
         handleClose: ownProps.handleClose
     })

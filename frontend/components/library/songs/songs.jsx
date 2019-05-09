@@ -13,11 +13,13 @@ class Songs extends React.Component {
  
 
     render() {
+        const { playSong } = this.props;
         const songs = this.props.songs.map(song => {
             return (
                 <Song
                     key={song.id}
                     song={song}
+                    playSong={playSong}
                  />
             );
         });

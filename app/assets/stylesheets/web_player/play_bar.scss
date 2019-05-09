@@ -10,4 +10,38 @@
     padding: 0 16px;
     display: flex;
     justify-content: space-between;
+    border-top: 1px solid #000;
+}
+
+#buttons {
+    display: flex;
+    align-items: center;
+    
+}
+
+.control-button#play {
+    background-image: image-url("play6.jpg");
+    // background: transparent;
+    background-size: contain;
+    height: 32px;
+    width: 32px;
+    z-index: 1;
+    border-radius: 50%;
+}  
+
+#react-player {
+    display: none;
+    visibility: hidden;
+}
+
+#play-bar-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#play-bar-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

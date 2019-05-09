@@ -1,17 +1,7 @@
- li.song-li {
-    
-    padding: 10px;
-    width: 100%;
-    list-style-type: none;
-    font-size: 16px;
-    font-weight: normal;
-}
-
-.song-div{
+ .song-div{
     display: flex;
     color: #FFFFFF;
     align-content: center;
-    // justify-content: center;
     height: auto;
     padding: 10px;
     width: 100%;
@@ -22,6 +12,12 @@
 .song-div:hover {
     background-color: rgba(0,0,0,.6);
     transition: .4s;
+}
+.song-div .song-play-btn {
+    display: none;
+}
+.song-div:hover .song-play-btn {
+    display: inline;
 }
 
 

@@ -4,7 +4,7 @@ class DeletePlaylistModal extends React.Component {
     constructor(props) {
         super(props) 
         this.handleDelete = this.handleDelete.bind(this);
-    }
+    } 
 
     handleDelete(e) {
         e.preventDefault();

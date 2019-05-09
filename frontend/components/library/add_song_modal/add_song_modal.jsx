@@ -6,9 +6,9 @@ class AddSongModal extends React.Component {
         super(props)
     }
 
-    componentDidMount() {
-        this.props.receiveAllPlaylists();
-    } 
+    shouldComponentUpdate(nextProps) {
+        (nextProps.show === true) ? this.props.receiveAllPlaylists() : null;
+    }
 
     render() { 
         // if (this.props.playlists.length === 0) return null;

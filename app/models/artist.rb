@@ -9,7 +9,7 @@
 #  updated_at  :datetime         not null
 #
 
-class Artist < ApplicationRecord 
+class Artist < ApplicationRecord  
     validates :name, presence: true
 
     has_many :albums

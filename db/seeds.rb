@@ -4,9 +4,13 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   Character.create(name: 'Luke', movie: movies.first) 
 
-# User.create(username: 'harden13', password: 'password', displayed_name: 'James Harden', email: 'the_beard@rockets.com')
+User.create(username: 'harden13', password: 'password', displayed_name: 'James Harden', email: 'the_beard@rockets.com')
+
+harden = User.find_by(username: 'harden13')
+
+harden.photo.attach(io: File.open("/Users/cameroncarter/Downloads/harden.jpg"), filename:"harden.jpg")
 
 ##########################################################################
 #_________________________________ARTISTS________________________________#
@@ -15,6 +19,21 @@
 
 Artist.create(name: 'Stevie Ray Vaughan', description: 'Guitarist from Texas')
 Artist.create(name: 'Lil Wayne', description: 'Rapper from New Orleans')
+Artist.create(name: 'Jimi Hendrix', description: 'Guitarist from Seattle')
+
+srv = Artist.find_by(name: 'Stevie Ray Vaughan')
+lw = Artist.find_by(name: 'Lil Wayne')
+jimi = Artist.find_by(name: 'Jimi Hendrix')
+
+srv.photo.attach(io: File.open("/Users/cameroncarter/Downloads/artist_photos/srv_artist_photo2.jpg"), filename:"srv_artist_photo2.jpg")
+srv.index_photo.attach(io: File.open("/Users/cameroncarter/Downloads/artist_photos/srv_artist_photo.jpg"), filename:"srv_artist_photo.jpg")
+
+lw.photo.attach(io: File.open("/Users/cameroncarter/Downloads/artist_photos/lil_wayne_artist_photo.jpeg"), filename:"lil_wayne_artist_photo.jpeg")
+lw.index_photo.attach(io: File.open("/Users/cameroncarter/Downloads/artist_photos/lw.jpg"), filename:"lw.jpg")
+
+jimi.photo.attach(io: File.open("/Users/cameroncarter/Downloads/artist_photos/jimi.jpg"), filename:"jimi.jpg")
+jimi.index_photo.attach(io: File.open("/Users/cameroncarter/Downloads/artist_photos/jimi_index.jpg"), filename:"jimi_index.jpg")
+
 
 ##########################################################################
 #__________________________________AlBUMS________________________________#
@@ -24,7 +43,17 @@ Artist.create(name: 'Lil Wayne', description: 'Rapper from New Orleans')
 Album.create(name: "Texas Flood", artist_id: Artist.find_by(name: 'Stevie Ray Vaughan').id, release_year: 1983)
 Album.create(name: "Soul to Soul", artist_id: Artist.find_by(name: 'Stevie Ray Vaughan').id, release_year: 1985)
 Album.create(name: "Tha Carter III", artist_id: Artist.find_by(name: 'Lil Wayne').id, release_year: 2008)
-Album.create(name: "Rebirth", artist_id: Artist.find_by(name: 'Lil Wayne').id, release_year: 2010)
+Album.create(name: "Electric Ladyland", artist_id: Artist.find_by(name: 'Jimi Hendrix').id, release_year: 1968)
+
+tf = Album.find_by(name: 'Texas Flood')
+ss = Album.find_by(name: 'Soul to Soul')
+tc = Album.find_by(name: 'Tha Carter III')
+el = Album.find_by(name: 'Electric Ladyland')
+
+tf.photo.attach(io: File.open("/Users/cameroncarter/Downloads/album_photos/tf.jpeg"), filename:"tf.jpeg")
+ss.photo.attach(io: File.open("/Users/cameroncarter/Downloads/album_photos/ss.jpg"), filename:"ss.jpg")
+tc.photo.attach(io: File.open("/Users/cameroncarter/Downloads/album_photos/tc.jpg"), filename:"tc.jpg")
+el.photo.attach(io: File.open("/Users/cameroncarter/Downloads/album_photos/el.jpg"), filename:"el.jpg")
 
 ##########################################################################
 #___________________________________SONGS________________________________#
@@ -32,57 +61,68 @@ Album.create(name: "Rebirth", artist_id: Artist.find_by(name: 'Lil Wayne').id, r
 ##########################################################################
 
 ## - Texas Flood - ##
-Song.create(name: 'Love Struck Baby', album_id: Album.find_by(name: 'Texas Flood').id, duration: 144)
-Song.create(name: 'Pride and Joy', album_id: Album.find_by(name: 'Texas Flood').id, duration: 220)
 Song.create(name: 'Texas Flood', album_id: Album.find_by(name: 'Texas Flood').id, duration: 321)
-Song.create(name: 'Tell Me', album_id: Album.find_by(name: 'Texas Flood').id, duration: 169)
+Song.create(name: 'Pride and Joy', album_id: Album.find_by(name: 'Texas Flood').id, duration: 220)
 Song.create(name: 'Testify', album_id: Album.find_by(name: 'Texas Flood').id, duration: 205)
 Song.create(name: 'Rude Mood', album_id: Album.find_by(name: 'Texas Flood').id, duration: 280)
-Song.create(name: 'Mary Had a Little Lamb', album_id: Album.find_by(name: 'Texas Flood').id, duration: 167)
-Song.create(name: 'Dirty Pool', album_id: Album.find_by(name: 'Texas Flood').id, duration: 302)
-Song.create(name: "I'm Cryin", album_id: Album.find_by(name: 'Texas Flood').id, duration: 222)
-Song.create(name: 'Lenny', album_id: Album.find_by(name: 'Texas Flood').id, duration: 298)
+
+TF = Song.find_by(name: 'Texas Flood')
+PJ = Song.find_by(name: 'Pride and Joy')
+T = Song.find_by(name: 'Testify')
+RM = Song.find_by(name: 'Rude Mood')
+
+TF.song_file.attach(io: File.open("/Users/cameroncarter/Downloads/songs/texas_flood.mp3"), filename:"texas_flood.mp3")
+PJ.song_file.attach(io: File.open("/Users/cameroncarter/Downloads/songs/PJ.mp3"), filename:"PJ.mp3")
+T.song_file.attach(io: File.open("/Users/cameroncarter/Downloads/songs/T.mp3"), filename:"T.mp3")
+RM.song_file.attach(io: File.open("/Users/cameroncarter/Downloads/songs/RM.mp3"), filename:"RM.mp3")
 
 ## - Soul to Soul - ##
 Song.create(name: 'Say What!', album_id: Album.find_by(name: 'Soul to Soul').id, duration: 323)
-Song.create(name: "Lookin' Out the Window", album_id: Album.find_by(name: 'Soul to Soul').id, duration: 168)
-Song.create(name: 'Look at Little Sister', album_id: Album.find_by(name: 'Soul to Soul').id, duration: 188)
 Song.create(name: "Ain't Gone 'n' Give Up on Love", album_id: Album.find_by(name: 'Soul to Soul').id, duration: 367)
-Song.create(name: 'Gone Home', album_id: Album.find_by(name: 'Soul to Soul').id, duration: 205)
 Song.create(name: 'Change It', album_id: Album.find_by(name: 'Soul to Soul').id, duration: 280)
-Song.create(name: "You'll Be Mine", album_id: Album.find_by(name: 'Soul to Soul').id, duration: 167)
-Song.create(name: 'Empty Arms', album_id: Album.find_by(name: 'Soul to Soul').id, duration: 302)
-Song.create(name: "Come On (Part III)", album_id: Album.find_by(name: 'Soul to Soul').id, duration: 222)
 Song.create(name: 'Life Without You', album_id: Album.find_by(name: 'Soul to Soul').id, duration: 298)
+
+SW = Song.find_by(name: 'Say What!')
+AGGL = Song.find_by(name: "Ain't Gone 'n' Give Up on Love")
+CI = Song.find_by(name: 'Change It')
+LWY = Song.find_by(name: 'Life Without You')
+
+SW.song_file.attach(io: File.open("/Users/cameroncarter/Downloads/songs/SW.mp3"), filename:"SW.mp3")
+AGGL.song_file.attach(io: File.open("/Users/cameroncarter/Downloads/songs/AGGL.mp3"), filename:"AGGL.mp3")
+CI.song_file.attach(io: File.open("/Users/cameroncarter/Downloads/songs/CI.mp3"), filename:"CI.mp3")
+LWY.song_file.attach(io: File.open("/Users/cameroncarter/Downloads/songs/LWY.mp3"), filename:"LWY.mp3")
 
 ## - Tha Carter III - ##
 Song.create(name: '3 Peat', album_id: Album.find_by(name: 'Tha Carter III').id, duration: 144)
 Song.create(name: 'Mr. Carter', album_id: Album.find_by(name: 'Tha Carter III').id, duration: 220)
 Song.create(name: 'A Milli', album_id: Album.find_by(name: 'Tha Carter III').id, duration: 321)
-Song.create(name: 'Got Money', album_id: Album.find_by(name: 'Tha Carter III').id, duration: 169)
-Song.create(name: 'Comfortable', album_id: Album.find_by(name: 'Tha Carter III').id, duration: 205)
-Song.create(name: 'Dr. Carter', album_id: Album.find_by(name: 'Tha Carter III').id, duration: 280)
-Song.create(name: 'Phone Home', album_id: Album.find_by(name: 'Tha Carter III').id, duration: 167)
-Song.create(name: 'Tie My Hands', album_id: Album.find_by(name: 'Tha Carter III').id, duration: 302)
 Song.create(name: "Mrs. Officer", album_id: Album.find_by(name: 'Tha Carter III').id, duration: 222)
-Song.create(name: 'Let the Beat Build', album_id: Album.find_by(name: 'Tha Carter III').id, duration: 298)
-Song.create(name: 'Shoot Me Down', album_id: Album.find_by(name: 'Tha Carter III').id, duration: 205)
-Song.create(name: 'Lollipop', album_id: Album.find_by(name: 'Tha Carter III').id, duration: 280)
-Song.create(name: 'La La', album_id: Album.find_by(name: 'Tha Carter III').id, duration: 167)
-Song.create(name: 'Playing With Fire', album_id: Album.find_by(name: 'Tha Carter III').id, duration: 302)
-Song.create(name: "You Ain't Got Nuthin", album_id: Album.find_by(name: 'Tha Carter III').id, duration: 222)
-Song.create(name: 'Dontgetit', album_id: Album.find_by(name: 'Tha Carter III').id, duration: 298)
 
-## - Rebirth - ##
-Song.create(name: 'American Star', album_id: Album.find_by(name: 'Rebirth').id, duration: 323)
-Song.create(name: "Prom Queen", album_id: Album.find_by(name: 'Rebirth').id, duration: 168)
-Song.create(name: 'Ground Zero', album_id: Album.find_by(name: 'Rebirth').id, duration: 188)
-Song.create(name: "Da Da Da", album_id: Album.find_by(name: 'Rebirth').id, duration: 367)
-Song.create(name: 'Paradice', album_id: Album.find_by(name: 'Rebirth').id, duration: 205)
-Song.create(name: 'Get a Life', album_id: Album.find_by(name: 'Rebirth').id, duration: 280)
-Song.create(name: "On Fire", album_id: Album.find_by(name: 'Rebirth').id, duration: 167)
-Song.create(name: 'Drop the World', album_id: Album.find_by(name: 'Rebirth').id, duration: 302)
-Song.create(name: "Runnin", album_id: Album.find_by(name: 'Rebirth').id, duration: 222)
-Song.create(name: 'One Way Trip', album_id: Album.find_by(name: 'Rebirth').id, duration: 298)
-Song.create(name: "Knockout", album_id: Album.find_by(name: 'Rebirth').id, duration: 222)
-Song.create(name: 'The Price is Wrong', album_id: Album.find_by(name: 'Rebirth').id, duration: 298)
+ThreeP = Song.find_by(name: '3 Peat')
+MC = Song.find_by(name: "Mr. Carter")
+AM = Song.find_by(name: 'A Milli')
+MO = Song.find_by(name: 'Mrs. Officer')
+
+ThreeP.song_file.attach(io: File.open("/Users/cameroncarter/Downloads/songs/ThreeP.mp3"), filename:"ThreeP.mp3")
+MC.song_file.attach(io: File.open("/Users/cameroncarter/Downloads/songs/MC.mp3"), filename:"MC.mp3")
+AM.song_file.attach(io: File.open("/Users/cameroncarter/Downloads/songs/AM.mp3"), filename:"AM.mp3")
+MO.song_file.attach(io: File.open("/Users/cameroncarter/Downloads/songs/MO.mp3"), filename:"MO.mp3")
+
+## - Electric Ladyland - ##
+Song.create(name: 'Voodoo Child (Slight Return)', album_id: Album.find_by(name: 'Electric Ladyland').id, duration: 244)
+Song.create(name: 'All Along the Watchtower', album_id: Album.find_by(name: 'Electric Ladyland').id, duration: 220)
+Song.create(name: 'Little Wing', album_id: Album.find_by(name: 'Electric Ladyland').id, duration: 321)
+Song.create(name: "Red House", album_id: Album.find_by(name: 'Electric Ladyland').id, duration: 222)
+
+VC = Song.find_by(name: 'Voodoo Child (Slight Return)')
+AAW = Song.find_by(name: "All Along the Watchtower")
+LittleWing = Song.find_by(name: 'Little Wing')
+RH = Song.find_by(name: 'Red House')
+
+VC.song_file.attach(io: File.open("/Users/cameroncarter/Downloads/songs/VC.mp3"), filename:"VC.mp3")
+AAW.song_file.attach(io: File.open("/Users/cameroncarter/Downloads/songs/AAW.mp3"), filename:"AAW.mp3")
+LittleWing.song_file.attach(io: File.open("/Users/cameroncarter/Downloads/songs/LittleWing.mp3"), filename:"LittleWing.mp3")
+RH.song_file.attach(io: File.open("/Users/cameroncarter/Downloads/songs/RH.mp3"), filename:"RH.mp3")
+
+
+
