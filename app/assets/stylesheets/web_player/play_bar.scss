@@ -14,7 +14,7 @@
 }
 
 #buttons {
-    display: flex;
+    display: flex; 
     align-items: center;
     
 }
@@ -28,6 +28,10 @@
     z-index: 1;
     border-radius: 50%;
 }  
+
+// .control-button#play:before {
+//     content: "\f051";
+// }
 
 #react-player {
     display: none;

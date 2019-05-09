@@ -2,6 +2,7 @@ import React from 'react';
 import GreetingContainer from '../greeting/greeting_container';
 import Errors from '../errors';
 import { Link } from 'react-router-dom';
+import Typed from 'typed.js';
 
 class SessionForm extends React.Component {
     constructor(props) { 
@@ -29,7 +30,7 @@ class SessionForm extends React.Component {
 
     demoLogin(e) {
         e.preventDefault();
-        let demoUsername = 'harden13';
+        let demoUsername = 'harden13'; 
         let demoPassword = 'password';
         let demoUser = {
             username: demoUsername,

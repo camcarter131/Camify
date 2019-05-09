@@ -4,7 +4,6 @@ import merge from 'lodash/merge';
 export const UIReducer = (state = {}, action) => {
     Object.freeze(state);
     let nextState = merge({}, state);
-    // debugger
     switch (action.type) {
         case PLAY_SONG:
             nextState['currentSong'] = action.song;
