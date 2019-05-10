@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import PlaylistShow from './playlist_show';
 import { receivePlaylist, remove } from '../../../actions/playlists_actions';
-import { playSong } from '../../../actions/UI_actions';
+import { playPauseSong } from '../../../actions/UI_actions';
 
 const msp = (state, ownProps) => {
     let playlistId = ownProps.match.params.id;
@@ -24,7 +24,7 @@ const mdp = dispatch => {
     return ({
         receivePlaylist: id => dispatch(receivePlaylist(id)),
         remove: id => dispatch(remove(id)),
-        playSong: song => dispatch(playSong(song))
+        playPauseSong: song => dispatch(playPauseSong(song))
     });
 };
 

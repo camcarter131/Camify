@@ -48,7 +48,7 @@ class PlaylistShow extends React.Component {
  
     render() {
         // debugger
-        const { songs, playlist, name, remove, playSong, loading } = this.props;
+        const { songs, playlist, name, remove, playPauseSong, loading } = this.props;
         // debugger
         if (loading) return (
             <div id="loader">
@@ -104,7 +104,7 @@ class PlaylistShow extends React.Component {
                         </div>
                     </div>
                 </div>       
-                <PlaylistSongs songs={songs} playSong={playSong} />
+                <PlaylistSongs songs={songs} playPauseSong={playPauseSong} />
             </div>
         )
     }

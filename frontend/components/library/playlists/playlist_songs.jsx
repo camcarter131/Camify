@@ -11,7 +11,7 @@ class PlaylistSongs extends React.Component {
                 <SongIndexItem
                     key={song.id}
                     song={song}
-                    playSong={this.props.playSong}
+                    playPauseSong={this.props.playPauseSong}
                 />
             )
         });
