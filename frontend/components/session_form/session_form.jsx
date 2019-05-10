@@ -98,8 +98,9 @@ class SessionForm extends React.Component {
                     </div>
                     <div id='or'>
                         {/* <div id="or-text">OR</div> */}
-                        <strong className="divider">OR</strong>
+                        <div className="divider">OR</div>
                     </div>
+                    <hr id="line" width={'100%'} />
                     <div id="input-list">
                         <li className="session-li">
                             <input className="login" type="text" value={this.state.username}
