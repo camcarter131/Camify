@@ -10,6 +10,7 @@ User.destroy_all
 Artist.destroy_all
 Album.destroy_all
 Song.destroy_all
+Playlist.destroy_all
 
 
 User.create(username: 'harden13', password: 'password', displayed_name: 'James Harden', email: 'the_beard@rockets.com')
