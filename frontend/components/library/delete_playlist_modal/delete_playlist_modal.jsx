@@ -25,7 +25,7 @@ class DeletePlaylistModal extends React.Component {
                         </svg>
                     </button>
                 </div>
-                <div className="modal-header">
+                <div className="delete-modal-header">
                     <h1>Do you really want to delete this playlist?</h1>
                 </div>
                 <div className="modal-buttons">

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import SongIndexItem from './song_index_item';
+import GridLoader from 'react-spinners/GridLoader';
 
 class SongIndex extends React.Component { 
     constructor(props) {
@@ -12,13 +12,22 @@ class SongIndex extends React.Component {
     }
 
     render() {
-        const { playSong } = this.props;
+        const { playPauseSong, removeOneSong, loading } = this.props;
+        if (loading) return (
+            <div id="loader-songs">
+                <GridLoader id="beatloader"
+                    color={'#DFE2E1'}
+                    loading={loading} />
+            </div>
+        );
         const songs = this.props.songs.map(song => { 
             return (
                 <SongIndexItem
                     key={song.id}
                     song={song}
-                    playSong={playSong}
+                    playPauseSong={playPauseSong}
+                    removeOneSong={removeOneSong}
+                    songs={this.props.songs}
                  />
             );
         });

@@ -9,3 +9,16 @@
     align-items: center;
  }
 
+ #loader-songs {
+   padding-left: $side_nav_width;
+   padding-bottom: $play_bar_height;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: transparent;
+   // background-image: linear-gradient(to right bottom, #306969, black), linear-gradient(transparent, black 70%);
+   display: fixed;
+   padding-top: 30%;
+   padding-right: 23%;
+ }
+

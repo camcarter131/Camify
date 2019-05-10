@@ -43,24 +43,20 @@ class SongIndexItem extends React.Component{
     }
 
     playPauseSong() {
-        // debugger
         return (
             (this.state.play === false) ? 
                 this.setState({play: true})
             : 
                 this.setState({ play: false })
         )
-    
-
     }
 
     render() {
-        const { song, playSong } = this.props;
+        const { song, songs, playPauseSong, removeOneSong } = this.props;
         return (
             <div className="song-div">
                 {(this.state.show) ? <AddSongModalContainer song={song} show={this.state.show} handleClose={this.hideModal} />: null}
-                
-                <button className="song-play-btn" onClick={() => playSong(song)}></button>     
+                <button className="song-play-btn" onClick={() => playPauseSong(song)}></button>
                 <div id="song-name">   
                     {song.name}
                 </div>          
@@ -70,7 +66,7 @@ class SongIndexItem extends React.Component{
                 {this.state.displayMenu ? (
                     <div className="dropdown">
                         <a onClick={this.showModal} className="dropdown">Add to playlist</a>
-                        <a className="dropdown">Remove from your library</a>
+                        <a onClick={() => removeOneSong(song.id)} className="dropdown">Remove from your library</a>
                     </div>
                 ) :
                     (null)

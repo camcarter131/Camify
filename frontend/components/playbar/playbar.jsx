@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactPlayer from 'react-player';
 
-const PlayBar = ({ user, song, isPlaying, playSong }) => {
+const PlayBar = ({ user, song, isPlaying, playPauseSong }) => {
     let audio = document.getElementById("react-player");
     if (user) { 
         return (
@@ -19,7 +19,7 @@ const PlayBar = ({ user, song, isPlaying, playSong }) => {
                 <div id="play-bar-center">
                     <div id="controls">
                         <div id="buttons">
-                            <button onClick={() => playSong(song) }className="control-button" id="play"></button>
+                            <button onClick={() => playPauseSong(song) }className="control-button" id="play"></button>
                         </div>
                         <div id="bar">
 

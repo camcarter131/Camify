@@ -38,9 +38,11 @@ class PlaylistModal extends React.Component {
                 </div>
                 <div className="modal-main">
                     <div className="input-box">
-                        <h4 className="input-box-label">Playlist Name</h4>
-                        <input className='create-playlist-input' placeholder="Start typing..." 
-                        type="text" onChange={this.update("playlistName")}/>
+                        <div className='content-spacing'>
+                            <div className="input-box-label">Playlist Name</div>
+                            <input className='create-playlist-input' placeholder="Start typing..." 
+                            type="text" onChange={this.update("playlistName")}/>
+                        </div>
                     </div>
                 </div>
                 <div className="modal-buttons">

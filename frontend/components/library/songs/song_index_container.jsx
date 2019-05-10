@@ -1,15 +1,20 @@
 import { connect } from 'react-redux';
 import SongIndex from './song_index';
-import { receiveAllSongs } from '../../../actions/songs_actions';
-import { playSong } from '../../../actions/UI_actions';
+import { receiveAllSongs, removeOneSong } from '../../../actions/songs_actions';
+import { playPauseSong } from '../../../actions/UI_actions';
 
-const msp = state => ({
-    songs: Object.values(state.entities.songs) 
-});
+const msp = state => {
+    let loading = state.UI.loading;
+    return ({
+        loading, 
+        songs: Object.values(state.entities.songs) 
+    })
+};
 
-const mdp = dispatch => ({
+const mdp = dispatch => ({ 
     receiveAllSongs: () => dispatch(receiveAllSongs()),
-    playSong: (song) => dispatch(playSong(song))
+    playPauseSong: (song) => dispatch(playPauseSong(song)),
+    removeOneSong: id => dispatch(removeOneSong(id))
 });
 
 export default connect(msp, mdp)(SongIndex);

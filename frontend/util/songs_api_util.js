@@ -4,3 +4,10 @@ export const receiveAllSongs = () => (
         method: "GET"
     })
 ); 
+
+export const removeOneSong = (id) => (
+    $.ajax({
+        url: `api/songs/${id}`,
+        method: "DELETE"
+    })
+); 

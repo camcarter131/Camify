@@ -3,4 +3,23 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    height: auto;
+}
+
+.add-song-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 72px;
+    color: #FFFFFF;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    height: auto;
+}
+
+.add-song-modal-close {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: auto;
 }

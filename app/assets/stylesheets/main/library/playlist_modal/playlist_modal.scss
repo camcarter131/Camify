@@ -23,7 +23,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 2;
 }
 
 .display-none {
@@ -35,12 +35,12 @@
     align-items: center;
     justify-content: center;
     font-size: 48px;
-    margin-bottom: 40px;
     color: #FFFFFF;
+    padding-top: 30px;
 }
 .modal-close{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 
 }
@@ -52,12 +52,29 @@
 
 .modal-buttons{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
 .input-box-label {
-    
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .015em;
+    font-weight: var(--glue-font-weight-bold);
+    color: #fff;
+    text-transform: none;
+    margin-bottom: .5em;
+    padding-left: 14px;
+}
+
+.input-box{
+    padding: 32px 20%; 
+}
+
+.content-spacing {
+    padding: 0 32px;
+    margin: 0 auto;
+    max-width: 1480px;
 }
 
 .create-playlist-input {
@@ -67,9 +84,11 @@
     caret-color: #1db954;
     font-size: 48px;
     position: relative;
-    height: 83px;
-    padding: 32px 0;
+    line-height: 56px;
+    letter-spacing: -.005em;
+    font-weight: var(--glue-font-weight-black);
     font-weight: bold;
+    padding-bottom: 10px;
 }
 
 #create-playlist-btn {
@@ -88,7 +107,7 @@
 }
 
 #cancel-playlist-btn {
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0,0,0,.3);
     color:#fff;
     border-radius: 25px;
     text-align: center;

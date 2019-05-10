@@ -1,8 +1,10 @@
-export const PLAY_SONG = 'PLAY_SONG';
+export const PLAY_PAUSE_SONG = 'PLAY_PAUSE_SONG';
 
-export const playSong = (song) => ({
-    type: PLAY_SONG,
-    song 
+export const playPauseSong = (song) => ({
+    type: PLAY_PAUSE_SONG,
+    song
 });
+
+
 
 // -------------------------------------------------------------- //

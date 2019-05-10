@@ -28,7 +28,7 @@ export const receivePlaylists = (playlists) => ({
 
 export const receiveOnePlaylist = (payload) => ({
     type: RECEIVE_PLAYLIST,
-    payload
+    payload 
 });
 
 export const startLoading = () => ({

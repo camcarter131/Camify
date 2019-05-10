@@ -7,29 +7,12 @@ class AddSongModal extends React.Component {
         this.state = {getPlaylists: false};
     } 
 
-    // shouldComponentUpdate(nextProps) {
-    //     // debugger
-    //     return (nextProps.show != this.props.show)
-    // }
-
-    // component
-
     componentDidMount() {
         // if (this.state.getPlaylists) 
         this.props.receiveAllPlaylists();
     }
 
-    // componentDidUpdate(prevProps) {
-    //     // debugger
-    //     // this.props.receiveAllPlaylists();
-    //     if (this.props.show) this.setState({getPlaylists: true})
-
-    //     // console.log(this.props.playlists);
-    //     // if (this.props.show) {
-    // }
-
     render() { 
-        // if (this.props.playlists.length === 0) return null;
       
         const playlists = this.props.playlists.map(playlist => {
             return (
@@ -46,14 +29,14 @@ class AddSongModal extends React.Component {
         const showHideClassName = show ? "modal display-block" : "modal display-none";
         return (
             <div className={showHideClassName}>
-                <div className="modal-close">
+                <div className="add-song-modal-close">
                     <button className="modal-close-button" onClick={handleClose}>
                         <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                             <path d="M31.098 29.794L16.955 15.65 31.097 1.51 29.683.093 15.54 14.237 1.4.094-.016 1.508 14.126 15.65-.016 29.795l1.414 1.414L15.54 17.065l14.144 14.143" fill="#fff"></path>
                         </svg>
                     </button> 
                 </div>
-                <div className="modal-header">
+                <div className="add-song-modal-header">
                     <h1>Add to playlist</h1>
                 </div>
                 <div className="modal-playlists">

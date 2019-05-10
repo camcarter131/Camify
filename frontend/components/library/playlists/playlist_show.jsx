@@ -21,8 +21,8 @@ class PlaylistShow extends React.Component {
     };
 
     componentDidMount() {
-        // debugger
-        this.props.receivePlaylist(this.props.playlistId)
+        this.props.receivePlaylist(this.props.playlistId);
+        
     } 
 
     showDropdownMenu(e) {
