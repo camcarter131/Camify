@@ -5,8 +5,12 @@ import { playPauseSong } from '../../../actions/UI_actions';
 
 const msp = state => {
     let loading = state.UI.loading;
+    let isPlaying = state.UI.isPlaying;
+    let currentSong = state.UI.currentSong;
     return ({
         loading, 
+        isPlaying,
+        currentSong,
         songs: Object.values(state.entities.songs) 
     })
 };

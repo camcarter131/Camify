@@ -12,7 +12,7 @@ class SongIndex extends React.Component {
     }
 
     render() {
-        const { playPauseSong, removeOneSong, loading } = this.props;
+        const { playPauseSong, removeOneSong, loading, isPlaying, currentSong } = this.props;
         if (loading) return (
             <div id="loader-songs">
                 <GridLoader id="beatloader"
@@ -28,6 +28,8 @@ class SongIndex extends React.Component {
                     playPauseSong={playPauseSong}
                     removeOneSong={removeOneSong}
                     songs={this.props.songs}
+                    isPlaying={isPlaying}
+                    currentSong={currentSong}
                  />
             );
         });

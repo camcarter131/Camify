@@ -16,17 +16,28 @@
 }
 .song-div .song-play-btn {
     // display: none;
-    background-image: image-url('play6.jpg');
-    background-size: contain;
+    // background-image: image-url('play6.jpg');
+    // background-size: contain;
     height: 20px;
     width: 20px;
     // z-index: 1;
     border-radius: 50%;
-    padding-right: 5px;
+    display: flex;
+    justify-content: center;
     
 }
 .song-div:hover .song-play-btn {
-    display: inline;
+    // display: inline;
+}
+
+.fa-2x {
+    // font-size: 1.33333333em;
+    line-height: .05;
+    vertical-align: -15%;
+}
+
+.fa-2x:hover {
+    font-size: 2.4em;
 }
 
 

@@ -19,7 +19,9 @@ const PlayBar = ({ user, song, isPlaying, playPauseSong }) => {
                 <div id="play-bar-center">
                     <div id="controls">
                         <div id="buttons">
-                            <button onClick={() => playPauseSong(song) }className="control-button" id="play"></button>
+                            <button onClick={() => playPauseSong(song) }className="control-button" id="play">
+                                {/* <i class="fa fa-play-circle" aria-hidden="true"></i> */}
+                            </button>
                         </div>
                         <div id="bar">
 

@@ -5,7 +5,7 @@ import Root from './components/root';
 import { logout } from '../frontend/actions/session_actions';
 import { create, remove } from '../frontend/actions/playlists_actions';
 import { receiveAllSongs } from '../frontend/actions/songs_actions';
-
+ 
 document.addEventListener("DOMContentLoaded", () => {
  
     let store;
