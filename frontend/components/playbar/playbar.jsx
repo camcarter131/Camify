@@ -11,7 +11,7 @@ const PlayBar = ({ user, song, isPlaying, playPauseSong }) => {
                     controls={true} playbackRate={1} loop={true}
                 />
                 ) : 
-                    (null)
+                    (null) 
                 }
                 <div id="play-bar-left">
                     {song? song.name : null }
@@ -20,7 +20,12 @@ const PlayBar = ({ user, song, isPlaying, playPauseSong }) => {
                     <div id="controls">
                         <div id="buttons">
                             <button onClick={() => playPauseSong(song) }className="control-button" id="play">
-                                {/* <i class="fa fa-play-circle" aria-hidden="true"></i> */}
+                                {(isPlaying === true ) ? (
+                                    <i className="fa fa-pause-circle fa-2x-playbar" aria-hidden="true"></i>
+                                ) : (
+                                        <i className="fa fa-play-circle fa-2x-playbar" aria-hidden="true"></i>
+                                    )
+                                }
                             </button>
                         </div>
                         <div id="bar">

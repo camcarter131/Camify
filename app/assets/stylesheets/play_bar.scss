@@ -20,13 +20,15 @@
 }
 
 .control-button#play {
-    background-image: image-url("play6.jpg");
+    // background-image: image-url("play6.jpg");
     // background: transparent;
     background-size: contain;
     height: 32px;
     width: 32px;
     z-index: 1;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
 }  
 
 #react-player {
@@ -44,4 +46,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.fa-2x-playbar {
+    // font-size: 1.33333333em;
+    // line-height: .05;
+    position: relative;
+    bottom: 6px;
+    vertical-align: -15%;
+    font-size: 2.6em;
+}
+
+.fa-2x-playbar:hover {
+    font-size: 3em;
 }
