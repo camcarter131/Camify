@@ -1,15 +1,6 @@
 # README
 
-Camify is a full-stack Spotify clone built using the following technologies:
+Camify is a full-stack Spotify clone built using Ruby on Rails, React.js, Redux, PostgreSQL, HTML5 & Sass with media hosted on AWS S3.
 
-* Ruby on Rails
 
-* React.js 
 
-* Redux 
-
-* PostgreSQL 
-
-* AWS
-
-* HTML5 & Sass
