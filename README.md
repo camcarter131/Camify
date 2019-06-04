@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Camify is a full-stack Spotify clone built using the following technologies:
 
-Things you may want to cover:
+* Ruby on Rails
 
-* Ruby version
+* React.js 
 
-* System dependencies
+* Redux 
 
-* Configuration
+* PostgreSQL 
 
-* Database creation
+* AWS
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* HTML5 & Sass
