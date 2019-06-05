@@ -17,7 +17,7 @@ const PlaylistIndexItem = ({ playlist, remove, name }) => {
                 </svg>
             </button> */}
             <Link className="playlist-link" id="playlist-name-link" to={`/playlists/${playlist.id}`}>{playlist.name}</Link>
-            <Link className="playlist-link" id="user-name-link" >{name}</Link>
+            <Link className="playlist-link" id="user-name-link" to="#">{name}</Link>
         </div>
     );
 };
