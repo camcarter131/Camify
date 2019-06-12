@@ -8,9 +8,20 @@
   transition: 0.5s;
   display: flex;
   flex-direction: column;
+
 //   background-color: rgba(0,0,0,.8);
   background-color: rgba(0,0,0,0);
   height: calc(100vh - 90px);
+}
+
+#side-nav-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    // background-color: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0.8);
+    transition: 0.5s;
+    
 }
 
 .side-nav-link a {
@@ -74,11 +85,11 @@
 }
 
 #logout-div {
-    background: rgba(0, 0, 0, 0.8);
+    // background: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: flex-end;
     padding: 0 24px;
-    padding-top: 100%;
+    // padding-top: 100%;
     height: auto;
     // flex-grow: 1;
 }
@@ -93,7 +104,7 @@
 }
 
 #avatar-div {
-    background: rgba(0, 0, 0, 0.8);
+    // background: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     // justify-content: center;
