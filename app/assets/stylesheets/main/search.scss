@@ -5,8 +5,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 100%;
-    justify-content: space-around;
+    // width: 100%;
     align-items: center;
     color: white;
     // background:linear-gradient(270deg,rgb(30, 15, 112),rgba(52, 74, 145, 0.795));
@@ -14,12 +13,12 @@
 }
 
 .search-input-box {
-    width: 100%;
+    width: 100%; 
     position: fixed;
 
 }
 
-.search-input {
+input.search-input {
     background-color: #282828;
     border: none;
     color: #FFF;
@@ -31,5 +30,13 @@
 }
 
 .search-results {
+    // height: auto;
+    display: flex;
+    justify-content: center;
     height: 300px;
+}
+
+div.search-input {
+    width: 100%;
+    height: 25%;
 }

@@ -24,7 +24,7 @@ class Library extends React.Component {
 
     hidePlaylistModal() {
         this.setState({ show: false });
-    }
+    } 
 
     playlists() {
         return (

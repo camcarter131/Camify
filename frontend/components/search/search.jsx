@@ -5,13 +5,17 @@ const Search = () => {
 
     return (
         <div id="search-main">
-            <div className="search-input-box">
+            <div className='search-input'>
                 <input className='search-input' placeholder="Start typing..."
                     type="text"/>
             </div>
             <div className="search-results">
-                Search Camify
+                <div>
+                    Search Camify
+                </div>
+                
             </div>
+            
         </div>
     )
 }

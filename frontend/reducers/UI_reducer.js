@@ -10,16 +10,13 @@ export const UIReducer = (state = {}, action) => {
     Object.freeze(state);
     let audio = document.getElementById("react-player");
     // let currentTime = audio.getCurrentTime();
-    // debugger
     let nextState = merge({}, state);
-    // debugger
     switch (action.type) {
         case PLAY_PAUSE_SONG:
             if (nextState['isPlaying'] && (action.song.id === nextState['currentSong'].id)) {
                 nextState['isPlaying'] = false;
                 return nextState;
             } 
-
             if (!nextState['isPlaying'] || nextState['isPlaying'] === false) {
                 nextState['currentSong'] = action.song;
                 nextState['isPlaying'] = true;

@@ -14,6 +14,6 @@ export const albumsReducer = (state = {}, action) => {
         case RECEIVE_PLAYLIST:
             return merge({}, state, action.payload.albums)
         default:
-            return state;
+            return state; 
     }
 };
