@@ -10,7 +10,7 @@ const msp = state => {
     return ({
         loading, 
         isPlaying,
-        currentSong,
+        currentSong, 
         songs: Object.values(state.entities.songs) 
     })
 };

@@ -9,7 +9,7 @@ export const receiveSongs = (songs) => ({
     songs
 });
 
-export const removeSong = id => ({
+export const removeSong = id => ({ 
     type: REMOVE_SONG, 
     id
 });

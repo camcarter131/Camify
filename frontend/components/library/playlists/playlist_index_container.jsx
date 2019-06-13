@@ -2,11 +2,14 @@ import { connect } from 'react-redux';
 import PlaylistIndex from './playlist_index';
 import { receiveAllPlaylists, remove } from '../../../actions/playlists_actions';
 
-const msp = state => {
+const msp = state => { 
     // debugger
     let userId = state.session.id;
     let name = state.entities.users[userId].displayed_name;
+    let loading = state.UI.loading; 
+
     return ({
+        loading,
         playlists: Object.values(state.entities.playlists),
         name 
     })

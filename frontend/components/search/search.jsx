@@ -1,18 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import GridLoader from 'react-spinners/GridLoader';
 
 class Search extends React.Component {
 
-    constructor(props) {
-        super(props);
 
+    componentDidMount() {
+        // console.log(this.props);
+        // this.props.receiveAllSongs();
+        // this.props.receivePlaylists();
+        // this.props.receiveAlbums();
+        // this.props.receiveArtists();
     }
 
-    handleChange (e) {
-        console.log("Changed");
-    }
+    // handleChange (e) {
+    //     console.log("Changed");
+    // }
 
     render () {
+        // const {songs, receiveAllSongs} = this.props;
+        // if (!receiveAllSongs ) return undefined;
+        // Object.values(songs).forEach(song => {
+        //     console.log(song.title);
+        // });
 
         return (
             <div id="search-main">

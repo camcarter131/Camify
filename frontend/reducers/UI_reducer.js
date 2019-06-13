@@ -1,8 +1,10 @@
 import { PLAY_PAUSE_SONG } from '../actions/UI_actions';
 import merge from 'lodash/merge';
 import ReactPlayer from 'react-player';
-import { RECEIVE_PLAYLIST, START_LOADING } from '../actions/playlists_actions';
+import { RECEIVE_PLAYLIST, RECEIVE_PLAYLISTS, START_LOADING } from '../actions/playlists_actions';
 import { RECEIVE_SONGS } from '../actions/songs_actions';
+import { RECEIVE_ARTISTS } from '../actions/artists_actions';
+import { RECEIVE_ALBUMS } from '../actions/albums_actions';
 
 
 
@@ -33,7 +35,16 @@ export const UIReducer = (state = {}, action) => {
         case RECEIVE_PLAYLIST:
             nextState['loading'] = false;
             return nextState;  
+        case RECEIVE_PLAYLISTS:
+            nextState['loading'] = false;
+            return nextState;  
         case RECEIVE_SONGS:
+            nextState['loading'] = false;
+            return nextState;      
+        case RECEIVE_ARTISTS:
+            nextState['loading'] = false;
+            return nextState;      
+        case RECEIVE_ALBUMS:
             nextState['loading'] = false;
             return nextState;      
         default:

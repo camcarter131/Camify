@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PlaylistIndexItem from './playlist_index_item';
+import GridLoader from 'react-spinners/GridLoader';
 
 class PlaylistIndex extends React.Component {
 
@@ -9,6 +10,14 @@ class PlaylistIndex extends React.Component {
     }
 
     render() {
+        const { loading } = this.props;
+        if (loading) return (
+            <div id="loader-songs">
+                <GridLoader id="beatloader"
+                    color={'#DFE2E1'}
+                    loading={loading} />
+            </div>
+        );
         
         const playlists = this.props.playlists.map(playlist => {
             return ( 
