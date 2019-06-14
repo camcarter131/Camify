@@ -31,7 +31,7 @@ input.search-input {
     height: 44px;
 }
 
-.search-results {
+.search-before {
     // height: auto;
     display: flex;
     justify-content: center;
@@ -43,7 +43,7 @@ div.search-input {
     height: 22%;
 }
 
-div#search-text {
+div#search-title {
     font-size: 28px;
     line-height: 36px;
     letter-spacing: -.005em;
@@ -73,3 +73,11 @@ p#search-subtitle {
    background: transparent;
    background-image: linear-gradient(to right bottom, rgb(18, 18, 18), rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
  }
+
+div#search-results {
+    width: 100%;
+    height: auto;
+}
+div.search-result-section {
+    height: auto;
+}

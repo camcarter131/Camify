@@ -6,7 +6,7 @@ import ReactPlayer from 'react-player';
 class SongIndexItem extends React.Component{ 
 
     constructor(props) {
-        super(props);
+        super(props); 
         this.state = {
             show: false,
             displayMenu: false, 
@@ -34,9 +34,7 @@ class SongIndexItem extends React.Component{
     }
 
     showModal() {
-        // debugger
         this.setState({ show: true });
-        // debugger
     }
 
     hideModal() {
@@ -50,10 +48,10 @@ class SongIndexItem extends React.Component{
             : 
                 this.setState({ play: false })
         )
-    }
+    } 
 
     render() {
-        const { song, songs, playPauseSong, removeOneSong, isPlaying, currentSong } = this.props;
+        const { song, playPauseSong, removeOneSong, isPlaying, currentSong } = this.props;
         return ( 
             <div className="song-div">
                 {(this.state.show) ? <AddSongModalContainer song={song} show={this.state.show} handleClose={this.hideModal} />: null}
