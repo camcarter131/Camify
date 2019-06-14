@@ -50,8 +50,10 @@ class Search extends React.Component {
         })
         // console.log('Playlists: ', foundPlaylists);
 
+        let setNothingSearched = false;
+        if (searchTerm === "") setNothingSearched = true;
         this.setState({
-            nothingSearched: false,
+            nothingSearched: setNothingSearched,
             foundSongs,
             foundArtists,
             foundAlbums,
