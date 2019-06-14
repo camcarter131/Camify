@@ -46,7 +46,7 @@ export const remove = id => dispatch => (
 );
 
 export const receiveAllPlaylists = () => dispatch => {
-    dispatch(startLoading()); 
+    // dispatch(startLoading()); 
     PlaylistsAPIUtil.receiveAllPlaylists().then(playlists => dispatch(receivePlaylists(playlists)))
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import PlaylistInModalContainer from '../add_song_modal/playlist_in_modal_container';
+import GridLoader from 'react-spinners/GridLoader';
 
 class AddSongModal extends React.Component {
     constructor(props) {
@@ -14,14 +15,14 @@ class AddSongModal extends React.Component {
 
     render() { 
         // debugger
-        const { loading } = this.props;
-        if (loading) return (
-            <div id="loader-songs">
-                <GridLoader id="beatloader"
-                    color={'#DFE2E1'}
-                    loading={loading} />
-            </div>
-        );
+        // const { loading } = this.props;
+        // if (loading) return (
+        //     <div id="loader-songs">
+        //         <GridLoader id="beatloader"
+        //             color={'#DFE2E1'}
+        //             loading={loading} />
+        //     </div>
+        // );
         const playlists = this.props.playlists.map(playlist => {
             return (
                 <PlaylistInModalContainer
