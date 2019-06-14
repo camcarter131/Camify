@@ -16,7 +16,7 @@ class SongIndex extends React.Component {
         if (loading) return (
             <div id="loader-songs">
                 <GridLoader id="beatloader"
-                    color={'#DFE2E1'}
+                    color={'#DFE2E1'} 
                     loading={loading} />
             </div>
         );

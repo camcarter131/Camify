@@ -25,10 +25,9 @@ input.search-input {
     caret-color: #1db954;
     font-size: 36px;
     position: relative;
-    
     font-weight: bold;
     padding: 16px 0;
-    padding-left: 32px;
+    
     height: 44px;
 }
 
@@ -64,3 +63,13 @@ p#search-subtitle {
     font-weight: 500;
     padding-top:12px;
 }
+
+ #search-loader-songs {
+    padding-left: $side_nav_width;
+    padding-top: 210px;
+   display: flex;
+   align-items: center; 
+   justify-content: center;
+   background: transparent;
+   background-image: linear-gradient(to right bottom, rgb(18, 18, 18), rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
+ }

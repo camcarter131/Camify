@@ -13,7 +13,15 @@ class AddSongModal extends React.Component {
     }
 
     render() { 
-      
+        // debugger
+        const { loading } = this.props;
+        if (loading) return (
+            <div id="loader-songs">
+                <GridLoader id="beatloader"
+                    color={'#DFE2E1'}
+                    loading={loading} />
+            </div>
+        );
         const playlists = this.props.playlists.map(playlist => {
             return (
                 <PlaylistInModalContainer
@@ -27,7 +35,7 @@ class AddSongModal extends React.Component {
         });
         const { song, show, handleClose, addSongToPlaylist } = this.props;
         const showHideClassName = show ? "modal display-block" : "modal display-none";
-        return (
+        return ( 
             <div className={showHideClassName}>
                 <div className="add-song-modal-close">
                     <button className="modal-close-button" onClick={handleClose}>

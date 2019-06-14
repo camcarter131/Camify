@@ -6,7 +6,9 @@ import { addSongToPlaylist } from '../../../actions/playlist_songs_actions';
 
 
 const msp = (state, ownProps) => {
+    let loading = state.UI.loading;
     return ({
+        loading,
         playlists: Object.values(state.entities.playlists),
         show: ownProps.show,   
         song: ownProps.song,

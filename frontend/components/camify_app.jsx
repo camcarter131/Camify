@@ -11,7 +11,7 @@ import PlaylistShowContainer from './library/playlists/playlist_show_container';
 import ArtistShowContainer from './library/artists/artist_show_container';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import Search from './search/search';
+import SearchContainer from './search/search_container';
 
  
 const App = () => (
@@ -25,7 +25,7 @@ const App = () => (
 
             <ProtectedRoute exact path="/browse/featured" component={Home} />
             <ProtectedRoute exact path="/collection/:type" component={LibraryContainer} />            
-            <ProtectedRoute exact path="/search" component={Search} /> 
+            <ProtectedRoute exact path="/search" component={SearchContainer} /> 
             <ProtectedRoute exact path="/playlists/:id" component={PlaylistShowContainer} />
             <ProtectedRoute exact path="/artists/:id" component={ArtistShowContainer} />
 

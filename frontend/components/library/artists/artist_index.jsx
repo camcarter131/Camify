@@ -10,7 +10,7 @@ class ArtistIndex extends React.Component {
     }
 
  
-    render() {
+    render() { 
         const { loading } = this.props;
         if (loading) return (
             <div id="loader-songs">

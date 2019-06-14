@@ -34,7 +34,9 @@ class SongIndexItem extends React.Component{
     }
 
     showModal() {
+        // debugger
         this.setState({ show: true });
+        // debugger
     }
 
     hideModal() {
@@ -52,7 +54,7 @@ class SongIndexItem extends React.Component{
 
     render() {
         const { song, songs, playPauseSong, removeOneSong, isPlaying, currentSong } = this.props;
-        return (
+        return ( 
             <div className="song-div">
                 {(this.state.show) ? <AddSongModalContainer song={song} show={this.state.show} handleClose={this.hideModal} />: null}
                 <button className="song-play-btn" onClick={() => playPauseSong(song)}>

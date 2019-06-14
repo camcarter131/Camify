@@ -39,9 +39,11 @@ export const UIReducer = (state = {}, action) => {
             nextState['loading'] = false;
             return nextState;  
         case RECEIVE_SONGS:
+            // debugger
             nextState['loading'] = false;
             return nextState;      
         case RECEIVE_ARTISTS:
+            // debugger
             nextState['loading'] = false;
             return nextState;      
         case RECEIVE_ALBUMS:
