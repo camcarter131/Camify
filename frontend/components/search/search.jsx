@@ -138,7 +138,19 @@ class Search extends React.Component {
                         </p>
                         </div>
                     </div>
-                ) :
+                ) : 
+                
+                (this.state.foundSongs.length===0 && this.state.foundArtists.length===0 &&
+                    this.state.foundAlbums.length===0 && this.state.foundPlaylists.length===0
+                    ) ? (
+                        <div id="search-title">
+                            No results found
+                        <p id="search-subtitle">
+                            Please make sure your words are spelled correctly 
+                            or use less or different keywords.
+                        </p>
+                            </div>
+                    ) : (
                     <div id="search-results">
                         <div className="search-result-section" id="songs">
                             Songs
@@ -157,7 +169,7 @@ class Search extends React.Component {
                             {playlists}
                         </div>
                     </div>
-                    
+                )
                 }        
             </div>
         )
