@@ -153,19 +153,27 @@ class Search extends React.Component {
                     ) : (
                     <div id="search-results">
                         <div className="search-result-section" id="songs">
-                            Songs
+                            <h2 class="search-header">
+                                Songs
+                            </h2>
                             {songs}
                         </div>
                         <div className="search-result-section" id="artists">
-                            Artists
+                            <h2 className = "search-header">
+                                Artists
+                            </h2>
                             {artists}
                         </div>
                         <div className="search-result-section" id="albums">
-                            Albums
+                            <h2 className="search-header">
+                                Albums
+                            </h2>
                             {albums}
                         </div>
                         <div className="search-result-section" id="playlists">
-                            Playlists
+                            <h2 className="search-header">
+                                Playlists
+                            </h2>
                             {playlists}
                         </div>
                     </div>
