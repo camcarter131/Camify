@@ -154,7 +154,7 @@ class Search extends React.Component {
 
                     <div id="search-results">
                         <div className="search-result-section" id="songs">
-                            <h2 class="search-header">
+                            <h2 className="search-header">
                                 Songs
                             </h2>
                             {songs}
