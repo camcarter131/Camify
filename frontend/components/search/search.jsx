@@ -151,6 +151,7 @@ class Search extends React.Component {
                         </p>
                             </div>
                     ) : (
+
                     <div id="search-results">
                         <div className="search-result-section" id="songs">
                             <h2 class="search-header">
@@ -177,6 +178,7 @@ class Search extends React.Component {
                             {playlists}
                         </div>
                     </div>
+                
                 )
                 }        
             </div>
