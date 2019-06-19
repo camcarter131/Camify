@@ -131,11 +131,13 @@ class Search extends React.Component {
                 
                 {this.state.nothingSearched ? (
                     <div className="search-before">
-                        <div id="search-title">
-                            Search Camify
-                        <p id="search-subtitle">
-                                Find your favorite songs, artists, albums, and playlists.
-                        </p>
+                        <div className="search-text" id="search-title">
+                            <div className = "search-inner" id="search-title-inner">
+                                Search Camify
+                                <p className="search-paragraph" id="search-subtitle">
+                                    Find your favorite songs, artists, albums, and playlists.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 ) : 
@@ -143,13 +145,17 @@ class Search extends React.Component {
                 (this.state.foundSongs.length===0 && this.state.foundArtists.length===0 &&
                     this.state.foundAlbums.length===0 && this.state.foundPlaylists.length===0
                     ) ? (
-                        <div id="search-title">
-                            No results found
-                        <p id="search-subtitle">
-                            Please make sure your words are spelled correctly 
-                            or use less or different keywords.
-                        </p>
+                        <div className="search-before">
+                            <div className="search-text" id="search-title-no-results">
+                                <div className="search-inner" id="search-title-inner-no-results">
+                                    No results found
+                                    <p className = "search-paragraph" id="search-subtitle-no-results">
+                                        Please make sure your words are spelled correctly 
+                                        or use less or different keywords.
+                                    </p>
+                                </div>
                             </div>
+                        </div>
                     ) : (
 
                     <div id="search-results">

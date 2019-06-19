@@ -33,11 +33,11 @@ input.search-input {
 }
 
 .search-before {
-    // height: auto;
+    height: auto;
     display: flex;
     justify-content: center;
-    padding-top: 100px;
-    height: 300px;
+    // padding-top: 100px;
+    height: 40vh;;
 }
 
 div.search-input {
@@ -45,7 +45,7 @@ div.search-input {
     height: 22%;
 }
 
-div#search-title {
+div.search-text {
     font-size: 28px;
     line-height: 36px;
     letter-spacing: -.005em;
@@ -54,10 +54,12 @@ div#search-title {
     color: #fff;
     width: 100%;
     overflow-wrap: break-word;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-p#search-subtitle {
+p.search-paragraph {
     color: #B3B3B3;
     font-size: 14px;
     line-height: 20px;
@@ -88,4 +90,9 @@ h2.search-header {
     font-size: 36px;
     margin: 24px 0;
     padding: 0 32px;
+}
+
+div.search-inner {
+    height: auto;
+    text-align: center;
 }
