@@ -38,23 +38,39 @@ class SideNav extends React.Component {
                         </div>
                         <div id="recently-played">
                             <div id="recently-played-header">
-                                RECENTLY PLAYED
+                                ABOUT ME
                         </div>
                             <div className='recently-played-item'>
-                                <div className="ellipsis-one-line">Texas Flood (Legacy Edition) vhjvhjvhvj</div>
-                                <div className='recently-played-type'>ALBUM</div>
+                                <div className="ellipsis-one-line">
+                                    <a href="https://github.com/camcarter131/Camify" className="info-link">
+                                        github.com
+                                    </a>
+                                </div>
+                                <div className='recently-played-type'>GITHUB</div>
                             </div>
                             <div className='recently-played-item'>
-                                <div className="ellipsis-one-line">In Session</div>
-                                <div className='recently-played-type'>ALBUM</div>
+                                <div className="ellipsis-one-line">   
+                                    <a href="https://linkedin.com/in/cameron-carter-34796398/" className="info-link">
+                                        linkedin.com
+                                    </a>
+                                </div>
+                                <div className='recently-played-type'>LINKEDIN</div>
                             </div>
                             <div className='recently-played-item'>
-                                <div className="ellipsis-one-line">Travis Scott</div>
-                                <div className='recently-played-type'>ARTIST</div>
+                                <div className="ellipsis-one-line">
+                                    <a href="https://cameroncarter.io" className="info-link">
+                                        cameroncarter.io
+                                    </a>
+                                </div>
+                                <div className='recently-played-type'>PORTFOLIO</div>
                             </div>
                             <div className='recently-played-item'>
-                                <div className="ellipsis-one-line">Your Top Songs 2018</div>
-                                <div className='recently-played-type'>PLAYLIST</div>
+                                <div className="ellipsis-one-line">
+                                    <a href="https://www.facebook.com/cameron.carter.3954" className="info-link">
+                                        facebook.com
+                                    </a>
+                                </div>
+                                <div className='recently-played-type'>FACEBOOK</div>
                             </div>
                         </div>
                     </div>

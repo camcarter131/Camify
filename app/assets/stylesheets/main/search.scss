@@ -20,7 +20,9 @@
 }
 
 input.search-input {
-    background-color: #282828;
+    // background-color: #282828;
+    background-color: transparent;
+    
     border: none;
     color: #FFF;
     caret-color: #1db954;
@@ -30,6 +32,24 @@ input.search-input {
     padding: 16px 0;
     
     height: 44px;
+
+}
+
+div#search-input-inner {
+    // opacity: .6;
+    background-color: #282828;
+    width: 93%;
+}
+
+div.search-input {
+    background-color: #282828;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 22%;
+
+    
+
 }
 
 .search-before {
@@ -38,11 +58,6 @@ input.search-input {
     justify-content: center;
     // padding-top: 100px;
     height: 40vh;;
-}
-
-div.search-input {
-    width: 100%;
-    height: 22%;
 }
 
 div.search-index {

@@ -125,8 +125,10 @@ class Search extends React.Component {
         return (
             <div id="search-main">
                 <div className='search-input'>
-                    <input className='search-input' placeholder="Start typing..."
-                        type="text" onChange={this.handleChange} />
+                    <div id="search-input-inner">
+                        <input className='search-input' placeholder="Start typing..."
+                            type="text" onChange={this.handleChange} />
+                    </div>
                 </div>
                 
                 {this.state.nothingSearched ? (
