@@ -176,7 +176,9 @@ class Search extends React.Component {
                             <h2 className = "search-header">
                                 Artists
                             </h2>
-                            {artists}
+                            <div className = "search-index">
+                                {artists}
+                            </div>
                         </div>
                         ) : (
                                 <div>
@@ -188,7 +190,9 @@ class Search extends React.Component {
                             <h2 className="search-header">
                                 Albums
                             </h2>
-                            {albums}
+                            <div className="search-index">
+                                {albums}
+                            </div>
                         </div>
                         ) : (
                                 <div>
@@ -200,7 +204,9 @@ class Search extends React.Component {
                             <h2 className="search-header">
                                 Playlists
                             </h2>
-                            {playlists}
+                            <div className="search-index">
+                                {playlists}
+                            </div>
                         </div>
                         ) : (
                             <div>
