@@ -159,30 +159,54 @@ class Search extends React.Component {
                     ) : (
 
                     <div id="search-results">
+                        {this.state.foundSongs.length > 0 ? (
                         <div className="search-result-section" id="songs">
                             <h2 className="search-header">
                                 Songs
                             </h2>
                             {songs}
                         </div>
+                        ): (
+                            <div>   
+                            </div>
+                        )
+                        }
+                        {this.state.foundArtists.length > 0 ? (
                         <div className="search-result-section" id="artists">
                             <h2 className = "search-header">
                                 Artists
                             </h2>
                             {artists}
                         </div>
+                        ) : (
+                                <div>
+                                </div>
+                            )   
+                        }
+                        {this.state.foundAlbums.length > 0 ? (
                         <div className="search-result-section" id="albums">
                             <h2 className="search-header">
                                 Albums
                             </h2>
                             {albums}
                         </div>
+                        ) : (
+                                <div>
+                                </div>
+                            )
+                        }
+                        {this.state.foundPlaylists.length > 0 ? (
                         <div className="search-result-section" id="playlists">
                             <h2 className="search-header">
                                 Playlists
                             </h2>
                             {playlists}
                         </div>
+                        ) : (
+                            <div>
+                            </div>
+                        )   
+                        }
                     </div>
                 
                 )
