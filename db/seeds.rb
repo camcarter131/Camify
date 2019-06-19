@@ -27,10 +27,14 @@ harden.photo.attach(io: File.open("app/assets/images/harden.jpg"), filename:"har
 Artist.create(name: 'Stevie Ray Vaughan', description: 'Guitarist from Texas')
 Artist.create(name: 'Lil Wayne', description: 'Rapper from New Orleans')
 Artist.create(name: 'Jimi Hendrix', description: 'Guitarist from Seattle')
+Artist.create(name: 'Travis Scott', description: 'Rapper from Houston')
+Artist.create(name: 'Chance the Rapper', description: 'Rapper from Chicago')
 
 srv = Artist.find_by(name: 'Stevie Ray Vaughan')
 lw = Artist.find_by(name: 'Lil Wayne')
 jimi = Artist.find_by(name: 'Jimi Hendrix')
+ts = Artist.find_by(name: 'Travis Scott')
+cr = Artist.find_by(name: 'Chance the Rapper')
 
 srv.photo.attach(io: File.open("app/assets/images/artist_photos/srv_artist_photo2.jpg"), filename:"srv_artist_photo2.jpg")
 srv.index_photo.attach(io: File.open("app/assets/images/artist_photos/srv_artist_photo.jpg"), filename:"srv_artist_photo.jpg")
@@ -40,6 +44,12 @@ lw.index_photo.attach(io: File.open("app/assets/images/artist_photos/lw.jpg"), f
 
 jimi.photo.attach(io: File.open("app/assets/images/artist_photos/jimi.jpg"), filename:"jimi.jpg")
 jimi.index_photo.attach(io: File.open("app/assets/images/artist_photos/jimi_index.jpg"), filename:"jimi_index.jpg")
+
+ts.photo.attach(io: File.open("app/assets/images/artist_photos/ts_show.jpg"), filename:"ts_show.jpg")
+ts.index_photo.attach(io: File.open("app/assets/images/artist_photos/ts.jpeg"), filename:"ts.jpeg")
+
+cr.photo.attach(io: File.open("app/assets/images/artist_photos/cr_show.png"), filename:"cr_show.png")
+cr.index_photo.attach(io: File.open("app/assets/images/artist_photos/cr.jpg"), filename:"cr.jpg")
 
 
 ##########################################################################
