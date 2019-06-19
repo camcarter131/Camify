@@ -55,28 +55,31 @@ class SongIndexItem extends React.Component{
         return ( 
             <div className="song-div">
                 {(this.state.show) ? <AddSongModalContainer song={song} show={this.state.show} handleClose={this.hideModal} />: null}
-                <button className="song-play-btn" onClick={() => playPauseSong(song)}>
-                    {(isPlaying === true && song === currentSong) ? (
-                        <i className="fa fa-pause-circle fa-2x" aria-hidden="true"></i>
-                    ) : (
-                        <i className="fa fa-play-circle fa-2x" aria-hidden="true"></i>
-                    )
-                    }
-                </button>
-                <div id="song-name">   
-                    {song.name}
-                </div>          
-                <div id="song-ellipses-div">
-                    <button onClick={this.showDropdownMenu} className="song-ellipses">&hellip;</button>
-                </div>
-                {this.state.displayMenu ? (
-                    <div className="dropdown">
-                        <a onClick={this.showModal} className="dropdown">Add to playlist</a>
-                        <a onClick={() => removeOneSong(song.id)} className="dropdown">Remove from your library</a>
+                <div className="song-div-inner">
+                    <button className="song-play-btn" onClick={() => playPauseSong(song)}>
+                        {(isPlaying === true && song === currentSong) ? (
+                            <i className="fa fa-pause-circle fa-2x" aria-hidden="true"></i>
+                        ) : (
+                                <i className="fa fa-play-circle fa-2x" aria-hidden="true"></i>
+                            )
+                        }
+                    </button>
+                    <div id="song-name">
+                        {song.name}
                     </div>
-                ) :
-                    (null)
-                } 
+                    <div id="song-ellipses-div">
+                        <button onClick={this.showDropdownMenu} className="song-ellipses">&hellip;</button>
+                    </div>
+                    {this.state.displayMenu ? (
+                        <div className="dropdown">
+                            <a onClick={this.showModal} className="dropdown">Add to playlist</a>
+                            <a onClick={() => removeOneSong(song.id)} className="dropdown">Remove from your library</a>
+                        </div>
+                    ) :
+                        (null)
+                    } 
+                </div>
+
             </div>
         );
     }

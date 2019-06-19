@@ -12,8 +12,15 @@
     font-weight: normal;
 }
 
-.song-div:hover {
-    background-color: rgba(0,0,0,.6);
+.song-div-inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.song-div-inner:hover {
+    background-color: rgba(0,0,0,.35);
     transition: .4s;
 }
 .song-div .song-play-btn {
