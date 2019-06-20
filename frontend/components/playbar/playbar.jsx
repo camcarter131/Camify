@@ -19,11 +19,7 @@ const PlayBar = ({ user, song, isPlaying, playPauseSong }) => {
                 <div id="play-bar-center">
                     <div id="controls">
                         <div id="buttons">
-                            <div id="prev-btn-div">
-                                <button className="control-button" id="prev">
-                                    <i className="far fa-step-forward"></i>
-                                </button> 
-                            </div>
+                            
                             <div id="play-btn-div">
                                 <button onClick={() => playPauseSong(song) }className="control-button" id="play">
                                     {(isPlaying === true ) ? (
@@ -34,11 +30,7 @@ const PlayBar = ({ user, song, isPlaying, playPauseSong }) => {
                                     }
                                 </button>
                             </div>
-                            <div id="next-btn-div">
-                                <button className="control-button" id="next">   
-                                    <i className="fas fa-forward" aria-hidden="true"></i>                         
-                                </button>
-                            </div>
+                            
                         </div>
                         <div id="bar">
 

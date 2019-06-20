@@ -71,3 +71,9 @@ button.control-button {
 .fa-2x-playbar:hover {
     font-size: 3em;
 }
+
+div#play-btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
