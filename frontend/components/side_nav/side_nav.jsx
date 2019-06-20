@@ -38,7 +38,7 @@ class SideNav extends React.Component {
                         </div>
                         <div id="recently-played">
                             <div id="recently-played-header">
-                                ABOUT ME
+                                ABOUT THE AUTHOR
                         </div>
                             <div className='recently-played-item'>
                                 <div className="ellipsis-one-line">

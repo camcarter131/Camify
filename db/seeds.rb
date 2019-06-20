@@ -61,16 +61,26 @@ Album.create(name: "Texas Flood", artist_id: Artist.find_by(name: 'Stevie Ray Va
 Album.create(name: "Soul to Soul", artist_id: Artist.find_by(name: 'Stevie Ray Vaughan').id, release_year: 1985)
 Album.create(name: "Tha Carter III", artist_id: Artist.find_by(name: 'Lil Wayne').id, release_year: 2008)
 Album.create(name: "Electric Ladyland", artist_id: Artist.find_by(name: 'Jimi Hendrix').id, release_year: 1968)
+Album.create(name: "Acid Rap", artist_id: Artist.find_by(name: 'Chance the Rapper').id, release_year: 2013)
+Album.create(name: "Coloring Book", artist_id: Artist.find_by(name: 'Chance the Rapper').id, release_year: 2016)
+Album.create(name: "ASTROWORLD", artist_id: Artist.find_by(name: 'Travis Scott').id, release_year: 2018)
 
 tf = Album.find_by(name: 'Texas Flood')
 ss = Album.find_by(name: 'Soul to Soul')
 tc = Album.find_by(name: 'Tha Carter III')
 el = Album.find_by(name: 'Electric Ladyland')
+ar = Album.find_by(name: 'Acid Rap')
+cb = Album.find_by(name: 'Coloring Book')
+aw = Album.find_by(name: 'ASTROWORLD')
+
 
 tf.photo.attach(io: File.open("app/assets/images/album_photos/tf.jpeg"), filename:"tf.jpeg")
 ss.photo.attach(io: File.open("app/assets/images/album_photos/ss.jpg"), filename:"ss.jpg")
 tc.photo.attach(io: File.open("app/assets/images/album_photos/tc.jpg"), filename:"tc.jpg")
 el.photo.attach(io: File.open("app/assets/images/album_photos/el.jpg"), filename:"el.jpg")
+ar.photo.attach(io: File.open("app/assets/images/album_photos/ar.jpg"), filename:"ar.jpg")
+cb.photo.attach(io: File.open("app/assets/images/album_photos/cb.png"), filename:"cb.png")
+aw.photo.attach(io: File.open("app/assets/images/album_photos/aw.jpg"), filename:"aw.jpg")
 
 ##########################################################################
 #___________________________________SONGS________________________________#
@@ -141,5 +151,58 @@ AAW.song_file.attach(io: File.open("app/assets/images/songs/AAW.mp3"), filename:
 LittleWing.song_file.attach(io: File.open("app/assets/images/songs/LittleWing.mp3"), filename:"LittleWing.mp3")
 RH.song_file.attach(io: File.open("app/assets/images/songs/RH.mp3"), filename:"RH.mp3")
 
+## - Acid Rap - ##
+Song.create(name: 'Juice', album_id: Album.find_by(name: 'Acid Rap').id, duration: 321)
+Song.create(name: 'Cocoa Butter Kisses (feat. Vic Mensa and Twista)', album_id: Album.find_by(name: 'Acid Rap').id, duration: 220)
+Song.create(name: 'Paranoia', album_id: Album.find_by(name: 'Acid Rap').id, duration: 205)
+Song.create(name: 'Favorite Song (feat. Childish Gambino)', album_id: Album.find_by(name: 'Acid Rap').id, duration: 280)
+Song.create(name: 'Smoke Again (feat. Ab-Soul)', album_id: Album.find_by(name: 'Acid Rap').id, duration: 280)
 
+J = Song.find_by(name: 'Juice')
+CBK = Song.find_by(name: 'Cocoa Butter Kisses (feat. Vic Mensa and Twista)')
+P = Song.find_by(name: 'Paranoia')
+FS = Song.find_by(name: 'Favorite Song (feat. Childish Gambino)')
+SA = Song.find_by(name: 'Smoke Again (feat. Ab-Soul)')
+
+J.song_file.attach(io: File.open("app/assets/images/songs/J.mp3"), filename:"J.mp3")
+CBK.song_file.attach(io: File.open("app/assets/images/songs/CBK.mp3"), filename:"CBK.mp3")
+P.song_file.attach(io: File.open("app/assets/images/songs/P.mp3"), filename:"P.mp3")
+FS.song_file.attach(io: File.open("app/assets/images/songs/FS.mp3"), filename:"FS.mp3")
+SA.song_file.attach(io: File.open("app/assets/images/songs/SA.mp3"), filename:"SA.mp3")
+
+## - Coloring Book - ##
+Song.create(name: 'All Night', album_id: Album.find_by(name: 'Coloring Book').id, duration: 321)
+Song.create(name: 'Blessings (feat. Jamila Woods and Byron Cage)', album_id: Album.find_by(name: 'Coloring Book').id, duration: 220)
+Song.create(name: 'Juke Jam (feat. Justin Bieber and Towkio)', album_id: Album.find_by(name: 'Coloring Book').id, duration: 205)
+Song.create(name: 'Smoke Break', album_id: Album.find_by(name: 'Coloring Book').id, duration: 280)
+Song.create(name: 'Same Drugs', album_id: Album.find_by(name: 'Coloring Book').id, duration: 280)
+
+AN = Song.find_by(name: 'All Night')
+BLESS = Song.find_by(name: 'Blessings (feat. Jamila Woods and Byron Cage)')
+JJ = Song.find_by(name: 'Juke Jam (feat. Justin Bieber and Towkio)')
+SB = Song.find_by(name: 'Smoke Break')
+SD = Song.find_by(name: 'Same Drugs')
+
+AN.song_file.attach(io: File.open("app/assets/images/songs/AN.mp3"), filename:"AN.mp3")
+BLESS.song_file.attach(io: File.open("app/assets/images/songs/BLESS.mp3"), filename:"BLESS.mp3")
+JJ.song_file.attach(io: File.open("app/assets/images/songs/JJ.mp3"), filename:"JJ.mp3")
+SB.song_file.attach(io: File.open("app/assets/images/songs/SB.mp3"), filename:"SB.mp3")
+SD.song_file.attach(io: File.open("app/assets/images/songs/SD.mp3"), filename:"SD.mp3")
+
+
+## - ASTROWORLD - ##
+Song.create(name: 'Sicko Mode (feat. Drake and Swae Lee)', album_id: Album.find_by(name: 'ASTROWORLD').id, duration: 321)
+Song.create(name: "Can't Say (feat. Don Toliver)", album_id: Album.find_by(name: 'ASTROWORLD').id, duration: 220)
+Song.create(name: 'Stop Trying to Be God (feat. Kid Cudi, James Blake, and Stevie Wonder)', album_id: Album.find_by(name: 'ASTROWORLD').id, duration: 205)
+Song.create(name: 'Wake Up (feat. The Weeknd)', album_id: Album.find_by(name: 'ASTROWORLD').id, duration: 280)
+
+SM = Song.find_by(name: 'Sicko Mode (feat. Drake and Swae Lee)')
+CS = Song.find_by(name: "Can't Say (feat. Don Toliver)")
+GOD = Song.find_by(name: 'Stop Trying to Be God (feat. Kid Cudi, James Blake, and Stevie Wonder)')
+WU = Song.find_by(name: 'Wake Up (feat. The Weeknd)')
+
+SM.song_file.attach(io: File.open("app/assets/images/songs/SM.mp3"), filename:"SM.mp3")
+CS.song_file.attach(io: File.open("app/assets/images/songs/CS.mp3"), filename:"CS.mp3")
+GOD.song_file.attach(io: File.open("app/assets/images/songs/GOD.mp3"), filename:"GOD.mp3")
+WU.song_file.attach(io: File.open("app/assets/images/songs/WU.mp3"), filename:"WU.mp3")
 
