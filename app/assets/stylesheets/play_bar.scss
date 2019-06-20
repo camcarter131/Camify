@@ -16,6 +16,7 @@
 #buttons {
     display: flex; 
     align-items: center;
+    justify-content: center;
     
 }
 
@@ -30,6 +31,16 @@
     display: flex;
     justify-content: center;
 }  
+
+button.control-button {
+    background-size: contain;
+    height: 32px;
+    width: 32px;
+    z-index: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
 
 #react-player {
     display: none;

@@ -1,14 +1,13 @@
 
-
+ 
 #home-main {
     padding-left: $side_nav_width;
     padding-bottom: $play_bar_height;
     font-weight: bold;
-    display: flex;
+    // display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
-    padding-top: $home_library_header_height;
+    height: auto;
+    min-height: 911px;
     justify-content: space-around;
     align-items: center;
     color: white;
@@ -52,4 +51,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+div#home-spacing {
+    height: 10%;
 }

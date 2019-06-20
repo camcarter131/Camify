@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
 
-    return (
+    return ( 
         <div id="home-main">
             <div id='nav-button-container'>
                 <div id="nav-div">
@@ -14,31 +14,31 @@ const Home = () => {
                     </li>
                     <li className="nav-li">
                         <div className="nav-li-div">
-                            <Link className="lib-link">PODCASTS</Link>
+                            <Link className="lib-link">PLAYLISTS</Link>
                         </div>
                     </li>
                     <li className="nav-li">
                         <div className="nav-li-div">
-                            <Link className="lib-link">CHARTS</Link>
+                            <Link className="lib-link">SONGS</Link>
                         </div>
                     </li>
                     <li className="nav-li">
                         <div className="nav-li-div">
-                            <Link className="lib-link">{"GENRES & MOODS"}</Link>
+                            <Link className="lib-link">ALBUMS</Link>
                         </div>
                     </li>
                     <li className="nav-li">
                         <div className="nav-li-div">
-                            <Link className="lib-link">NEW RELEASES</Link>
+                            <Link className="lib-link">ARTISTS</Link>
                         </div>
                     </li>
                 </div>
             </div>
-
-            <div>
-                This is Home. Will render different components here.
+            <div className="search-result-section" id="songs">
+                <h2 className="search-header">
+                    Made for James
+                </h2>
             </div>
-            
         </div>
     )
 }
