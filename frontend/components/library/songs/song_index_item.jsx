@@ -51,7 +51,7 @@ class SongIndexItem extends React.Component{
     } 
 
     render() {
-        const { song, playPauseSong, removeOneSong, isPlaying, currentSong } = this.props;
+        const { song, playPauseSong, removeOneSong, isPlaying, currentSong, artist, album } = this.props;
         return ( 
             <div className="song-div">
                 {(this.state.show) ? <AddSongModalContainer song={song} show={this.state.show} handleClose={this.hideModal} />: null}
@@ -66,6 +66,8 @@ class SongIndexItem extends React.Component{
                     </button>
                     <div id="song-name">
                         {song.name}
+                        {artist.name}
+                        {album.name}
                     </div>
                     <div id="song-ellipses-div">
                         <button onClick={this.showDropdownMenu} className="song-ellipses">&hellip;</button>

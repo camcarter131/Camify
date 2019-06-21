@@ -21,8 +21,6 @@
 }
 
 .control-button#play {
-    // background-image: image-url("play6.jpg");
-    // background: transparent;
     background-size: contain;
     height: 32px;
     width: 32px;
@@ -76,4 +74,16 @@ div#play-btn-div {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+div.play-bar-song-artist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.play-bar-song {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .015em;
 }

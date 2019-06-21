@@ -14,7 +14,15 @@ const PlayBar = ({ user, song, isPlaying, playPauseSong }) => {
                     (null) 
                 }
                 <div id="play-bar-left">
-                    {song? song.name : null }
+                    <div id="play-bar-album-img"></div>
+                    <div id="play-bar-song-artist">
+                        <div id="play-bar-song">
+                            {song ? song.name : null}
+                        </div>
+                        <div id="play-bar-artist">
+
+                        </div>
+                    </div>
                 </div>
                 <div id="play-bar-center">
                     <div id="controls">

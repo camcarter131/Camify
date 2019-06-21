@@ -25,6 +25,8 @@ class SongIndex extends React.Component {
                 <SongIndexItem
                     key={song.id}
                     song={song}
+                    artist={song.artist}
+                    album={song.album}
                     playPauseSong={playPauseSong}
                     removeOneSong={removeOneSong}
                     isPlaying={isPlaying}

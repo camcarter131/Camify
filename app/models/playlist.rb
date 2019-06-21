@@ -12,7 +12,7 @@
 class Playlist < ApplicationRecord
     validates :name, :user_id, presence: true
 
-    has_many :playlist_songs
+    has_many :playlist_songs 
 
     has_many :songs,
     through: :playlist_songs,
