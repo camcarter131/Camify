@@ -56,22 +56,37 @@ class SongIndexItem extends React.Component{
             <div className="song-div">
                 {(this.state.show) ? <AddSongModalContainer song={song} show={this.state.show} handleClose={this.hideModal} />: null}
                 <div className="song-div-inner">
-                    <button className="song-play-btn" onClick={() => playPauseSong(song)}>
-                        {(isPlaying === true && song === currentSong) ? (
-                            <i className="fa fa-pause-circle fa-2x" aria-hidden="true"></i>
-                        ) : (
-                                <i className="fa fa-play-circle fa-2x" aria-hidden="true"></i>
-                            )
-                        }
-                    </button>
-                    <div id="song-name">
-                        {song.name}
-                        {artist.name}
-                        {album.name}
+                    <div className="song-play-btn">
+                        <button className="song-play-btn" onClick={() => playPauseSong(song)}>
+                            {(isPlaying === true && song === currentSong) ? (
+                                <i className="fa fa-pause-circle fa-2x" aria-hidden="true"></i>
+                            ) : (
+                                    <i className="fa fa-play-circle fa-2x" aria-hidden="true"></i>
+                                )
+                            }
+                        </button>
                     </div>
+                    <div id="song-info">
+                        <div id="song-name">
+                            {song.name}
+                        </div>
+                        <div id="song-not-name">
+                            <div id="song-artist">
+                                {artist.name}
+                            </div>
+                            <div id="separator">
+                                .
+                            </div>
+                            <div id="song-album">
+                                {album.name}
+                            </div>
+                        </div>
+                    </div>
+
                     <div id="song-ellipses-div">
                         <button onClick={this.showDropdownMenu} className="song-ellipses">&hellip;</button>
                     </div>
+                    
                     {this.state.displayMenu ? (
                         <div className="dropdown">
                             <a onClick={this.showModal} className="dropdown">Add to playlist</a>
