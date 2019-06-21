@@ -89,12 +89,12 @@ div#song-not-name {
     display: flex;
     align-items: center;
     font-size: 14px;
-    opacity: .6;
+    opacity: .5;
 }
 
 div#song-name {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     font-size: 16px;
     opacity: .9;
     
@@ -117,6 +117,7 @@ div#song-album {
 }
 div#separator {
     display: flex;
-    align-items: center;
-    font-size: 20px;
+    align-items: flex-start;
+    padding: 0 8px;
+    font-size: 18px;
 }
