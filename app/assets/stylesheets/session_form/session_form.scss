@@ -37,7 +37,7 @@
 }
 
 #login-li {
-    padding-top: 18px;
+    padding-top: 30px;
 }
 
 .divider {
@@ -65,12 +65,22 @@ input.login {
 }
 
 li.session-li {
-    display: flex;
+    display: flex; 
     padding: 10px;
     justify-content: center;
     height: 20%;
     width: 100%;
 }
+
+#password-text {
+    margin-top: 8px;
+    // margin-bottom: 8px;
+}
+
+#login-btn {
+    margin-top: 8px;
+}
+
 
 #input-list {
     width: 450px;
@@ -214,7 +224,7 @@ li#text-border {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    padding-top: 60px;
+    padding-top: 74px;
 }
 
 #line {

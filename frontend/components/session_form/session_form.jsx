@@ -107,7 +107,7 @@ class SessionForm extends React.Component {
                                 placeholder="Username" onChange={this.update("username")} />
                         </li>
                         <li className="session-li">
-                            <input className="login" type="password" value={this.state.password}
+                            <input id="password-text" className="login" type="password" value={this.state.password}
                                 placeholder="Password" onChange={this.update("password")} />
                         </li>
                         <li className="session-li" id="login-li">
