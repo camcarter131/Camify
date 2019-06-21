@@ -26,8 +26,16 @@ class Library extends React.Component {
         this.setState({ show: false });
     } 
 
-    playlists() {
-        return (
+    showLibrary(type) {
+        let playlistClass = "lib-link";
+        let songClass = "lib-link";
+        let albumClass = "lib-link";
+        let artistClass = "lib-link";
+        (type === "playlists") ? playlistClass = "lib-link-clicked" : playlistClass = playlistClass;
+        (type === "tracks") ? songClass = "lib-link-clicked" : songClass = songClass;
+        (type === "albums") ? albumClass = "lib-link-clicked" : albumClass = albumClass;
+        (type === "artists") ? artistClass = "lib-link-clicked" : artistClass = artistClass;
+        return ( 
             <div id="library-main">
                 <PlaylistModalContainer show={this.state.show} handleClose={this.hidePlaylistModal}>
                     <p>Modal</p>
@@ -36,23 +44,24 @@ class Library extends React.Component {
                 <div id='nav-button-container'>
                     <div id="nav-div">
                         <li className="nav-li">
+                            
                             <div className="nav-li-div">
-                                <Link to="/collection/playlists" className="lib-link">PLAYLISTS</Link>
+                            <Link to="/collection/playlists" className={playlistClass}>PLAYLISTS</Link>
                             </div>
-                        </li>
+                        </li> 
                         <li className="nav-li">
                             <div className="nav-li-div"> 
-                                <Link to="/collection/tracks" className="lib-link">SONGS</Link>
+                                <Link to="/collection/tracks" className={songClass}>SONGS</Link>
                             </div>
                         </li>
                         <li className="nav-li">
                             <div className="nav-li-div">
-                                <Link to="/collection/albums" className="lib-link">ALBUMS</Link>
+                                <Link to="/collection/albums" className={albumClass}>ALBUMS</Link>
                             </div>
                         </li>
                         <li className="nav-li">
                             <div className="nav-li-div">
-                                <Link to="/collection/artists" className="lib-link">ARTISTS</Link>
+                                <Link to="/collection/artists" className={artistClass}>ARTISTS</Link>
                             </div>
                         </li>
                     </div>
@@ -75,8 +84,9 @@ class Library extends React.Component {
     }
 
     render() { 
+        const {type} = this.props;
         return(
-            this.playlists()
+            this.showLibrary(type)
         )
     }
 }

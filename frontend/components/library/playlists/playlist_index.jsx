@@ -27,7 +27,7 @@ class PlaylistIndex extends React.Component {
                     remove={this.props.remove}
                     name={this.props.name}
                 />
-            );
+            ); 
         });
 
         return (

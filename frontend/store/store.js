@@ -16,7 +16,7 @@ const _preloadedState = {
 };
 
 export const configureStore = (preloadedState = _preloadedState) => (
-
+    
     createStore(
         rootReducer,
         preloadedState,

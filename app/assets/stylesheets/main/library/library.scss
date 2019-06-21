@@ -34,6 +34,28 @@ a.lib-link {
     outline: none;
 }
 
+a.lib-link-clicked {
+    color: #FFFFFF;
+    letter-spacing: .015em;
+    font-size: 12px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    outline: none;
+}
+
+a.lib-link-clicked:before {
+    content: "";
+    height: 2px;
+    background-color: #1db954;
+    width: 30px;
+    position: absolute;
+    display: block;
+    // left: 50%;
+    bottom: 90px;
+    // margin-left: -15px;
+}
+
 a.lib-link:hover {
     color: white;
     transition: .4s;
@@ -71,6 +93,7 @@ a.lib-link:hover {
     align-items: center;
     justify-content: center;
 }
+
 
 #nav-div {
     display: flex;

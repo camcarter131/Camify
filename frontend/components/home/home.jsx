@@ -31,7 +31,7 @@ const Home = () => {
                         <div className="nav-li-div">
                             <Link className="lib-link">ARTISTS</Link>
                         </div>
-                    </li>
+                    </li> 
                 </div>
             </div>
             <div className="search-result-section" id="songs">

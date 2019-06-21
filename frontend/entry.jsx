@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         store = configureStore();
     }
     window.store = store;
+    // window.ownProps = ownProps;
     window.receiveAllSongs = receiveAllSongs;
     window.dispatch = store.dispatch
     window.getState = store.getState;

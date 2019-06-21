@@ -18,7 +18,7 @@ const App = () => (
     <div className="app-div">
  
         <SideNavContainer />
-        <Switch>
+        <Switch> 
             {/* <ProtectedRoute ></ProtectedRoute> */}
             <AuthRoute id="login-signup" exact path="/login" component={LogInFormContainer} />
             <AuthRoute id="login-signup" exact path="/signup" component={SignUpFormContainer} />
