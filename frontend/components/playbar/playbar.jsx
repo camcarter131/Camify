@@ -10,7 +10,7 @@ class PlayBar extends React.Component{
             getSong: true,
             url: null,
             pip: false,
-            playing: true,
+            playing: false,
             controls: false,
             light: false,
             volume: 0.8,
@@ -40,21 +40,15 @@ class PlayBar extends React.Component{
         // if (!song) this.setState({ getSong: !this.state.getSong })
         // debugger
         const { url, playing, controls, light, volume, muted, loop, played, loaded, duration, playbackRate, pip } = this.state
-
-        if (user) {
+        if (user && song) {
+            debugger
             return (
                 <div id="play-bar">
-                    {/* {isPlaying ? (<ReactPlayer id="react-player" url={song.songFile} playing={isPlaying}
-                        controls={true} playbackRate={1} loop={true}
-                    />
-                    ) :
-                        (null)
-                    } */}
                     <ReactPlayer
-                        // url={song.songFile}
+                        url={song.songFile}
                         id='react-player'
                         playing={playing}
-                        onPlay={this.onPlay}
+                        // onPlay={this.onPlay}
                     />
                     <div id="play-bar-left">
                         <div id="play-bar-album-img"></div>
