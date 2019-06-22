@@ -3,4 +3,4 @@ songs.each do |song|
     json.extract! song, :id, :name, :album_id, :duration
     json.songFile url_for(song.song_file)
   end
-end
+end 

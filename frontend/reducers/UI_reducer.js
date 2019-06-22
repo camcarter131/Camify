@@ -19,13 +19,16 @@ export const UIReducer = (state = {}, action) => {
                 nextState['isPlaying'] = false;
                 return nextState;
             } 
-            if (!nextState['isPlaying'] || nextState['isPlaying'] === false) {
+            if (!nextState['isPlaying']) {
                 nextState['currentSong'] = action.song;
                 nextState['isPlaying'] = true;
-            } else if (nextState['currentSong'] != action.song) {
+            } else if (nextState['isPlaying'] === false) {
+                nextState['isPlaying'] = true;
+            }
+            else if (nextState['currentSong'] != action.song) {
                 nextState['currentSong'] = action.song;
                 nextState['isPlaying'] = true;
-            } else if (nextState['isPlaying']) {
+            } else if (nextState['isPlaying']) { 
                 nextState['isPlaying'] = false;
             }
             return nextState;
@@ -36,7 +39,7 @@ export const UIReducer = (state = {}, action) => {
             nextState['currentSong'] = Object.values(action.payload.songs)[0];
             nextState['loading'] = false;
             return nextState;  
-        case RECEIVE_PLAYLISTS:
+        case RECEIVE_PLAYLISTS: 
             nextState['loading'] = false;
             return nextState;  
         case RECEIVE_SONGS:

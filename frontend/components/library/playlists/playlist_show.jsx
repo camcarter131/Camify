@@ -60,7 +60,7 @@ class PlaylistShow extends React.Component {
         if (songs === undefined) return null;
         if (playlist === undefined) return null;
         let num_songs = Object.values(songs).length;
-        return ( 
+        return (  
             <div id='playlist-show'>
                 <DeletePlaylistModalContainer handleClose={this.hideDeleteModal} playlist={playlist} remove={remove} show={this.state.show} />
                 <div id="playlist-header-all">

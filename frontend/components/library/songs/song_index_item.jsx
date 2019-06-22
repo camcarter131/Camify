@@ -52,6 +52,7 @@ class SongIndexItem extends React.Component{
 
     render() {
         const { song, playPauseSong, removeOneSong, isPlaying, currentSong, artist, album } = this.props;
+        // debugger
         return ( 
             <div className="song-div">
                 {(this.state.show) ? <AddSongModalContainer song={song} show={this.state.show} handleClose={this.hideModal} />: null}

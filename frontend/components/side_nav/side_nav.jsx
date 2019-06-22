@@ -41,36 +41,40 @@ class SideNav extends React.Component {
                                 ABOUT THE AUTHOR
                         </div>
                             <div className='recently-played-item'>
-                                <div className="ellipsis-one-line">
+                                {/* <div className="ellipsis-one-line">
                                     <a href="https://github.com/camcarter131/Camify" className="info-link">
-                                        github.com
+                                        GITHUB
+                                    </a>
+                                </div> */}
+                                <div className='recently-played-type'>
+                                    <a href="https://github.com/camcarter131/Camify" className="info-link">
+                                        GITHUB
                                     </a>
                                 </div>
-                                <div className='recently-played-type'>GITHUB</div>
                             </div>
                             <div className='recently-played-item'>
-                                <div className="ellipsis-one-line">   
+                                {/* <div className="ellipsis-one-line">   
                                     <a href="https://linkedin.com/in/cameron-carter-34796398/" className="info-link">
-                                        linkedin.com
+                                        LINKEDIN
+                                    </a>
+                                </div> */}
+                                <div className='recently-played-type'>
+                                    <a href="https://linkedin.com/in/cameron-carter-34796398/" className="info-link">
+                                    LINKEDIN
                                     </a>
                                 </div>
-                                <div className='recently-played-type'>LINKEDIN</div>
                             </div>
                             <div className='recently-played-item'>
-                                <div className="ellipsis-one-line">
+                                {/* <div className="ellipsis-one-line">
                                     <a href="https://cameroncarter.io" className="info-link">
-                                        cameroncarter.io
+                                        PORTFOLIO
+                                    </a>
+                                </div> */}
+                                <div className='recently-played-type'>
+                                    <a href="https://cameroncarter.io" className="info-link">
+                                        PORTFOLIO
                                     </a>
                                 </div>
-                                <div className='recently-played-type'>PORTFOLIO</div>
-                            </div>
-                            <div className='recently-played-item'>
-                                <div className="ellipsis-one-line">
-                                    <a href="https://www.facebook.com/cameron.carter.3954" className="info-link">
-                                        facebook.com
-                                    </a>
-                                </div>
-                                <div className='recently-played-type'>FACEBOOK</div>
                             </div>
                         </div>
                     </div>

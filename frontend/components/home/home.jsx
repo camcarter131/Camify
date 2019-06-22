@@ -6,7 +6,7 @@ const Home = () => {
     return ( 
         <div id="home-main">
             <div id='nav-button-container'>
-                <div id="nav-div">
+                <div id="nav-div"> 
                     <li className="nav-li">
                         <div className="nav-li-div">
                             <Link className="lib-link">FEATURED</Link>

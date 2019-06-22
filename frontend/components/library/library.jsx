@@ -30,7 +30,7 @@ class Library extends React.Component {
         let playlistClass = "lib-link";
         let songClass = "lib-link";
         let albumClass = "lib-link";
-        let artistClass = "lib-link";
+        let artistClass = "lib-link"; 
         (type === "playlists") ? playlistClass = "lib-link-clicked" : playlistClass = playlistClass;
         (type === "tracks") ? songClass = "lib-link-clicked" : songClass = songClass;
         (type === "albums") ? albumClass = "lib-link-clicked" : albumClass = albumClass;

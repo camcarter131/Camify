@@ -86,6 +86,8 @@ class Search extends React.Component {
                 <SongIndexItem
                     key={song.id}
                     song={song}
+                    artist={song.artist}
+                    album={song.album}
                     playPauseSong={playPauseSong}
                     removeOneSong={removeOneSong}
                     isPlaying={isPlaying}
@@ -168,7 +170,7 @@ class Search extends React.Component {
                             </h2>
                             {songs}
                         </div>
-                        ): (
+                        ): ( 
                             <div>   
                             </div>
                         )

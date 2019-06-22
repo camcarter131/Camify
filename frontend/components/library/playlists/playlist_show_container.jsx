@@ -19,7 +19,7 @@ const msp = (state, ownProps) => {
         loading
     })
 };
-
+ 
 const mdp = dispatch => {
     return ({
         receivePlaylist: id => dispatch(receivePlaylist(id)),

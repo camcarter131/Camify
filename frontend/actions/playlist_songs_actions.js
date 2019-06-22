@@ -4,7 +4,7 @@ export const ADD_SONG = 'ADD_SONG';
 export const REMOVE_SONG = 'REMOVE_SONG';
 export const RECEIVE_PLAYLIST_SONGS = 'RECEIVE_PLAYLIST_SONGS';
 
-
+ 
 export const addSong = playlistSong => ({
     type: ADD_SONG,
     playlistSong 
@@ -24,7 +24,7 @@ export const receivePlaylistSongs = (playlistSongs) => ({
 
 export const addSongToPlaylist = playlistSong => dispatch => (
     PlaylistSongsAPIUtil.addSongToPlaylist(playlistSong).then(playlistSong => dispatch(addSong(playlistSong)))
-);
+); 
 
 export const removeSongFromPlaylist = id => dispatch => (
     PlaylistSongsAPIUtil.removeSongFromPlaylist(id).then(playlistSong => dispatch(removeSong(playlistSong)))
@@ -33,4 +33,4 @@ export const removeSongFromPlaylist = id => dispatch => (
 export const receiveAllPlaylistSongs = () => dispatch => (
     PlaylistSongsAPIUtil.receiveAllPlaylistSongs().then(playlistSongs => dispatch(receivePlaylistSongs(playlistSongs)))
 );
-
+ 
