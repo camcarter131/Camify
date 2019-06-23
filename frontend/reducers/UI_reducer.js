@@ -42,7 +42,7 @@ export const UIReducer = (state = {}, action) => {
         case RECEIVE_PLAYLISTS: 
             nextState['loading'] = false;
             return nextState;  
-        case RECEIVE_SONGS:
+        case RECEIVE_SONGS: 
             // debugger
             nextState['currentSong'] = Object.values(action.songs)[0];
             nextState['loading'] = false;

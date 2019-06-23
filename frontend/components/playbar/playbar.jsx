@@ -25,6 +25,8 @@ class PlayBar extends React.Component{
     }
 
     playPause() {
+        const { playPauseSong, song } = this.props;
+        playPauseSong(song);
         this.setState({ playing: !this.state.playing })
     }
     stop() {
@@ -36,12 +38,10 @@ class PlayBar extends React.Component{
     }
 
     render() {
-        const { user, song, isPlaying, playPauseSong } = this.props;
+        const { user, song, isPlaying } = this.props;
         // if (!song) this.setState({ getSong: !this.state.getSong })
-        // debugger
         const { url, playing, controls, light, volume, muted, loop, played, loaded, duration, playbackRate, pip } = this.state
-        if (user && song) {
-            debugger
+        if (user && song !== undefined) {
             return (
                 <div id="play-bar">
                     <ReactPlayer
