@@ -41,11 +41,6 @@ class SideNav extends React.Component {
                                 ABOUT THE AUTHOR
                         </div>
                             <div className='recently-played-item'>
-                                {/* <div className="ellipsis-one-line">
-                                    <a href="https://github.com/camcarter131/Camify" className="info-link">
-                                        GITHUB
-                                    </a>
-                                </div> */}
                                 <div className='recently-played-type'>
                                     <a href="https://github.com/camcarter131/Camify" className="info-link">
                                         GITHUB
@@ -53,11 +48,7 @@ class SideNav extends React.Component {
                                 </div>
                             </div>
                             <div className='recently-played-item'>
-                                {/* <div className="ellipsis-one-line">   
-                                    <a href="https://linkedin.com/in/cameron-carter-34796398/" className="info-link">
-                                        LINKEDIN
-                                    </a>
-                                </div> */}
+                                
                                 <div className='recently-played-type'>
                                     <a href="https://linkedin.com/in/cameron-carter-34796398/" className="info-link">
                                     LINKEDIN
@@ -73,6 +64,13 @@ class SideNav extends React.Component {
                                 <div className='recently-played-type'>
                                     <a href="https://cameroncarter.io" className="info-link">
                                         PORTFOLIO
+                                    </a>
+                                </div>
+                            </div>
+                            <div className='recently-played-item'>
+                                <div className='recently-played-type'>
+                                    <a href="https://angel.co/cameron-carter-5?al_content=view+your+profile&al_source=transaction_feed%2Fnetwork_sidebar" className="info-link">
+                                        ANGELLIST
                                     </a>
                                 </div>
                             </div>

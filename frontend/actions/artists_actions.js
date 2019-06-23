@@ -12,7 +12,7 @@ export const receiveArtists = (artists) => ({
 export const receiveArtist = (artist) => ({
     type: RECEIVE_ARTIST, 
     artist
-});
+}); 
  
 export const startLoading = () => ({
     type: START_LOADING

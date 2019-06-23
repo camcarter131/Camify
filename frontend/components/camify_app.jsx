@@ -9,6 +9,7 @@ import SideNavContainer from './side_nav/side_nav_container';
 import PlayBarContainer from './playbar/playbar_container';
 import PlaylistShowContainer from './library/playlists/playlist_show_container';
 import ArtistShowContainer from './library/artists/artist_show_container';
+import AlbumShowContainer from './library/albums/album_show_container';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SearchContainer from './search/search_container';
@@ -18,7 +19,7 @@ const App = () => (
     <div className="app-div">
  
         <SideNavContainer />
-        <Switch> 
+        <Switch>  
             {/* <ProtectedRoute ></ProtectedRoute> */}
             <AuthRoute id="login-signup" exact path="/login" component={LogInFormContainer} />
             <AuthRoute id="login-signup" exact path="/signup" component={SignUpFormContainer} />
@@ -28,6 +29,7 @@ const App = () => (
             <ProtectedRoute exact path="/search" component={SearchContainer} /> 
             <ProtectedRoute exact path="/playlists/:id" component={PlaylistShowContainer} />
             <ProtectedRoute exact path="/artists/:id" component={ArtistShowContainer} />
+            <ProtectedRoute exact path="/albums/:id" component={AlbumShowContainer} />
 
             <AuthRoute exact path="/" component={Splash} />
 

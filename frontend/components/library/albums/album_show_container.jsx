@@ -3,6 +3,7 @@ import AlbumShow from './album_show';
 import { receiveOneAlbum } from '../../../actions/albums_actions';
 
 const msp = (state, ownProps) => {
+    debugger
     let albumId = ownProps.match.params.id;
     let album = state.entities.albums[albumId];
     return ({

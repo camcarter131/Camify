@@ -5,13 +5,14 @@ class AlbumShow extends React.Component {
 
     componentDidMount() {
         let albumId = this.props.match.params.id
+        debugger
         this.props.receiveOneAlbum(albumId);
     }
 
 
     render() {
         const { album } = this.props;
-
+        debugger
         if (album === undefined) return null;
         return (
             <div className="album-show-div">

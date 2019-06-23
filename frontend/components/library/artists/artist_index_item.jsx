@@ -10,11 +10,11 @@ class ArtistIndexItem extends React.Component {
             // <div className="song-div">
             //     <Link to={`/artists/${artist.id}`}>{artist.name}</Link> 
             //     <img id="user-photo" src={artist.photoUrl}></img>
-            // </div>
+            // </div> 
             <div className="artist-div">
                 <button className="artist-btn">
                     <img id="artist-photo" src={artist.indexPhotoUrl}></img>
-                </button>
+                </button> 
                 <Link className="artist-link" id="artist-name-link" to={`/artists/${artist.id}`}>{artist.name}</Link>
             </div>
         ); 

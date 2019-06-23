@@ -9,6 +9,7 @@ export const artistsReducer = (state = {}, action) => {
         case RECEIVE_ARTISTS:
             return merge(nextState, action.artists)
         case RECEIVE_ARTIST:
+            debugger
             nextState[action.artist.id] = action.artist;
             return nextState;
         case RECEIVE_PLAYLIST:

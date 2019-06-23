@@ -10,4 +10,4 @@ export const receiveOneArtist = (id) => (
         url: `api/artists/${id}`,
         method: "GET"
     })
-); 
+);  

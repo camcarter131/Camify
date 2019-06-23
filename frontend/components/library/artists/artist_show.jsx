@@ -7,7 +7,7 @@ class ArtistShow extends React.Component {
         let artistId = this.props.match.params.id
         this.props.receiveOneArtist(artistId);
     }
-
+ 
 
     render() {
         const { artist } = this.props;

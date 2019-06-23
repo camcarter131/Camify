@@ -6,5 +6,6 @@ class Api::ArtistsController < ApplicationController
 
     def show 
         @artist = Artist.find(params[:id])
+        # debugger
     end
 end
