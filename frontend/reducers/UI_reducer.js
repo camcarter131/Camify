@@ -44,7 +44,7 @@ export const UIReducer = (state = {}, action) => {
             return nextState;  
         case RECEIVE_SONGS: 
             // debugger
-            nextState['currentSong'] = Object.values(action.songs)[0];
+            if (!nextState['currentSong']) nextState['currentSong'] = Object.values(action.songs)[0];
             nextState['loading'] = false;
             return nextState;      
         case RECEIVE_ARTISTS:

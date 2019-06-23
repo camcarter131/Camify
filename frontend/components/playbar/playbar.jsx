@@ -51,13 +51,16 @@ class PlayBar extends React.Component{
                         // onPlay={this.onPlay}
                     />
                     <div id="play-bar-left">
-                        <div id="play-bar-album-img"></div>
+                        <div id="play-bar-album-img">
+                            <img id="album-photo-play-bar" src={song.albumPhotoUrl}>
+                            </img>
+                        </div>
                         <div id="play-bar-song-artist">
                             <div id="play-bar-song">
                                 {song ? song.name : null}
                             </div>
                             <div id="play-bar-artist">
-
+                                {song ? song.artist.name : null}
                             </div>
                         </div>
                     </div>

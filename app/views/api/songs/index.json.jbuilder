@@ -6,7 +6,8 @@
                     json.extract! song, :id, :name, :album_id, :duration
                     json.songFile url_for(song.song_file)
                     json.album alb
-                    json.artist art
+                    json.albumPhotoUrl url_for(alb.photo)
+                    json.artist art 
                 end
             end
         end

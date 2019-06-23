@@ -76,14 +76,34 @@ div#play-btn-div {
     justify-content: center;
 }
 
-div.play-bar-song-artist {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+div#play-bar-artist {
+    color: #b3b3b3;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: .015em;
+    text-align: left;
 }
 
-div.play-bar-song {
+div#play-bar-song {
     font-size: 14px;
     line-height: 20px;
     letter-spacing: .015em;
+    color: #FFFFFF;
+    opacity: .85;
+}
+
+div#play-bar-song-artist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 14px;
+}
+
+div#play-bar-album-img {
+    display: flex;
+    align-items: center;
+}
+
+#album-photo-play-bar {
+    height: 56px;;
 }
