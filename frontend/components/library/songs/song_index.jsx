@@ -19,7 +19,7 @@ class SongIndex extends React.Component {
                     color={'#DFE2E1'} 
                     loading={loading} />
             </div>
-        );
+        ); 
         const songs = this.props.songs.map(song => { 
             return (
                 <SongIndexItem

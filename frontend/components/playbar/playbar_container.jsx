@@ -3,11 +3,14 @@ import PlayBar from './playbar';
 import { logout } from '../../actions/session_actions';
 import { playPauseSong } from '../../actions/UI_actions';
 
-const msp = ({ session, entities: { users }, UI }) => ({
-    user: users[session.id],
-    song: UI.currentSong,
-    isPlaying: UI.isPlaying
-});
+const msp = ({ session, entities: { users }, UI }) => {
+    
+    return {
+        user: users[session.id],
+        song: UI.currentSong,
+        isPlaying: UI.isPlaying
+    }
+};
 
 const mdp = dispatch => ({
     logout: () => dispatch(logout()),

@@ -6,7 +6,7 @@ class Api::PlaylistSongsController < ApplicationController
 
         if @playlist_song.save!
             render "api/playlist_songs/show"
-        else 
+        else  
             render json: ["Invalid"], status: 422
         end 
     end

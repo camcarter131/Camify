@@ -5,9 +5,13 @@ import GridLoader from 'react-spinners/GridLoader';
 
 class PlaylistIndex extends React.Component {
 
+    componentDidMount() {
+        this.props.receiveAllSongs();
+    }
+
     componentWillMount() { 
         this.props.receiveAllPlaylists();
-    }
+    } 
 
     render() {
         // const { loading } = this.props;
@@ -18,6 +22,8 @@ class PlaylistIndex extends React.Component {
         //             loading={loading} />
         //     </div>
         // );
+
+        if (this.props.songs === undefined) return null;
         
         const playlists = this.props.playlists.map(playlist => {
             return ( 

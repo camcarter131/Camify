@@ -47,9 +47,7 @@ class PlaylistShow extends React.Component {
     }
  
     render() {
-        // debugger
         const { songs, playlist, name, remove, playPauseSong, loading } = this.props;
-        // debugger
         if (loading) return (
             <div id="loader">
                 <GridLoader id="beatloader"
@@ -93,8 +91,6 @@ class PlaylistShow extends React.Component {
                                     {this.state.displayMenu ? (
                                         <div className="dropdown">
                                         <a onClick={this.showDeleteModal} className="dropdown">Delete</a>
-                                            <a className="dropdown">Make secret</a>
-                                            <a className="dropdown">Start Radio</a>
                                         </div>
                                     ) : 
                                     (null)

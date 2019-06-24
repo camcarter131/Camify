@@ -11,7 +11,9 @@ class Api::PlaylistsController < ApplicationController
  
     def show
         @playlist = Playlist.find(params[:id])
-        render "api/playlists/show"
+        @albums = Album.all
+        @artists = Artist.all
+        # render "api/playlists/show"
     end
 
     def index

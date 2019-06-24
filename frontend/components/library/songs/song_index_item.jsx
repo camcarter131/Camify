@@ -20,7 +20,7 @@ class SongIndexItem extends React.Component{
 
     }
 
-    showDropdownMenu(e) {
+    showDropdownMenu(e) { 
         e.preventDefault();
         this.setState({ displayMenu: true }, () => {
             document.addEventListener('click', this.hideDropdownMenu);
@@ -52,9 +52,8 @@ class SongIndexItem extends React.Component{
 
     render() {
         const { song, playPauseSong, removeOneSong, isPlaying, currentSong, artist, album } = this.props;
-        // debugger
         return ( 
-            <div className="song-div">
+            <div className="song-div"> 
                 {(this.state.show) ? <AddSongModalContainer song={song} show={this.state.show} handleClose={this.hideModal} />: null}
                 <div className="song-div-inner">
                     <div className="song-play-btn">

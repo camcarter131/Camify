@@ -13,7 +13,7 @@ const msp = (state, ownProps) => {
     // debugger
     return ({ 
         playlist,
-        playlistId,
+        playlistId, 
         name,
         songs,
         loading

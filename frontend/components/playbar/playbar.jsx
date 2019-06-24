@@ -39,8 +39,8 @@ class PlayBar extends React.Component{
 
     render() {
         const { user, song, isPlaying } = this.props;
-        // if (!song) this.setState({ getSong: !this.state.getSong })
         const { url, playing, controls, light, volume, muted, loop, played, loaded, duration, playbackRate, pip } = this.state
+        
         if (user && song !== undefined) {
             return (
                 <div id="play-bar">
@@ -65,7 +65,7 @@ class PlayBar extends React.Component{
                             </div>
                             <div id="play-bar-artist">
                                 <a className="play-bar-link"id="play-bar-artist-link">
-                                    {song ? song.artist.name : null}
+                                    {song.artist ? song.artist.name : null}
                                 </a>
                             </div>
                         </div>
