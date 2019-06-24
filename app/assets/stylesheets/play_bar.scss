@@ -132,3 +132,37 @@ div#play-bar-album-img {
     color: #FFFFFF;
     border-bottom: 1px solid;
 }
+
+
+div#play-bar-center {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+div#controls {
+    height: 70%;    
+}
+
+div.progress-time {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: .015em;
+    min-width: 40px;
+    text-align: center;
+    color: #B3B3B3;
+}
+
+div#song-slider {
+    width: 70%;
+}
+
+div#progress {
+    height: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+input {
+    height: auto;
+}

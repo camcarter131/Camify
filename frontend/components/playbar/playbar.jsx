@@ -56,7 +56,7 @@ class PlayBar extends React.Component{
                                 <img id="album-photo-play-bar" src={song.albumPhotoUrl}>
                                 </img>
                             </a>
-                        </div>
+                        </div> 
                         <div id="play-bar-song-artist">
                             <div id="play-bar-song">
                                 <a className="play-bar-link" id="play-bar-song-link">
@@ -90,6 +90,17 @@ class PlayBar extends React.Component{
 
                             </div>
                         </div>
+                        <div id="progress">
+                            <div className = "progress-time">
+                                0:00
+                            </div>
+                            <div id="song-slider">
+                                <input type="range" id="slider" min="10" max="2000" value="1000"/>
+                            </div>
+                            <div className = "progress-time">
+                                3:30
+                            </div>
+                        </div>  
                     </div>
                     <div id="play-bar-right"></div>
                 </div>

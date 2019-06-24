@@ -16,6 +16,7 @@
     left:50%;
     transform: translate(-50%,-50%);
     width: 100%;
+    margin-top: 30px;
 }
 
 .display-block {
@@ -36,12 +37,13 @@
     justify-content: center;
     font-size: 48px;
     color: #FFFFFF;
-    padding-top: 30px;
+    // padding-bottom: 50px;
 }
 .modal-close{
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    padding-bottom: 30px;
 
 }
 
@@ -68,7 +70,7 @@
 }
 
 .input-box{
-    padding: 32px 20%; 
+    padding: 32px 8%; 
 }
 
 .content-spacing {

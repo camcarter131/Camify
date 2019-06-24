@@ -3,7 +3,7 @@ export const receiveAllAlbums = () => (
         url: "api/albums",
         method: "GET"
     })  
-); 
+);  
 
 export const receiveAlbum = (id) => (
     $.ajax({

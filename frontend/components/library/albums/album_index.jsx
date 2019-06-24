@@ -8,8 +8,11 @@ class AlbumIndex extends React.Component {
     componentDidMount() {
         this.props.receiveAllAlbums();
     }
- 
 
+    // componentDidUpdate() {
+    //     this.props.receiveAllAlbums();
+    // }
+ 
     render() {
         const { loading } = this.props;
         if (loading) return (
@@ -19,6 +22,8 @@ class AlbumIndex extends React.Component {
                     loading={loading} />
             </div>
         );
+        // if (!this.props.albums) return null;
+        // debugger
         const albums = Object.values(this.props.albums).map(album => {
             return (
                 <AlbumIndexItem

@@ -1,18 +1,23 @@
 import { connect } from 'react-redux';
 import AlbumShow from './album_show';
-import { receiveOneAlbum } from '../../../actions/albums_actions';
+import { receiveAlbum } from '../../../actions/albums_actions';
+import { receiveAllArtists } from '../../../actions/artists_actions';
 
 const msp = (state, ownProps) => {
-    debugger
+    // debugger
     let albumId = ownProps.match.params.id;
     let album = state.entities.albums[albumId];
+    let artists = Object.values(state.entities.artists);
     return ({
-        album
+        album,
+        artists
     })
 };
 
 const mdp = dispatch => ({
-    receiveOneAlbum: (id) => dispatch(receiveOneAlbum(id))
+    receiveAlbum: (id) => dispatch(receiveAlbum(id)),
+    receiveAllArtists: () => dispatch(receiveAllArtists())
+
 });
 
 export default connect(msp, mdp)(AlbumShow);
