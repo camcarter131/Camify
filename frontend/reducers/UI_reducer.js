@@ -37,7 +37,7 @@ export const UIReducer = (state = {}, action) => {
             return nextState;
         case RECEIVE_PLAYLIST:
             // debugger
-            nextState['currentSong'] = Object.values(action.payload.songs)[0];
+            if (!nextState['currentSong']) nextState['currentSong'] = Object.values(action.payload.songs)[0];
             nextState['loading'] = false;
             return nextState;  
         case RECEIVE_PLAYLISTS: 

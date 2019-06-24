@@ -72,8 +72,10 @@ class PlayBar extends React.Component{
                     </div>
                     <div id="play-bar-center">
                         <div id="controls">
-                            <div id="buttons">
-
+                            <div id="buttons"> 
+                                <div id="prev-btn">
+                                    
+                                </div>
                                 <div id="play-btn-div">
                                     <button onClick={this.playPause } className="control-button" id="play">
                                         {(isPlaying === true) ? (
@@ -84,7 +86,9 @@ class PlayBar extends React.Component{
                                         }
                                     </button>
                                 </div>
+                                <div id="next-btn">
 
+                                </div>
                             </div>
                             <div id="bar">
 

@@ -64,16 +64,39 @@ button.control-button {
     bottom: 6px;
     vertical-align: -15%;
     font-size: 2.6em;
+    border-radius: 50%;
+    // border: 1px solid hsla(0,0%,100%,.6);
+    cursor: auto;
 }
 
 .fa-2x-playbar:hover {
     font-size: 3em;
+    opacity: 1;
+    // border: 1px solid rgba(255, 255, 255, 1);
+}
+
+div#buttons {
+    opacity: .6;
+}
+
+div#next-btn {
+    background-image: image-url("next6.png");
+    height: 32px;
+    width: 32px;
+    background-size: contain;
+}
+div#prev-btn {
+    background-image: image-url("prev.png");
+    height: 32px;
+    width: 32px;
+    background-size: contain;
 }
 
 div#play-btn-div {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 14%;
 }
 
 div#play-bar-artist {
