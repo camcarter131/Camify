@@ -37,4 +37,11 @@ div#artist-name {
 
 div.album-header {
     display: flex;
+    padding-bottom: 32px;
+}
+
+div#album-info-div {
+    display: flex;
+    flex-direction: column;
+    padding-left: 32px;
 }
