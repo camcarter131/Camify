@@ -1,4 +1,4 @@
-import { PLAY_PAUSE_SONG } from '../actions/UI_actions';
+import { PLAY_PAUSE_SONG, NEXT_SONG, PREV_SONG } from '../actions/UI_actions';
 import merge from 'lodash/merge';
 import ReactPlayer from 'react-player';
 import { RECEIVE_PLAYLIST, RECEIVE_PLAYLISTS, START_LOADING } from '../actions/playlists_actions';
@@ -10,8 +10,6 @@ import { RECEIVE_ALBUMS } from '../actions/albums_actions';
 
 export const UIReducer = (state = {}, action) => {
     Object.freeze(state);
-    let audio = document.getElementById("react-player");
-    // let currentTime = audio.getCurrentTime();
     let nextState = merge({}, state);
     switch (action.type) { 
         case PLAY_PAUSE_SONG:
@@ -46,6 +44,7 @@ export const UIReducer = (state = {}, action) => {
         case RECEIVE_SONGS: 
             // debugger
             if (!nextState['currentSong']) nextState['currentSong'] = Object.values(action.songs)[0];
+            if (!nextState['queue']) nextState['queue'] = Object.values(action.songs).slice(1);
             nextState['loading'] = false;
             return nextState;      
         case RECEIVE_ARTISTS:
@@ -54,7 +53,13 @@ export const UIReducer = (state = {}, action) => {
             return nextState;      
         case RECEIVE_ALBUMS:
             nextState['loading'] = false;
-            return nextState;      
+            return nextState; 
+        case NEXT_SONG:
+            nextState['currentSong'] = action.song;
+            return nextState;
+        case PREV_SONG:
+            nextState['currentSong'] = action.song;
+            return nextState;
         default:
             return state;
     }

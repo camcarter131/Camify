@@ -22,6 +22,18 @@ class PlayBar extends React.Component{
             loop: false
         };
         this.playPause = this.playPause.bind(this);
+        this.prev = this.prev.bind(this);
+        this.next = this.next.bind(this);
+    }
+
+    prev() {
+        const { queue } = this.props;
+        this.props.nextSong(queue.shift());
+    }
+
+    next() {
+        const { queue } = this.props;
+        this.props.nextSong(queue.shift());
     }
 
     playPause() {
@@ -40,7 +52,6 @@ class PlayBar extends React.Component{
     render() {
         const { user, song, isPlaying } = this.props;
         const { url, playing, controls, light, volume, muted, loop, played, loaded, duration, playbackRate, pip } = this.state
-        
         if (user && song !== undefined) {
             return (
                 <div id="play-bar">
@@ -74,7 +85,8 @@ class PlayBar extends React.Component{
                         <div id="controls">
                             <div id="buttons"> 
                                 <div id="prev-btn">
-                                    
+                                    <button onClick={this.prev} className="prev-next-button" id="prev">
+                                    </button>
                                 </div>
                                 <div id="play-btn-div">
                                     <button onClick={this.playPause } className="control-button" id="play">
@@ -87,7 +99,8 @@ class PlayBar extends React.Component{
                                     </button>
                                 </div>
                                 <div id="next-btn">
-
+                                    <button onClick={this.next} className="prev-next-button" id="next">
+                                    </button>
                                 </div>
                             </div>
                             <div id="bar">
