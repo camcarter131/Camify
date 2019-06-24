@@ -70,14 +70,14 @@ class PlayBar extends React.Component{
                         </div> 
                         <div id="play-bar-song-artist">
                             <div id="play-bar-song">
-                                <a className="play-bar-link" id="play-bar-song-link">
-                                    {song ? song.name : null}
-                                </a>
+                                <Link className="play-bar-link" id="play-bar-song-link" to={`/albums/${song.album.id}`}>
+                                    {song.name}
+                                </Link>
                             </div>
                             <div id="play-bar-artist">
-                                <a className="play-bar-link"id="play-bar-artist-link">
-                                    {song.artist ? song.artist.name : null}
-                                </a>
+                                <Link className="play-bar-link" id="play-bar-artist-link" to={`/artists/${song.artist.id}`}>
+                                    {song.artist.name}
+                                </Link>
                             </div>
                         </div>
                     </div>

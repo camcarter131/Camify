@@ -17,7 +17,7 @@ class AlbumIndexItem extends React.Component {
                 </Link>
                 <Link className="album-link" id="album-artist-name-link" to={`/artists/${album.artist.id}`}>
                     {album.artist.name}
-                </Link>
+                </Link> 
             </div>
         );
     }

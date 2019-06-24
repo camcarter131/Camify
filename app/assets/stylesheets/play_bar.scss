@@ -140,9 +140,22 @@ div#play-bar-album-img {
     height: 56px;
 }
 
-.play-bar-link {
+.play-bar-link#play-bar-artist-link {
     cursor: pointer;
     height: 50%;
+    text-decoration: none;
+    outline: none;
+    color: #b3b3b3;
+    opacity: .85;
+}
+
+.play-bar-link#play-bar-song-link {
+    cursor: pointer;
+    height: 50%;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    // opacity: .85;
 }
 
 #play-bar-album-photo-link {
