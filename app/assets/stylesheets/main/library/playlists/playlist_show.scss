@@ -55,11 +55,11 @@ a.dropdown:hover {
 
 div.dropdown {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     z-index: 1;
     width: 158px;
 }
-
+ 
 .playlist-btn-show {
     height: 157px;
     width: 157px;

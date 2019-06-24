@@ -22,7 +22,7 @@ class AlbumShow extends React.Component {
         if (album === undefined || artist === undefined) return null;
         return (
             <div className="album-show-div">
-                <div className = "contentSpacing">
+                <div className = "contentSpacing"> 
                     <div className="album-header">
                         <div id="album-photo-div">
                             <img id="album-show-photo" src={album.photoUrl}></img>
