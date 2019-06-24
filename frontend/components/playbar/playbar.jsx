@@ -52,6 +52,7 @@ class PlayBar extends React.Component{
     render() {
         const { user, song, isPlaying } = this.props;
         const { url, playing, controls, light, volume, muted, loop, played, loaded, duration, playbackRate, pip } = this.state
+        // debugger
         if (user && song !== undefined) {
             return (
                 <div id="play-bar">

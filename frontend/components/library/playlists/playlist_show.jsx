@@ -1,8 +1,6 @@
 import React from 'react';
 import DeletePlaylistModalContainer from '../delete_playlist_modal/delete_playlist_modal_container';
-import PlaylistIndex from './playlist_index';
 import PlaylistSongs from './playlist_songs';
-// import BeatLoader from 'react-spinners/BeatLoader';
 import GridLoader from 'react-spinners/GridLoader';
 
 class PlaylistShow extends React.Component {
@@ -57,7 +55,7 @@ class PlaylistShow extends React.Component {
         );
         if (songs === undefined) return null;
         if (playlist === undefined) return null;
-        let num_songs = Object.values(songs).length;
+        let numSongs = Object.values(songs).length;
         return (  
             <div id='playlist-show'> 
                 <DeletePlaylistModalContainer handleClose={this.hideDeleteModal} playlist={playlist} remove={remove} show={this.state.show} />
@@ -79,9 +77,9 @@ class PlaylistShow extends React.Component {
                         </div>
                         <div id='playlist-show-info'>
                             <span>
-                                {(num_songs != 1) ? 
-                                    `${num_songs} SONGS` :
-                                    `${num_songs} SONG`}
+                                {(numSongs != 1) ? 
+                                    `${numSongs} SONGS` :
+                                    `${numSongs} SONG`}
                             </span>
                         </div>
                         <div id='playlist-show-buttons'>

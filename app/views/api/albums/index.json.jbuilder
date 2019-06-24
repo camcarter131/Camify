@@ -1,18 +1,12 @@
 @albums.each do |album|
   json.set! album.id do
-    @artists.each do |art|
-        if album.artist_id == art.id
-            json.extract! album, :id, :name, :artist_id, :release_year
-            json.artist art
-            json.photoUrl url_for(album.photo)
-            json.songs do 
-              @songs.each do |s|
-                if s.album_id == album.id
-                  json.extract! s, :id, :name, :duration
-                end
-              end
-            end
-        end
-    end
+    json.id album.id
+    json.name album.name
+    json.artist_id album.artist_id
+    json.release_year album.release_year
+    json.songs album.songs.map {|song| {id: song[:id], name: song[:name], duration: song[:duration]}}
+    json.artist album.artist
+    json.photoUrl url_for(album.photo)
   end
-end 
+end
+

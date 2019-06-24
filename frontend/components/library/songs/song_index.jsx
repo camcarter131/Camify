@@ -17,7 +17,7 @@ class SongIndex extends React.Component {
             <div id="loader-songs">
                 <GridLoader id="beatloader"
                     color={'#DFE2E1'} 
-                    loading={loading} />
+                    loading={loading} /> 
             </div>
         ); 
         const songs = this.props.songs.map(song => { 

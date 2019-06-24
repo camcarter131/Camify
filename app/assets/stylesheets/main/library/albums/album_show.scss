@@ -9,8 +9,8 @@
 
 div#album-photo-div { 
 
-    height: 157px;
-    width: 157px;
+    height: 200px;
+    width: 200px;
 }
 
 .contentSpacing {
@@ -33,4 +33,8 @@ div#artist-name {
     color: #fff;
     opacity: .6;
     font-size: 14px;
+}
+
+div.album-header {
+    display: flex;
 }

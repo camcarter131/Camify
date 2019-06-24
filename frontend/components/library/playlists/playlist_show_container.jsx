@@ -16,7 +16,7 @@ const msp = (state, ownProps) => {
         playlistId, 
         name,
         songs,
-        loading
+        loading 
     })
 };
  

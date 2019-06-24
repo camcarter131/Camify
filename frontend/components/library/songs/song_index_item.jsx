@@ -9,7 +9,7 @@ class SongIndexItem extends React.Component{
         super(props); 
         this.state = {
             show: false,
-            displayMenu: false, 
+            displayMenu: false,  
             play: false
         }; 
         this.showDropdownMenu = this.showDropdownMenu.bind(this);
