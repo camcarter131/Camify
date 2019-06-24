@@ -72,13 +72,17 @@ class SongIndexItem extends React.Component{
                         </div>
                         <div id="song-not-name">
                             <div id="song-artist">
-                                {artist.name}
+                                <Link className="song-links" to={`/artists/${artist.id}`}>
+                                    {artist.name}
+                                </Link>
                             </div>
                             <div id="separator">
                                 .
                             </div>
                             <div id="song-album">
-                                {album.name}
+                                <Link className="song-links" to={`/albums/${album.id}`}>
+                                    {album.name}
+                                </Link>
                             </div>
                         </div>
                     </div>

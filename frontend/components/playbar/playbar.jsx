@@ -63,10 +63,10 @@ class PlayBar extends React.Component{
                     />
                     <div id="play-bar-left">
                         <div id="play-bar-album-img">
-                            <a id="play-bar-album-photo-link">
+                            <Link id="play-bar-album-photo-link" to={`/albums/${song.album.id}`}>
                                 <img id="album-photo-play-bar" src={song.albumPhotoUrl}>
                                 </img>
-                            </a>
+                            </Link>
                         </div> 
                         <div id="play-bar-song-artist">
                             <div id="play-bar-song">

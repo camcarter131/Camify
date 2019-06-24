@@ -89,7 +89,6 @@ div#song-not-name {
     display: flex;
     align-items: center;
     font-size: 14px;
-    opacity: .5;
 }
 
 div#song-name {
@@ -120,4 +119,21 @@ div#separator {
     align-items: flex-start;
     padding: 0 8px;
     font-size: 18px;
+}
+a.song-links {
+    outline: none;
+    text-decoration: none;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 60%;
+    opacity: .5;
+}
+a.song-links:hover {
+    outline: none;
+    color: #FFFFFF;
+    border-bottom: 1px solid;
+    opacity: .9;
+
 }
