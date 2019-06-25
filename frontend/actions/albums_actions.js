@@ -6,7 +6,7 @@ export const START_LOADING = 'START_LOADING';
 
 export const receiveAlbums = (albums) => ({
     type: RECEIVE_ALBUMS, 
-    albums 
+    albums  
 });
 
 export const receiveOneAlbum = (album) => ({

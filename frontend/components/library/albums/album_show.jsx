@@ -56,6 +56,12 @@ class AlbumShow extends React.Component {
                             </div>
                             <div id='playlist-show-info'>
                                 <span>
+                                    {album.release_year}&nbsp;
+                                </span>
+                                <span>
+                                    .
+                                </span>
+                                <span>
                                     {(numSongs != 1) ?
                                         `${numSongs} SONGS` :
                                         `${numSongs} SONG`}
