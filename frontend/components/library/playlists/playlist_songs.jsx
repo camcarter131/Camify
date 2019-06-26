@@ -7,15 +7,17 @@ class PlaylistSongs extends React.Component {
     render() {
         // debugger
         const songs = Object.values(this.props.songs).map(song => {
-            // debugger
+            debugger
             return (
                 // <PlaylistSong song={song} ></PlaylistSong>
                 <SongIndexItem
                     key={song.id}
                     song={song} 
-                    artist={song.artist}
+                    artist={song.artist} 
                     album={song.album}
                     playPauseSong={this.props.playPauseSong}
+                    isPlaying={this.props.isPlaying}
+                    currentSong={this.props.currentSong}
                 />
             )
         });

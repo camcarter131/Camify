@@ -59,7 +59,7 @@ class PlayBar extends React.Component{
                     <ReactPlayer
                         url={song.songFile}
                         id='react-player'
-                        playing={playing}
+                        playing={isPlaying}
                         // onPlay={this.onPlay}
                     />
                     <div id="play-bar-left">

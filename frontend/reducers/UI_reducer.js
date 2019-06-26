@@ -1,4 +1,4 @@
-import { PLAY_PAUSE_SONG, NEXT_SONG, PREV_SONG } from '../actions/UI_actions';
+import { PLAY_PAUSE_SONG, NEXT_SONG, PREV_SONG, PLAY_PLAYLIST } from '../actions/UI_actions';
 import merge from 'lodash/merge';
 import ReactPlayer from 'react-player';
 import { RECEIVE_PLAYLIST, RECEIVE_PLAYLISTS, START_LOADING } from '../actions/playlists_actions';
@@ -64,6 +64,13 @@ export const UIReducer = (state = {}, action) => {
             return nextState;
         case PREV_SONG:
             nextState['currentSong'] = action.song;
+            return nextState;
+        case PLAY_PLAYLIST:
+            if (action.songs.length > 0) {
+                nextState['queue'] = action.songs.slice(1);
+                nextState['currentSong'] = action.songs[0];
+                nextState['isPlaying'] = true;
+            }
             return nextState;
         default:
             return state;

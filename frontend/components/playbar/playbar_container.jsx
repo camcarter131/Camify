@@ -5,7 +5,7 @@ import { playPauseSong, nextSong, prevSong } from '../../actions/UI_actions';
 
 const msp = ({ session, entities: { users }, UI }) => {
     
-    return {
+    return { 
         user: users[session.id],
         song: UI.currentSong,
         queue: UI.queue,

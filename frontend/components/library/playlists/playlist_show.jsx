@@ -45,7 +45,7 @@ class PlaylistShow extends React.Component {
     }
  
     render() {
-        const { songs, playlist, name, remove, playPauseSong, loading } = this.props;
+        const { songs, playlist, name, remove, playPauseSong, playPlaylist, loading, isPlaying, currentSong } = this.props;
         if (loading) return (
             <div id="loader">
                 <GridLoader id="beatloader"
@@ -83,7 +83,7 @@ class PlaylistShow extends React.Component {
                             </span>
                         </div>
                         <div id='playlist-show-buttons'>
-                            <button id="playlist-play-btn">PLAY</button>
+                            <button onClick={() => playPlaylist(Object.values(songs))}id="playlist-play-btn">PLAY</button>
                             <div className="dropdown">
                                 <button onClick={this.showDropdownMenu}className="ellipses">&hellip;</button>
                                     {this.state.displayMenu ? (
@@ -98,7 +98,7 @@ class PlaylistShow extends React.Component {
                         </div>
                     </div>
                 </div>       
-                <PlaylistSongs songs={songs} playPauseSong={playPauseSong} />
+                <PlaylistSongs songs={songs} playPauseSong={playPauseSong} isPlaying={isPlaying} currentSong={currentSong}/>
             </div>
         )
     }
