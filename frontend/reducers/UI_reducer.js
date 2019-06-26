@@ -1,4 +1,4 @@
-import { PLAY_PAUSE_SONG, NEXT_SONG, PREV_SONG, PLAY_PLAYLIST } from '../actions/UI_actions';
+import { PLAY_PAUSE_SONG, NEXT_SONG, PREV_SONG, PLAY_PLAYLIST, SET_VOLUME } from '../actions/UI_actions';
 import merge from 'lodash/merge';
 import ReactPlayer from 'react-player';
 import { RECEIVE_PLAYLIST, RECEIVE_PLAYLISTS, START_LOADING } from '../actions/playlists_actions';
@@ -41,7 +41,10 @@ export const UIReducer = (state = {}, action) => {
             nextState['loading'] = false;
             return nextState;  
         case RECEIVE_SONGS: 
-            if (!nextState['currentSong']) nextState['currentSong'] = Object.values(action.songs)[0];
+            if (!nextState['currentSong']) {
+                nextState['currentSong'] = Object.values(action.songs)[0];
+                nextState['volume'] = 0.8;
+            }
             if (!nextState['queue']) nextState['queue'] = Object.values(action.songs).slice(1);
             nextState['loading'] = false;
             return nextState;      
@@ -52,7 +55,10 @@ export const UIReducer = (state = {}, action) => {
             nextState['loading'] = false;
             return nextState; 
         case RECEIVE_ALBUM:
-            if (!nextState['currentSong']) nextState['currentSong'] = Object.values(action.album)[0].songs[0];
+            if (!nextState['currentSong']) {
+                nextState['currentSong'] = Object.values(action.album)[0].songs[0];
+                nextState['volume'] = 0.8;
+            }
             if (!nextState['queue']) nextState['queue'] = Object.values(action.album)[0].songs.slice(1);
             return nextState;
         case NEXT_SONG:
@@ -79,9 +85,13 @@ export const UIReducer = (state = {}, action) => {
             if (action.songs.length > 0) {
                 nextState['queue'] = action.songs.slice(1);
                 nextState['currentSong'] = action.songs[0];
+                nextState['volume'] = 0.8;
                 nextState['isPlaying'] = true;
             }
             return nextState;
+        case SET_VOLUME:
+
+            return nextState
         default:
             return state;
     }

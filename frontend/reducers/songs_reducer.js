@@ -6,12 +6,14 @@ export const songsReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_SONGS: 
+            // debugger
             return action.songs;
         case REMOVE_SONG:
             let nextState = merge({}, state);
             delete nextState[action.id];
             return nextState;
         case RECEIVE_PLAYLIST:
+            
             return action.payload.songs || {};
         default:
             return state;

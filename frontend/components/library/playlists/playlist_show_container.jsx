@@ -19,7 +19,7 @@ const msp = (state, ownProps) => {
         name,
         songs,
         loading,
-        isPlaying,
+        isPlaying, 
         currentSong
     })
 };

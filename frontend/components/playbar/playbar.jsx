@@ -24,6 +24,7 @@ class PlayBar extends React.Component{
         this.playPause = this.playPause.bind(this);
         this.prev = this.prev.bind(this);
         this.next = this.next.bind(this);
+        this.setVolume = this.setVolume.bind(this);
     }
 
     prev() {
@@ -49,9 +50,16 @@ class PlayBar extends React.Component{
         console.log(duration);
     }
 
+    setVolume(e) {
+        // this.props.setVolume();
+        this.setState({
+            volume: parseInt(e.target.value)
+        });
+    }
+
     render() {
         const { user, song, isPlaying } = this.props;
-        const { url, playing, controls, light, volume, muted, loop, played, loaded, duration, playbackRate, pip } = this.state
+        const { url, playing, controls, volume, light, muted, loop, played, loaded, duration, playbackRate, pip } = this.state
         // debugger
         if (user && song !== undefined) {
             return (
@@ -60,6 +68,7 @@ class PlayBar extends React.Component{
                         url={song.songFile}
                         id='react-player'
                         playing={isPlaying}
+                        volume ={volume}
                         // onPlay={this.onPlay}
                     />
                     <div id="play-bar-left">
@@ -83,40 +92,37 @@ class PlayBar extends React.Component{
                         </div>
                     </div>
                     <div id="play-bar-center">
-                        <div id="controls">
-                            <div id="buttons"> 
-                                <div id="shuffle-btn" className="btn-div">
-                                    <button onClick={this.next} className="prev-next-button" id="shuffle">
-                                        <i class="fa fa-random fa-light" aria-hidden="true"></i>
-                                    </button>
-                                </div>
-                                <div id="prev-btn" className="btn-div">
-                                    <button onClick={this.prev} className="prev-next-button" id="prev">
-                                        <i class="fa fa-step-backward" aria-hidden="true"></i>
-                                    </button>
-                                </div>
-                                <div id="play-btn-div">
-                                    <button onClick={this.playPause } className="control-button" id="play">
-                                        {(isPlaying === true) ? (
-                                            <i class="fa fa-pause"></i>
-                                        ) : (
-                                                <i class="fa fa-play"></i>
-                                            )
-                                        }
-                                    </button>
-                                </div>
-                                <div id="next-btn" className="btn-div">
-                                    <button onClick={this.next} className="prev-next-button" id="next">
-                                        <i class="fa fa-step-forward" aria-hidden="true"></i>
-                                    </button>
-                                </div>
-                                <div id="loop-btn" className="btn-div">
-                                    <button onClick={this.next} className="prev-next-button" id="loop">
-                                        <i class="fa fas fa-redo"></i>
-                                    </button>
-                                </div>
+                        <div id="buttons"> 
+                            <div id="shuffle-btn" className="btn-div">
+                                <button onClick={this.next} className="prev-next-button" id="shuffle">
+                                    <i class="fa fa-random fa-light" aria-hidden="true"></i>
+                                </button>
                             </div>
-                
+                            <div id="prev-btn" className="btn-div">
+                                <button onClick={this.prev} className="prev-next-button" id="prev">
+                                    <i class="fa fa-step-backward" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div id="play-btn-div">
+                                <button onClick={this.playPause } className="control-button" id="play">
+                                    {(isPlaying === true) ? (
+                                        <i class="fa fa-pause"></i>
+                                    ) : (
+                                            <i class="fa fa-play"></i>
+                                        )
+                                    }
+                                </button>
+                            </div>
+                            <div id="next-btn" className="btn-div">
+                                <button onClick={this.next} className="prev-next-button" id="next">
+                                    <i class="fa fa-step-forward" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div id="loop-btn" className="btn-div">
+                                <button onClick={this.next} className="prev-next-button" id="loop">
+                                    <i class="fa fas fa-redo"></i>
+                                </button>
+                            </div>
                         </div>
                         <div id="progress">
                             <div className = "progress-time">
@@ -130,7 +136,19 @@ class PlayBar extends React.Component{
                             </div>
                         </div>  
                     </div>
-                    <div id="play-bar-right"></div>
+                    <div id="play-bar-right">
+                        {(this.state.volume === 0) ? (
+                            <i className="fas fa-volume-off"></i>
+                        ) : (this.state.volume < .5) ? (
+                            <i className="fas fa-volume-down"></i> 
+                        ) : (
+                            <i className="fas fa-volume-up"></i>
+                        )}
+                        
+                        <div id="volume-bar">
+                            <input onChange={e => this.setVolume(e)} type="range" id="volume-slider" min="0" max="1" value={volume} />
+                        </div>
+                    </div>
                 </div>
             );
         } else {

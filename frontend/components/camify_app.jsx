@@ -36,7 +36,7 @@ const App = () => (
             {/* <ProtectedRoute exact path="/collection/playlists" component={WebPlayerContainer} /> */}
             <Redirect to="/" />
         </Switch>
-        <PlayBarContainer />
+        <PlayBarContainer /> 
     </div>
 );
 

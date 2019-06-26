@@ -16,24 +16,28 @@
 #buttons {
     display: flex; 
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    opacity: .85;
+    height: 70%; 
+    padding: 0 210px;
     
 }
 
 .control-button#play {
-    background-size: contain;
-    height: 32px;
-    width: 32px;
-    z-index: 1;
-    border-radius: 50%;
-    position: relative;
-    top: 15px;
-    color: #b3b3b3;
-    border: 1px solid rgba(255,255,255,0.6);
-    background-color: #282828;
+    // background-size: contain;
+    // height: 32px;
+    // width: 32px;
+    // z-index: 1;
+    // border-radius: 50%;
+    // position: relative;
+    // top: 15px;
+    // color: #b3b3b3;
+    // border: 1px solid rgba(255,255,255,0.6);
+    // background-color: #282828;
 }  
 
 button.control-button {
+    font-size: 14px;
     background-size: contain;
     height: 32px;
     width: 32px;
@@ -41,6 +45,10 @@ button.control-button {
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    background-color: #282828;
+    position: relative;
+    top: 15px;
+    color: #b3b3b3;
 }
 
 #react-player {
@@ -51,13 +59,28 @@ button.control-button {
 #play-bar-left {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 25%;
+
 }
 
 #play-bar-right {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 25%;
+}
+
+#play-bar-right i {
+    display: flex;
+    align-items: center;
+}
+
+#volume-bar {
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+
 }
 
 .fa-2x-playbar {
@@ -77,39 +100,10 @@ button.control-button {
     // border: 1px solid rgba(255, 255, 255, 1);
 }
 
-div#buttons {
-    opacity: .85;
-}
-
-div#next-btn {
-    // background-image: image-url("next6.png");
-    height: 32px;
-    width: 32px;
-    // background-size: contain;
-}
-div#prev-btn {
-    // background-image: image-url("prev.png");
-    height: 32px;
-    width: 32px;
-    // background-size: contain;
-}
-div#prev-btn {
-    // background-image: image-url("prev.png");
-    height: 32px;
-    width: 32px;
-    // background-size: contain;
-}
-div#prev-btn {
-    // background-image: image-url("prev.png");
-    height: 32px;
-    width: 32px;
-    // background-size: contain;
-}
-
 div#play-btn-div {
     display: flex;
     justify-content: center;
-    width: 14%;
+    // width: 14%;
 }
 
 div#play-bar-artist {
@@ -124,10 +118,11 @@ div#play-bar-artist {
 div#play-bar-song {
     color: #FFFFFF;
     opacity: .85;
-
     font-size: 14px;
     line-height: 20px;
     letter-spacing: .015em;
+    overflow: hidden;
+    text-overflow: ellipsis;
     // display: flex;
     // flex-direction: column;
     // justify-content: flex-end;
@@ -186,11 +181,11 @@ div#play-bar-album-img {
 div#play-bar-center {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 700px;
 }
 
 div#controls {
-    height: 70%;    
+       
 }
 
 div.progress-time {

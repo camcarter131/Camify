@@ -44,7 +44,7 @@ class PlaylistShow extends React.Component {
         this.setState({ show: false });
     }
  
-    render() {
+    render() { 
         const { songs, playlist, name, remove, playPauseSong, playPlaylist, loading, isPlaying, currentSong } = this.props;
         if (loading) return (
             <div id="loader">
