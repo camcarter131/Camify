@@ -111,7 +111,7 @@ class SessionForm extends React.Component {
                                 placeholder="Password" onChange={this.update("password")} />
                         </li>
                         <li className="session-li" id="login-li">
-                            <button onClick={this.handleSubmit} id="login-submit-button2">{this.props.formType}</button>
+                            {/* <button onClick={this.handleSubmit} id="login-submit-button2">{this.props.formType}</button> */}
                             <input id="login-submit-button2" type="submit" value={this.props.formType} />
                         </li>
                     </div>

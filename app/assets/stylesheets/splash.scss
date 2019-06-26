@@ -27,6 +27,8 @@
     justify-content: space-evenly;
     align-items: center;
     color: white;
+    height: 90vh;
+    position: fixed;
     // background-image: image-url("hero-burst.svg");
     background:linear-gradient(0deg,rgba(235, 44, 155, 0.65),rgba(219, 197, 69, 0.836)), image-url("hero-burst.svg");
 }
@@ -35,8 +37,8 @@
     display: flex;
     align-items: center;
     font-size: 18px;
-    padding-top: 18px;
-    padding-bottom: 23px;
+    padding-top: 21px;
+    padding-bottom: 24px;
 }
 
 #upper-left-logo{
@@ -105,6 +107,7 @@
     justify-content: flex-end;
     align-items: center;
     float: right;
+    z-index: 2;
 }
   
 #topnav-link {
@@ -125,3 +128,86 @@ div > logo {
   transition: .34s;
 }
 
+#splash-footer {
+    background-color: #000;
+    height: 10vh;
+    // padding-bottom: 3vh;
+    // padding-top: 3vh;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#footer-camify-logo {
+  padding-left: 4%;
+
+   margin-right: auto;
+   display: flex;
+   align-items: center;
+}
+
+#bottom-left-logo {
+  outline: none;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+}
+
+div#footer-img {
+    background-image: image-url("Camify.png");
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    display: flex;
+}
+
+div#footer-camify {
+  height: 40px;
+  width: 40px;
+}
+
+div#footer-icons {
+  padding-right: 4%;
+  display: flex;
+  align-items: center;
+  color:#fff;
+  font-size: 41px;
+  
+}
+
+.devicon-github-plain {
+  font-size: 41px;
+}
+
+a#linkedin {
+
+}
+
+a.footer-link {
+  cursor: pointer;
+}
+
+i#github{
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+}
+
+i#linkedin{
+  display: flex;
+  align-items: center;
+}
+
+#Camify-splash-footer{
+    font-weight: bold;
+    color:#fff;
+    font-size: 24px;
+    text-decoration:  none;
+    height: 46px;
+    padding-left: 6px;
+    display: flex;
+    align-items: center;
+    outline: none;
+}

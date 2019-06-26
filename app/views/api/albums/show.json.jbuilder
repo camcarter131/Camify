@@ -8,5 +8,4 @@ json.set! @album.id do
         json.artist song.album.artist
         json.album song.album
     end
-    
 end 
