@@ -13,7 +13,7 @@ class AlbumShow extends React.Component {
 
   
     render() { 
-        const { album, playPauseSong, loading } = this.props;
+        const { album, playPauseSong, loading, playAlbum, isPlaying, currentSong } = this.props;
 
         if (loading) return (
             <div id="loader">
@@ -32,10 +32,13 @@ class AlbumShow extends React.Component {
                     key={song.id}
                     song={song}
                     artist={artist}
-                    album={album}
+                    album={album} 
                     playPauseSong={playPauseSong}
+                    isPlaying={this.props.isPlaying}
+                    currentSong={this.props.currentSong}
                 />
-            )
+
+            ) 
         }); 
         let numSongs = album.songs.length;
         return (
@@ -46,26 +49,30 @@ class AlbumShow extends React.Component {
                             <img id="album-show-photo" src={album.photoUrl}></img>
                         </div>
                         <div id="album-info-div">
-                            <div id="album-name">
-                                {album.name}
+                            <div id="album-info-top">
+                                <div id="album-name">
+                                    {album.name}
+                                </div>
+                                <div id="album-show-artist-name">
+                                    <span id='by'>By&nbsp;</span><Link className="album-song-links" to={`/artists/${artist.id}`}><span id='author'>{artist.name}</span>
+                                    </Link>
+                                </div>
+                                <div id='playlist-show-info'>
+                                    <span>
+                                        {album.release_year}
+                                    </span>
+                                    <span id="dot-separator">
+                                        .
+                                    </span>
+                                    <span>
+                                        {(numSongs != 1) ?
+                                            `${numSongs} SONGS` :
+                                            `${numSongs} SONG`}
+                                    </span>
+                                </div>
                             </div>
-                            <div id="artist-name">
-                                <Link className="song-links" to={`/artists/${artist.id}`}>
-                                    <span id='by'>By&nbsp;</span><span id='author'>{artist.name}</span>
-                                </Link>
-                            </div>
-                            <div id='playlist-show-info'>
-                                <span>
-                                    {album.release_year}&nbsp;
-                                </span>
-                                <span>
-                                    .
-                                </span>
-                                <span>
-                                    {(numSongs != 1) ?
-                                        `${numSongs} SONGS` :
-                                        `${numSongs} SONG`}
-                                </span>
+                            <div id='album-show-buttons'>
+                                <button onClick={() => playAlbum(Object.values(album.songs))} id="playlist-play-btn">PLAY</button>
                             </div>
                         </div>
                     </div>

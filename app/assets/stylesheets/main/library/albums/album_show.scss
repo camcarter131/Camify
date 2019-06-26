@@ -27,23 +27,69 @@ div#album-name {
     font-weight: bold;
     color: #fff;
     text-transform: none;
+    padding-bottom: 6px;
 }
 
-div#artist-name {
+#dot-separator {
+    position: relative;
+    bottom: 3px;
+    font-size: 18px;
+    padding: 0 8px;
+}
+
+div#album-show-artist-name {
     color: #fff;
     opacity: .6;
     font-size: 14px;
 }
 
+.album-song-links {
+    outline: none;
+    text-decoration: none;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 30%;
+    opacity: .5;
+    display: inline;
+}
+
+a.album-song-links:hover {
+    outline: none;
+    color: #FFFFFF;
+    border-bottom: 1px solid;
+    opacity: .9;
+    
+
+}
+
+#album-info-top {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+}
+
 div.album-header {
     display: flex;
-    padding-bottom: 32px;
+    padding-bottom: 62px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-style: solid;
+    border-bottom-width: thin;
+}
+
+#album-show-buttons {
+    display: flex;
+    height: 39px;
+    // flex-direction: column;
 }
 
 div#album-info-div {
     display: flex;
     flex-direction: column;
-    padding-left: 32px;
+    padding-left: 40px;
+    height: 200px;
+    justify-content: space-between;
 }
 
 .album-show-header-link {

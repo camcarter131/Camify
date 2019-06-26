@@ -146,7 +146,7 @@ class PlayBar extends React.Component{
                         )}
                         
                         <div id="volume-bar">
-                            <input onChange={e => this.setVolume(e)} type="range" id="volume-slider" min="0" max="1" value={volume} />
+                            <input onChange={e => this.setVolume(e)} type="range" id="volume-slider" min={0} max={1} value={volume} />
                         </div>
                     </div>
                 </div>

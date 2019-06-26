@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player';
 import { RECEIVE_PLAYLIST, RECEIVE_PLAYLISTS, START_LOADING } from '../actions/playlists_actions';
 import { RECEIVE_SONGS } from '../actions/songs_actions';
 import { RECEIVE_ARTISTS } from '../actions/artists_actions';
-import { RECEIVE_ALBUMS, RECEIVE_ALBUM } from '../actions/albums_actions';
+import { RECEIVE_ALBUMS, RECEIVE_ALBUM, PLAY_ALBUM } from '../actions/albums_actions';
 
 
 
@@ -82,6 +82,14 @@ export const UIReducer = (state = {}, action) => {
             }
             return nextState;
         case PLAY_PLAYLIST:
+            if (action.songs.length > 0) {
+                nextState['queue'] = action.songs.slice(1);
+                nextState['currentSong'] = action.songs[0];
+                nextState['volume'] = 0.8;
+                nextState['isPlaying'] = true;
+            }
+            return nextState;
+        case PLAY_ALBUM:
             if (action.songs.length > 0) {
                 nextState['queue'] = action.songs.slice(1);
                 nextState['currentSong'] = action.songs[0];

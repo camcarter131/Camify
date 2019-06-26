@@ -5,7 +5,7 @@ import GridLoader from 'react-spinners/GridLoader';
 
 class PlaylistShow extends React.Component {
 
-    constructor(props) {
+    constructor(props) { 
         super(props);
 
         this.state = {
@@ -97,7 +97,7 @@ class PlaylistShow extends React.Component {
                             
                         </div>
                     </div>
-                </div>       
+                </div>        
                 <PlaylistSongs songs={songs} playPauseSong={playPauseSong} isPlaying={isPlaying} currentSong={currentSong}/>
             </div>
         )
