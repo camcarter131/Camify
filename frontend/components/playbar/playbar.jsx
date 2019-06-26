@@ -27,13 +27,13 @@ class PlayBar extends React.Component{
     }
 
     prev() {
-        const { queue } = this.props;
-        this.props.nextSong(queue.shift());
+        const { backQueue, song } = this.props;
+        this.props.prevSong([backQueue.shift(), song]);
     }
 
     next() {
-        const { queue } = this.props;
-        this.props.nextSong(queue.shift());
+        const { queue, song } = this.props;
+        this.props.nextSong([queue.shift(), song]);
     }
 
     playPause() {

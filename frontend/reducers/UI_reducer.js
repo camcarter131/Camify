@@ -34,7 +34,6 @@ export const UIReducer = (state = {}, action) => {
             nextState['loading'] = true;
             return nextState;
         case RECEIVE_PLAYLIST:
-            // debugger
             if (!nextState['currentSong']) nextState['currentSong'] = Object.values(action.payload.songs)[0];
             nextState['loading'] = false;
             return nextState;  
@@ -42,28 +41,39 @@ export const UIReducer = (state = {}, action) => {
             nextState['loading'] = false;
             return nextState;  
         case RECEIVE_SONGS: 
-            // debugger
             if (!nextState['currentSong']) nextState['currentSong'] = Object.values(action.songs)[0];
             if (!nextState['queue']) nextState['queue'] = Object.values(action.songs).slice(1);
             nextState['loading'] = false;
             return nextState;      
         case RECEIVE_ARTISTS:
-            // debugger
             nextState['loading'] = false;
             return nextState;      
         case RECEIVE_ALBUMS:
             nextState['loading'] = false;
             return nextState; 
         case RECEIVE_ALBUM:
-            // debugger
             if (!nextState['currentSong']) nextState['currentSong'] = Object.values(action.album)[0].songs[0];
             if (!nextState['queue']) nextState['queue'] = Object.values(action.album)[0].songs.slice(1);
             return nextState;
         case NEXT_SONG:
-            nextState['currentSong'] = action.song;
+            if (action.song[0]) {
+                nextState['currentSong'] = action.song[0];
+                if (!nextState['backQueue']) {
+                    nextState['backQueue'] = [action.song[1]];
+                } else {
+                    nextState['backQueue'] = [action.song[1]].concat(nextState['backQueue']);
+                }
+            }
             return nextState;
         case PREV_SONG:
-            nextState['currentSong'] = action.song;
+            if (action.song[0]) {
+                nextState['currentSong'] = action.song[0];
+                if (!nextState['queue']) {
+                    nextState['queue'] = [action.song[1]];
+                } else {
+                    nextState['queue'] = [action.song[1]].concat(nextState['queue']);
+                }
+            }
             return nextState;
         case PLAY_PLAYLIST:
             if (action.songs.length > 0) {

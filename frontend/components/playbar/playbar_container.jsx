@@ -9,6 +9,7 @@ const msp = ({ session, entities: { users }, UI }) => {
         user: users[session.id],
         song: UI.currentSong,
         queue: UI.queue,
+        backQueue: UI.backQueue,
         isPlaying: UI.isPlaying
     }
 };

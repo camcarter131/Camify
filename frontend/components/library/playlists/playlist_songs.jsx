@@ -5,11 +5,8 @@ import SongIndexItem from '../songs/song_index_item';
 class PlaylistSongs extends React.Component {
 
     render() {
-        // debugger
         const songs = Object.values(this.props.songs).map(song => {
-            debugger
             return (
-                // <PlaylistSong song={song} ></PlaylistSong>
                 <SongIndexItem
                     key={song.id}
                     song={song} 
