@@ -26,8 +26,11 @@
     width: 32px;
     z-index: 1;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
+    position: relative;
+    top: 15px;
+    color: #b3b3b3;
+    border: 1px solid rgba(255,255,255,0.6);
+    background-color: #282828;
 }  
 
 button.control-button {
@@ -75,25 +78,36 @@ button.control-button {
 }
 
 div#buttons {
-    opacity: .6;
+    opacity: .85;
 }
 
 div#next-btn {
-    background-image: image-url("next6.png");
+    // background-image: image-url("next6.png");
     height: 32px;
     width: 32px;
-    background-size: contain;
+    // background-size: contain;
 }
 div#prev-btn {
-    background-image: image-url("prev.png");
+    // background-image: image-url("prev.png");
     height: 32px;
     width: 32px;
-    background-size: contain;
+    // background-size: contain;
+}
+div#prev-btn {
+    // background-image: image-url("prev.png");
+    height: 32px;
+    width: 32px;
+    // background-size: contain;
+}
+div#prev-btn {
+    // background-image: image-url("prev.png");
+    height: 32px;
+    width: 32px;
+    // background-size: contain;
 }
 
 div#play-btn-div {
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 14%;
 }
@@ -207,4 +221,18 @@ button.prev-next-button {
     border: none;
     height: 100%;
     width: 100%;
+    color: #b3b3b3;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-div {
+    display: flex;
+    align-items: center;
+}
+
+.btn-div:hover {
+    opacity:.95
 }

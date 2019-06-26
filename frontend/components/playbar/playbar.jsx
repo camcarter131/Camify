@@ -85,28 +85,38 @@ class PlayBar extends React.Component{
                     <div id="play-bar-center">
                         <div id="controls">
                             <div id="buttons"> 
-                                <div id="prev-btn">
+                                <div id="shuffle-btn" className="btn-div">
+                                    <button onClick={this.next} className="prev-next-button" id="shuffle">
+                                        <i class="fa fa-random fa-light" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div id="prev-btn" className="btn-div">
                                     <button onClick={this.prev} className="prev-next-button" id="prev">
+                                        <i class="fa fa-step-backward" aria-hidden="true"></i>
                                     </button>
                                 </div>
                                 <div id="play-btn-div">
                                     <button onClick={this.playPause } className="control-button" id="play">
                                         {(isPlaying === true) ? (
-                                            <i className="fa fa-pause-circle fa-2x-playbar" aria-hidden="true"></i>
+                                            <i class="fa fa-pause"></i>
                                         ) : (
-                                                <i className="fa fa-play-circle fa-2x-playbar" aria-hidden="true"></i>
+                                                <i class="fa fa-play"></i>
                                             )
                                         }
                                     </button>
                                 </div>
-                                <div id="next-btn">
+                                <div id="next-btn" className="btn-div">
                                     <button onClick={this.next} className="prev-next-button" id="next">
+                                        <i class="fa fa-step-forward" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div id="loop-btn" className="btn-div">
+                                    <button onClick={this.next} className="prev-next-button" id="loop">
+                                        <i class="fa fas fa-redo"></i>
                                     </button>
                                 </div>
                             </div>
-                            <div id="bar">
-
-                            </div>
+                
                         </div>
                         <div id="progress">
                             <div className = "progress-time">
