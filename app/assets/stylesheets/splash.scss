@@ -30,7 +30,8 @@
     height: 90vh;
     position: fixed;
     // background-image: image-url("hero-burst.svg");
-    background:linear-gradient(0deg,rgba(235, 44, 155, 0.65),rgba(219, 197, 69, 0.836)), image-url("hero-burst.svg");
+    background:linear-gradient(0deg,rgba(231, 7, 74, 0.815),rgba(228, 200, 45, 0.836)), image-url("hero-burst.svg");
+    // background:white;
 }
 
 #small-text {
@@ -134,6 +135,7 @@ div > logo {
     // padding-bottom: 3vh;
     // padding-top: 3vh;
     display: flex;
+    align-items: center;
     justify-content: flex-end;
     position: absolute;
     bottom: 0;
@@ -187,17 +189,21 @@ a#linkedin {
 
 a.footer-link {
   cursor: pointer;
+  height:40%;
+  text-decoration: none;
 }
 
 i#github{
   display: flex;
   align-items: center;
   padding-right: 30px;
+  color: #FFFFFF;
 }
 
 i#linkedin{
   display: flex;
   align-items: center;
+  color: #FFFFFF;
 }
 
 #Camify-splash-footer{

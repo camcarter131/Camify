@@ -20,7 +20,7 @@ const Splash = () => {
                     
             <div id="splash-lower">
                 <div id="big-text">
-                    Music for some.
+                    Music for everyone.
                 </div>
                 <div id="small-text">
                     Dozens of songs. Listen to a few of them. 
@@ -43,18 +43,16 @@ const Splash = () => {
                     </div>
                 </div> */}
                 <div id ="footer-icons">
-                    
-                    {/* <a className="footer-link" href="https://github.com/camcarter131/Camify" > */}
-                    {/* </a> */}
-                    <i id="github" className="devicon-github-plain"></i>
+                    <a className="footer-link" href="https://github.com/camcarter131/Camify" >
+                        <i id="github" className="devicon-github-plain">
+                        </i>
+                    </a>
+                
                    
-                    {/* <i class="fab fa-github"></i> */}
-                    <i id="linkedin" className="fab fa-linkedin-in">
-                        {/* <a className = "footer-link" id="linkedin" href="https://www.linkedin.com/in/cameron-carter-34796398/" >
-                        </a> */}
-                    </i>
-                    
-                    
+                    <a className="footer-link" id="linkedin" href="https://www.linkedin.com/in/cameron-carter-34796398/" >
+                        <i id="linkedin" className="fab fa-linkedin-in">
+                        </i>
+                    </a>
                 </div>
             </div>    
         </div>
