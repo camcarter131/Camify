@@ -13,11 +13,11 @@ class ArtistShow extends React.Component {
         const { artist } = this.props;
 
         if (artist === undefined) return null;
-        return (
+        return ( 
             <div className="artist-show-div">
-                <div className="artist-header">
-                    <div id="photo-div">
-                        <img id="artist-show-photo" src={artist.photoUrl}></img>
+                <div className="artist-header" id={`${artist.name[0]}`}>
+                    <div id="artist-photo-div">
+                        {/* <img id="artist-show-photo" src={artist.photoUrl}></img> */}
                     </div>
                     <div id="artist-name"> 
                         {artist.name} 

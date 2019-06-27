@@ -96,20 +96,20 @@ class PlayBar extends React.Component{
                         <div id="buttons"> 
                             <div id="shuffle-btn" className="btn-div">
                                 <button onClick={this.next} className="prev-next-button" id="shuffle">
-                                    <i class="fa fa-random fa-light" aria-hidden="true"></i>
+                                    <i className="fa fa-random fa-light" aria-hidden="true"></i>
                                 </button>
                             </div>
                             <div id="prev-btn" className="btn-div">
                                 <button onClick={this.prev} className="prev-next-button" id="prev">
-                                    <i class="fa fa-step-backward" aria-hidden="true"></i>
+                                    <i className="fa fa-step-backward" aria-hidden="true"></i>
                                 </button>
                             </div>
                             <div id="play-btn-div">
                                 <button onClick={this.playPause } className="control-button" id="play">
                                     {(isPlaying === true) ? (
-                                        <i class="fa fa-pause"></i>
+                                        <i className="fa fa-pause"></i>
                                     ) : (
-                                            <i class="fa fa-play"></i>
+                                            <i className="fa fa-play"></i>
                                         )
                                     }
                                 </button>
