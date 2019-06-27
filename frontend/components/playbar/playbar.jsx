@@ -13,7 +13,7 @@ class PlayBar extends React.Component{
             playing: false,
             controls: false,
             light: false,
-            volume: 0.8,
+            volume: 80,
             muted: false,
             played: 0,
             loaded: 0,
@@ -52,6 +52,7 @@ class PlayBar extends React.Component{
 
     setVolume(e) {
         // this.props.setVolume();
+        // debugger
         this.setState({
             volume: parseInt(e.target.value)
         });
@@ -68,7 +69,7 @@ class PlayBar extends React.Component{
                         url={song.songFile}
                         id='react-player'
                         playing={isPlaying}
-                        volume ={volume}
+                        volume ={volume/100}
                         // onPlay={this.onPlay}
                     />
                     <div id="play-bar-left">
@@ -139,14 +140,14 @@ class PlayBar extends React.Component{
                     <div id="play-bar-right">
                         {(this.state.volume === 0) ? (
                             <i className="fas fa-volume-off"></i>
-                        ) : (this.state.volume < .5) ? (
+                        ) : (this.state.volume < 50) ? (
                             <i className="fas fa-volume-down"></i> 
                         ) : (
                             <i className="fas fa-volume-up"></i>
                         )}
                         
                         <div id="volume-bar">
-                            <input onChange={e => this.setVolume(e)} type="range" id="volume-slider" min={0} max={1} value={volume} />
+                            <input onChange={e => this.setVolume(e)} type="range" id="volume-slider" min={0} max={100} value={volume} />
                         </div>
                     </div>
                 </div>
