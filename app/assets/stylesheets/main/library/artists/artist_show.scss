@@ -9,16 +9,19 @@
     // align-items: center;
     color: white;
     // background: linear-gradient(270deg, #811430, rgba(100, 32, 35, 0.685));
-    background-image: linear-gradient(to right bottom, rgb(46, 39, 40), rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
+    background-image: linear-gradient(to bottom, rgb(46, 39, 40), rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
 }
 
 #artist-name {
-    font-size: 48px;
+    font-size: 72px;
     line-height: 56px;
     letter-spacing: -.005em;
     font-weight: var(--glue-font-weight-black);
     color: #fff;
     text-transform: none;
+    display: flex;
+    align-items: center;
+    margin-top: 130px;
     // position: relative;
     // position: absolute;
 }
@@ -38,9 +41,11 @@
     padding-left: $side_nav_width;
     padding-bottom: $play_bar_height;
     // background-image:image-url("artist_photos/ts_show.jpeg");
-    
+    height: 40%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
     // position: relative;
     // bottom: 50px;
 }
@@ -89,6 +94,15 @@
     // background-image: image-url("hero-burst.svg");
     // background:linear-gradient(0deg,rgba(231, 7, 74, 0.815),rgba(228, 200, 45, 0.836)), image-url("hero-burst.svg");
     // background:linear-gradient(0deg,rgba(231, 7, 74, 0.815),rgba(228, 200, 45, 0.836)), image-url("hero-burst.svg");
+
+}
+
+#artist-show-button {
+    display: flex;
+    align-items: center;
+    // height: 39px;
+    margin-bottom: 80px;
+
 
 }
 

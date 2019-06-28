@@ -9,7 +9,7 @@ class Api::AlbumsController < ApplicationController
  
     def show 
         @album = Album.find(params[:id])
-        @songs = Song.all  
+        @songs = Song.all   
         # debugger
     end
 

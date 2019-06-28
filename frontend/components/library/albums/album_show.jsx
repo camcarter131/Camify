@@ -11,7 +11,7 @@ class AlbumShow extends React.Component {
         this.props.receiveAlbum(albumId);
     }
 
-  
+   
     render() { 
         const { album, playPauseSong, loading, playAlbum, isPlaying, currentSong } = this.props;
 

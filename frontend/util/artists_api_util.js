@@ -5,7 +5,7 @@ export const receiveAllArtists = () => (
     })
 );
 
-export const receiveOneArtist = (id) => (
+export const receiveOneArtist = (id) => ( 
     $.ajax({
         url: `api/artists/${id}`,
         method: "GET"

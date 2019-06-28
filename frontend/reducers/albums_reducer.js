@@ -4,7 +4,7 @@ import merge from 'lodash/merge';
 
 export const albumsReducer = (state = {}, action) => {
     Object.freeze(state);
-    let nextState = merge({}, state);
+    let nextState = merge({}, state); 
     switch (action.type) {
         case RECEIVE_ALBUMS: 
             return merge(nextState, action.albums)
@@ -14,6 +14,6 @@ export const albumsReducer = (state = {}, action) => {
         case RECEIVE_PLAYLIST:
             return merge({}, state, action.payload.albums)
         default:
-            return state; 
+            return state;  
     } 
 }; 

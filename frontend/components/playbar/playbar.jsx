@@ -116,12 +116,12 @@ class PlayBar extends React.Component{
                             </div>
                             <div id="next-btn" className="btn-div">
                                 <button onClick={this.next} className="prev-next-button" id="next">
-                                    <i class="fa fa-step-forward" aria-hidden="true"></i>
+                                    <i className="fa fa-step-forward" aria-hidden="true"></i>
                                 </button>
                             </div>
                             <div id="loop-btn" className="btn-div">
                                 <button onClick={this.next} className="prev-next-button" id="loop">
-                                    <i class="fa fas fa-redo"></i>
+                                    <i className="fa fas fa-redo"></i>
                                 </button>
                             </div>
                         </div>

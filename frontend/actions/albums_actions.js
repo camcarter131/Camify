@@ -13,7 +13,7 @@ export const receiveAlbums = (albums) => ({
 export const receiveOneAlbum = (album) => ({
     type: RECEIVE_ALBUM,
     album  
-}); 
+});  
 
 export const startLoading = () => ({
     type: START_LOADING
@@ -32,4 +32,4 @@ export const receiveAllAlbums = () => dispatch => {
 };
 
 export const receiveAlbum = (id) => dispatch => (
-    AlbumsAPIUtil.receiveAlbum(id).then(album => dispatch(receiveOneAlbum(album))));
+    AlbumsAPIUtil.receiveAlbum(id).then(album => dispatch(receiveOneAlbum(album)))); 

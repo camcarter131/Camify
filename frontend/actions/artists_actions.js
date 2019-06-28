@@ -3,6 +3,7 @@ import * as ArtistsAPIUtil from '../util/artists_api_util';
 export const RECEIVE_ARTISTS = 'RECEIVE_ARTISTS';
 export const RECEIVE_ARTIST = 'RECEIVE_ARTIST';
 export const START_LOADING = 'START_LOADING';
+export const PLAY_ARTIST = 'PLAY_ARTIST';
 
 export const receiveArtists = (artists) => ({
     type: RECEIVE_ARTISTS,
@@ -12,11 +13,18 @@ export const receiveArtists = (artists) => ({
 export const receiveArtist = (artist) => ({
     type: RECEIVE_ARTIST, 
     artist
-}); 
+});  
+
+export const playArtist = songs => ({
+    type: PLAY_ARTIST,
+    songs
+});
  
 export const startLoading = () => ({
     type: START_LOADING
 });
+
+
 
 // -------------------------------------------------------------- //
 
@@ -27,4 +35,4 @@ export const receiveAllArtists = () => dispatch => {
 };
 
 export const receiveOneArtist = (id) => dispatch => (
-    ArtistsAPIUtil.receiveOneArtist(id).then(artist => dispatch(receiveArtists(artist))));
+    ArtistsAPIUtil.receiveOneArtist(id).then(artist => dispatch(receiveArtist(artist))));

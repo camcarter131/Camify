@@ -3,7 +3,7 @@ import merge from 'lodash/merge';
 import ReactPlayer from 'react-player';
 import { RECEIVE_PLAYLIST, RECEIVE_PLAYLISTS, START_LOADING } from '../actions/playlists_actions';
 import { RECEIVE_SONGS } from '../actions/songs_actions';
-import { RECEIVE_ARTISTS } from '../actions/artists_actions';
+import { RECEIVE_ARTISTS, RECEIVE_ARTIST, PLAY_ARTIST } from '../actions/artists_actions';
 import { RECEIVE_ALBUMS, RECEIVE_ALBUM, PLAY_ALBUM } from '../actions/albums_actions';
 
 
@@ -61,6 +61,13 @@ export const UIReducer = (state = {}, action) => {
             }
             if (!nextState['queue']) nextState['queue'] = Object.values(action.album)[0].songs.slice(1);
             return nextState;
+        case RECEIVE_ARTIST:
+            if (!nextState['currentSong']) {
+                nextState['currentSong'] = Object.values(action.artist)[0].albums[0].songs[0];
+                nextState['volume'] = 0.8;
+            }
+            if (!nextState['queue']) nextState['queue'] = Object.values(action.artist)[0].albums[0].songs.slice(1);
+            return nextState;
         case NEXT_SONG:
             if (action.song[0]) {
                 nextState['currentSong'] = action.song[0];
@@ -90,6 +97,14 @@ export const UIReducer = (state = {}, action) => {
             }
             return nextState;
         case PLAY_ALBUM:
+            if (action.songs.length > 0) {
+                nextState['queue'] = action.songs.slice(1);
+                nextState['currentSong'] = action.songs[0];
+                nextState['volume'] = 0.8;
+                nextState['isPlaying'] = true;
+            }
+            return nextState;
+        case PLAY_ARTIST:
             if (action.songs.length > 0) {
                 nextState['queue'] = action.songs.slice(1);
                 nextState['currentSong'] = action.songs[0];

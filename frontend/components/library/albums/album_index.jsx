@@ -7,6 +7,7 @@ class AlbumIndex extends React.Component {
 
     componentDidMount() {
         this.props.receiveAllAlbums();
+        this.props.receiveAllSongs();
     }
 
     // componentDidUpdate() {

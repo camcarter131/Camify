@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ArtistShow from './artist_show';
-import { receiveOneArtist } from '../../../actions/artists_actions';
+import { receiveOneArtist, playArtist } from '../../../actions/artists_actions';
 
 const msp = (state, ownProps) => {
     let artistId = ownProps.match.params.id;
@@ -10,8 +10,12 @@ const msp = (state, ownProps) => {
     })
 };
 
-const mdp = dispatch => ({
-    receiveOneArtist: (id) => dispatch(receiveOneArtist(id))
-});
+const mdp = dispatch => {
+    
+    return ({
+        receiveOneArtist: (id) => dispatch(receiveOneArtist(id)),
+        playArtist: (songs) => dispatch(playArtist(songs))
+    })
+};
 
 export default connect(msp, mdp)(ArtistShow);

@@ -7,6 +7,8 @@ class ArtistIndex extends React.Component {
 
     componentDidMount() { 
         this.props.receiveAllArtists();
+        this.props.receiveAllSongs();
+        
     }
 
  

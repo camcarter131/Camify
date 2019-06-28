@@ -11,7 +11,8 @@ const msp = state => {
 };
 
 const mdp = dispatch => ({
-    receiveAllArtists: () => dispatch(receiveAllArtists())
+    receiveAllArtists: () => dispatch(receiveAllArtists()),
+    receiveAllSongs: () => dispatch(receiveAllSongs())
 });
 
 export default connect(msp, mdp)(ArtistIndex);
