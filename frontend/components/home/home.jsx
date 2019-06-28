@@ -1,54 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import FeaturedSongIndexContainer from './featured/featured_song_index_container';
+import FeaturedAlbumIndexContainer from './featured/featured_album_index_container';
+import FeaturedArtistIndexContainer from './featured/featured_artist_index_container';
+import FeaturedPlaylistIndexContainer from './featured/featured_playlist_index_container';
+import FeaturedContainer from './featured/featured_container';
 
-import { Route, Switch } from 'react-router-dom';
-import { AuthRoute, ProtectedRoute } from '../../util/route_util';
-
-// const Home = () => {
-
-//     return ( 
-//         <div id="home-main">
-//             <div id='nav-button-container'>
-//                 <div id="nav-div"> 
-//                     <li className="nav-li">
-//                         <div className="nav-li-div">
-//                             <Link className="lib-link">FEATURED</Link>
-//                         </div>
-//                     </li>
-//                     <li className="nav-li">
-//                         <div className="nav-li-div">
-//                             <Link className="lib-link">PLAYLISTS</Link>
-//                         </div>
-//                     </li>
-//                     <li className="nav-li">
-//                         <div className="nav-li-div">
-//                             <Link to="/browse/tracks" className="lib-link">SONGS</Link>
-//                         </div>
-//                     </li>
-//                     <li className="nav-li">
-//                         <div className="nav-li-div">
-//                             <Link className="lib-link">ALBUMS</Link>
-//                         </div>
-//                     </li>
-//                     <li className="nav-li">
-//                         <div className="nav-li-div">
-//                             <Link className="lib-link">ARTISTS</Link>
-//                         </div>
-//                     </li> 
-//                 </div>
-//             </div>
-//             <div className="search-result-section" id="songs">
-//                 <h2 className="search-header">
-//                     Made for James
-//                 </h2>
-//             </div>
-//             <Switch>
-//                 <ProtectedRoute exact path="/browse/tracks" component={FeaturedSongIndexContainer} />
-//             </Switch>
-//         </div>
-//     )
-// }
+import { Switch } from 'react-router-dom';
+import { ProtectedRoute } from '../../util/route_util';
 
 class Home extends React.Component {
 
@@ -56,13 +15,13 @@ class Home extends React.Component {
         super(props);
     }
 
-    
-
     showHome(kind) {
+        let featuredClass = "lib-link";
         let playlistClass = "lib-link";
         let songClass = "lib-link";
         let albumClass = "lib-link";
         let artistClass = "lib-link";
+        (kind === "featured") ? featuredClass = "lib-link-clicked" : featuredClass = featuredClass;
         (kind === "playlists") ? playlistClass = "lib-link-clicked" : playlistClass = playlistClass;
         (kind === "tracks") ? songClass = "lib-link-clicked" : songClass = songClass;
         (kind === "albums") ? albumClass = "lib-link-clicked" : albumClass = albumClass;
@@ -74,12 +33,12 @@ class Home extends React.Component {
                         <li className="nav-li">
 
                             <div className="nav-li-div">
-                                <Link to="/collection/playlists" className={playlistClass}>FEATURED</Link>
+                                <Link to="/browse/featured" className={featuredClass}>FEATURED</Link>
                             </div>
                         </li>
                         <li className="nav-li">
                             <div className="nav-li-div">
-                                <Link to="/collection/artists" className={artistClass}>PLAYLISTS</Link>
+                                <Link to="/browse/playlists" className={playlistClass}>PLAYLISTS</Link>
                             </div>
                         </li>
                         <li className="nav-li">
@@ -89,32 +48,33 @@ class Home extends React.Component {
                         </li>
                         <li className="nav-li">
                             <div className="nav-li-div">
-                                <Link to="/collection/albums" className={albumClass}>ALBUMS</Link>
+                                <Link to="/browse/albums" className={albumClass}>ALBUMS</Link>
                             </div>
                         </li>
                         <li className="nav-li">
                             <div className="nav-li-div">
-                                <Link to="/collection/artists" className={artistClass}>ARTISTS</Link>
+                                <Link to="/browse/artists" className={artistClass}>ARTISTS</Link>
                             </div>
                         </li>
                        
                     </div>
                 </div>
-                <div id="home-content-spacing">
-
+                <div className="home-content-spacing" >
                 </div>
                 <div className="search-result-section" id="songs">
                     <h2 className="search-header">
                         Made for James
                     </h2>
                 </div>
-
+                <div className="home-content-spacing" id="spacing-bottom" >
+                </div>
                 
                 <Switch>
                     {/* <ProtectedRoute exact path="/collection/playlists" component={PlaylistIndexContainer} /> */}
+                    <ProtectedRoute exact path="/browse/featured" component={FeaturedContainer} />
                     <ProtectedRoute exact path="/browse/tracks" component={FeaturedSongIndexContainer} />
-                    {/* <ProtectedRoute exact path="/collection/artists" component={ArtistIndexContainer} />
-                    <ProtectedRoute exact path="/collection/albums" component={AlbumIndexContainer} /> */}
+                    <ProtectedRoute exact path="/browse/artists" component={FeaturedArtistIndexContainer} /> 
+                    <ProtectedRoute exact path="/browse/albums" component={FeaturedAlbumIndexContainer} /> */}
                 </Switch>
             </div>
         )

@@ -40,6 +40,21 @@
     color: #fff;
 }
 
+.side-nav-link-clicked {
+    color: #fff;
+    height: 40px;
+    display: flex;
+}
+
+.side-nav-link-clicked a{
+    color: #fff;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    height: 20px;
+    outline: none;
+}
+
 
 
 .side-nav-menu {
@@ -162,7 +177,7 @@ img#user-photo {
     justify-content: space-between;
     padding: 0 24px;
     height: auto;
-    flex-direction: column;
+    flex-direction: column; 
     padding-top: 35px;
     padding-bottom: 120px;
 

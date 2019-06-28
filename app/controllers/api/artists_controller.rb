@@ -5,7 +5,12 @@ class Api::ArtistsController < ApplicationController
     end 
 
     def show 
-        @artist = Artist.find(params[:id])
+        # debugger
+        artistId = params[:id]
+        if artistId == "undefined"
+            artistId = 6
+        end
+        @artist = Artist.find(artistId)
         
-    end
+    end 
 end

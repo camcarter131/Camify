@@ -15,8 +15,12 @@
     background-image: linear-gradient(to right bottom, rgb(55, 29, 30), rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
 } 
 
-#home-content-spacing{
+.home-content-spacing{
     height: 60px;
+}
+
+.home-content-spacing#spacing-bottom{
+    height: 32px;
 }
 
 #home-link {
