@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AlbumIndexItem from '../albums/album_index_item';
+import SongIndexItem from '../songs/song_index_item';
 import GridLoader from 'react-spinners/GridLoader';
 
 class ArtistShow extends React.Component {
@@ -12,7 +13,7 @@ class ArtistShow extends React.Component {
 
 
     render() {
-        const { artist, loading, playArtist } = this.props;
+        const { artist, loading, playArtist, playPauseSong, isPlaying, currentSong } = this.props;
 
         if (loading) return (
             <div id="loader">
@@ -32,6 +33,20 @@ class ArtistShow extends React.Component {
                 />
             );
         });
+
+        const songs = artist.albums[0].songs.map(song => {
+            return (
+                <SongIndexItem
+                    key={song.id}
+                    song={song}
+                    artist={song.artist}
+                    album={song.album}
+                    playPauseSong={playPauseSong}
+                    isPlaying={isPlaying}
+                    currentSong={currentSong}
+                />
+            );
+        });
         return ( 
             <div className="artist-show-div">
                 <div className="artist-header" id={`${artist.name[0]}`}>
@@ -42,12 +57,19 @@ class ArtistShow extends React.Component {
                         <button onClick={() => playArtist(Object.values(artist.albums[0].songs))} id="playlist-play-btn">PLAY</button>
                     </div>
                 </div>
-                {/* <div>
-                    <h2 className="search-header">
+                <div className="artist-show-lower">
+                    <h2 className="artist-show-header">
+                        Popular
+                    </h2>
+                    {songs}
+
+                    <h2 className="artist-show-header">
                         Albums
                     </h2>
-                    {albums}
-                </div> */}
+                    <div id="artist-show-index">
+                        {albums}
+                    </div>
+                </div>
             </div>
         );
     }
