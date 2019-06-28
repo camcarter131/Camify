@@ -60,9 +60,14 @@ class PlayBar extends React.Component{
 
     render() {
         const { user, song, isPlaying } = this.props;
-        const { url, playing, controls, volume, light, muted, loop, played, loaded, duration, playbackRate, pip } = this.state
+        const { url, playing, controls, volume, light, muted, loop, played, loaded, duration, playbackRate, pip } = this.state;
+
+
         // debugger
         if (user && song !== undefined) {
+            // debugger
+            let albumPhoto = song.albumPhotoUrl;
+            if (albumPhoto === undefined) albumPhoto = song.album.photoUrl;
             return (
                 <div id="play-bar">
                     <ReactPlayer
@@ -75,7 +80,7 @@ class PlayBar extends React.Component{
                     <div id="play-bar-left">
                         <div id="play-bar-album-img">
                             <Link id="play-bar-album-photo-link" to={`/albums/${song.album.id}`}>
-                                <img id="album-photo-play-bar" src={song.albumPhotoUrl}>
+                                <img id="album-photo-play-bar" src={albumPhoto}>
                                 </img>
                             </Link>
                         </div> 
