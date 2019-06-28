@@ -2,16 +2,19 @@ import { connect } from 'react-redux';
 import PlayBar from './playbar';
 import { logout } from '../../actions/session_actions';
 import { playPauseSong, nextSong, prevSong, setVolume } from '../../actions/UI_actions';
+import { withRouter } from 'react-router-dom';
 
 const msp = ({ session, entities: { users }, UI }) => {
-    
+    // let albumId = ownProps.match.params.id;
+    // let album = state.entities.albums[albumId];
     return { 
         user: users[session.id],
         song: UI.currentSong,
         queue: UI.queue,
-        backQueue: UI.backQueue,
+        backQueue: UI.backQueue, 
         isPlaying: UI.isPlaying,
-        volume: UI.volume
+        volume: UI.volume,
+        // album
     }
 };
 
@@ -23,4 +26,4 @@ const mdp = dispatch => ({
     setVolume: volume => dispatch(setVolume(volume))
 });
 
-export default connect(msp, mdp)(PlayBar);
+export default withRouter(connect(msp, mdp)(PlayBar));

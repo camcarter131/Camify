@@ -54,12 +54,12 @@ class PlayBar extends React.Component{
         // this.props.setVolume();
         // debugger
         this.setState({
-            volume: parseInt(e.target.value)
+            volume: parseInt(e.target.value) 
         });
     }
 
     render() {
-        const { user, song, isPlaying } = this.props;
+        const { user, song, isPlaying, album } = this.props;
         const { url, playing, controls, volume, light, muted, loop, played, loaded, duration, playbackRate, pip } = this.state;
 
 
@@ -68,6 +68,9 @@ class PlayBar extends React.Component{
             // debugger
             let albumPhoto = song.albumPhotoUrl;
             if (albumPhoto === undefined) albumPhoto = song.album.photoUrl;
+            if (albumPhoto === undefined) albumPhoto = song.albumPhotoUrl;
+
+            // debugger
             return (
                 <div id="play-bar">
                     <ReactPlayer

@@ -7,5 +7,6 @@ json.set! @album.id do
         json.songFile url_for(song.song_file)
         json.artist song.album.artist
         json.album song.album 
+        json.albumPhotoUrl url_for(song.album.photo)
     end
 end  
