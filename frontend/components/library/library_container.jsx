@@ -3,6 +3,7 @@ import Library from './library';
 import { receiveAllSongs } from '../../actions/songs_actions';
 
 const msp = (state, ownProps) => {
+    // debugger
     return {
         songs: Object.values(state.entities.songs),
         playlistId: ownProps.playlistId,

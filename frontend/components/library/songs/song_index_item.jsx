@@ -54,6 +54,8 @@ class SongIndexItem extends React.Component{
         const { song, playPauseSong, removeOneSong, isPlaying, currentSong, artist, album } = this.props;
         if (song === undefined) return null;
         // debugger
+        let songNameId = "song-name";
+        if (song.name === currentSong.name) songNameId = "song-name-green";
         return ( 
             <div className="song-div"> 
                 {(this.state.show) ? <AddSongModalContainer song={song} show={this.state.show} handleClose={this.hideModal} />: null}
@@ -69,7 +71,7 @@ class SongIndexItem extends React.Component{
                         </button>
                     </div>
                     <div id="song-info">
-                        <div id="song-name">
+                        <div id={songNameId}>
                             {song.name}
                         </div>
                         <div id="song-not-name">

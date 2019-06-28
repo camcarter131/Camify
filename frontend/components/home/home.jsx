@@ -58,15 +58,15 @@ class Home extends React.Component {
 
     
 
-    showHome(type) {
+    showHome(kind) {
         let playlistClass = "lib-link";
         let songClass = "lib-link";
         let albumClass = "lib-link";
         let artistClass = "lib-link";
-        (type === "playlists") ? playlistClass = "lib-link-clicked" : playlistClass = playlistClass;
-        (type === "tracks") ? songClass = "lib-link-clicked" : songClass = songClass;
-        (type === "albums") ? albumClass = "lib-link-clicked" : albumClass = albumClass;
-        (type === "artists") ? artistClass = "lib-link-clicked" : artistClass = artistClass;
+        (kind === "playlists") ? playlistClass = "lib-link-clicked" : playlistClass = playlistClass;
+        (kind === "tracks") ? songClass = "lib-link-clicked" : songClass = songClass;
+        (kind === "albums") ? albumClass = "lib-link-clicked" : albumClass = albumClass;
+        (kind === "artists") ? artistClass = "lib-link-clicked" : artistClass = artistClass;
         return (
             <div id="home-main">
                 <div id='nav-button-container'>
@@ -119,10 +119,11 @@ class Home extends React.Component {
     }
 
     render() {
-        const { type } = this.props;
-        debugger
+        // debugger
+        // const { kind } = this.props;
+        let kind = this.props.match.params.kind;
         return (
-            this.showHome(type)
+            this.showHome(kind)
         )
     }
 }
