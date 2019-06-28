@@ -10,7 +10,7 @@
                     json.artist art 
                 end
             end
-        end
+        end 
     end
 end
 

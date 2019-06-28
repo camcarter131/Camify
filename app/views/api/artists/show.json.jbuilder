@@ -6,7 +6,10 @@ json.set! @artist.id do
         json.artist @artist
         json.songs album.songs do |song|
             json.extract! song, :id, :name, :duration
-            json.album song.album
+            json.album do
+                json.extract! album, :id, :name, :artist_id, :release_year
+                json.photoUrl url_for(album.photo)
+            end
             json.artist @artist
             json.songFile url_for(song.song_file)
         end
