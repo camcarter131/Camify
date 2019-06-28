@@ -100,6 +100,9 @@ class Home extends React.Component {
                        
                     </div>
                 </div>
+                <div id="home-content-spacing">
+
+                </div>
                 <div className="search-result-section" id="songs">
                     <h2 className="search-header">
                         Made for James
