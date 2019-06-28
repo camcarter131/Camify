@@ -3,7 +3,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import Splash from './splash';
-import Home from './home/home';
+import HomeContainer from './home/home';
 import LibraryContainer from './library/library_container';
 import SideNavContainer from './side_nav/side_nav_container';
 import PlayBarContainer from './playbar/playbar_container';
@@ -24,7 +24,7 @@ const App = () => (
             <AuthRoute id="login-signup" exact path="/login" component={LogInFormContainer} />
             <AuthRoute id="login-signup" exact path="/signup" component={SignUpFormContainer} />
 
-            <ProtectedRoute exact path="/browse/featured" component={Home} />
+            <ProtectedRoute exact path="/browse/:type" component={HomeContainer} />
             <ProtectedRoute exact path="/collection/:type" component={LibraryContainer} />            
             <ProtectedRoute exact path="/search" component={SearchContainer} /> 
             <ProtectedRoute exact path="/playlists/:id" component={PlaylistShowContainer} />
@@ -32,8 +32,6 @@ const App = () => (
             <ProtectedRoute exact path="/albums/:id" component={AlbumShowContainer} />
 
             <AuthRoute exact path="/" component={Splash} />
-
-            {/* <ProtectedRoute exact path="/collection/playlists" component={WebPlayerContainer} /> */}
             <Redirect to="/" />
         </Switch>
         <PlayBarContainer /> 

@@ -12,7 +12,6 @@ class FeaturedSongIndex extends React.Component {
     }
 
     render() {
-        debugger
         const { playPauseSong, removeOneSong, loading, isPlaying, currentSong } = this.props;
         if (loading) return (
             <div id="loader-songs">

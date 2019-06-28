@@ -7,7 +7,6 @@ const msp = state => {
     let loading = state.UI.loading;
     let isPlaying = state.UI.isPlaying;
     let currentSong = state.UI.currentSong;
-    debugger
     return ({
         loading,
         isPlaying,

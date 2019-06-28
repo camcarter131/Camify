@@ -119,10 +119,10 @@ class Home extends React.Component {
     }
 
     render() {
-        let defaultType = "tracks";
-        // const { type } = this.props;
+        const { type } = this.props;
+        debugger
         return (
-            this.showHome(defaultType)
+            this.showHome(type)
         )
     }
 }

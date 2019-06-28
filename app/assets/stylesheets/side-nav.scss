@@ -33,8 +33,11 @@
     outline: none;
 }
 
-#home.side-nav-link {
-    
+.side-nav-link a:hover {
+    color: #fff;
+}
+.side-nav-link:hover {
+    color: #fff;
 }
 
 
@@ -202,6 +205,12 @@ img#user-photo {
 
 .icon-img {
     padding-top: 10px;
+}
+
+.icon-img:hover {
+    padding-top: 10px;
+    color: #fff;
+    cursor: pointer;
 }
 
 .recently-played-item {

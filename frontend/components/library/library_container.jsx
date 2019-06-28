@@ -8,7 +8,7 @@ const msp = (state, ownProps) => {
         playlistId: ownProps.playlistId,
         type: ownProps.match.params.type
     }
-}; 
+};  
 
 const mdp = dispatch => ({
     receiveAllSongs: () => dispatch(receiveAllSongs)
