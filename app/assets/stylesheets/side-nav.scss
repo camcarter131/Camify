@@ -55,6 +55,20 @@
     outline: none;
 }
 
+.side-nav-link-clicked:before {
+    content: "";
+    
+    background-color: #1ed760;
+    width: 4px;
+    height: 30px;
+    position: absolute;
+    display: block;
+    
+    margin-left: -24px;
+    margin-top: 6px;
+    opacity: 1;
+}
+
 
 
 .side-nav-menu {
