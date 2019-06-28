@@ -28,7 +28,7 @@ class ArtistShow extends React.Component {
         const albums = Object.values(artist.albums).map(album => {
             return (
                 <AlbumIndexItem
-                    key={album.id}
+                    key={album.id} 
                     album={album}
                 />
             );
