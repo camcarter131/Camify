@@ -67,3 +67,10 @@ a#album-artist-name-link {
     -webkit-filter: brightness(70%);
     transition: all .2s ease;
 }
+
+.album-img-link {
+    outline: none;
+    text-decoration: none;
+    // color: #FFF;
+    // opacity: .9;
+}

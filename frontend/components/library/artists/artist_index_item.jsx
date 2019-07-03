@@ -13,7 +13,9 @@ class ArtistIndexItem extends React.Component {
             // </div> 
             <div className="artist-div">
                 <button className="artist-btn">
-                    <img id="artist-photo" src={artist.indexPhotoUrl}></img>
+                    <Link className="artist-img-link" to={`/artists/${artist.id}`}>
+                        <img id="artist-photo" src={artist.indexPhotoUrl}></img>
+                    </Link>
                 </button> 
                 <Link className="artist-link" id="artist-name-link" to={`/artists/${artist.id}`}>{artist.name}</Link>
             </div>
