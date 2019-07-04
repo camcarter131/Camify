@@ -9,7 +9,9 @@ class Featured extends React.Component {
     componentDidMount() {
         // debugger
         // this.props.receiveAllArtists();
-        let artistId = this.props.match.params.id
+        // let artistId = this.props.match.params.id
+        const { artistId } = this.props;
+        debugger
         this.props.receiveOneArtist(artistId);
     }
 
