@@ -4,7 +4,7 @@ import { receiveOneArtist, playArtist } from '../../../actions/artists_actions';
 import { playPauseSong } from '../../../actions/UI_actions';
 
 const msp = (state, ownProps) => {
-    let artistId = 6;
+    let artistId = 6; 
     let artist = state.entities.artists[artistId];
     let isPlaying = state.UI.isPlaying;
     let currentSong = state.UI.currentSong;
