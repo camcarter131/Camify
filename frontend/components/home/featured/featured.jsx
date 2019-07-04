@@ -7,7 +7,8 @@ import GridLoader from 'react-spinners/GridLoader';
 class Featured extends React.Component {
 
     componentDidMount() {
-        
+        // debugger
+        // this.props.receiveAllArtists();
         let artistId = this.props.match.params.id
         this.props.receiveOneArtist(artistId);
     }
@@ -15,7 +16,7 @@ class Featured extends React.Component {
 
     render() {
         const { artist, loading, playArtist, playPauseSong, isPlaying, currentSong } = this.props;
-
+        
         if (loading) return (
             <div id="loader">
                 <GridLoader id="beatloader"
@@ -23,9 +24,10 @@ class Featured extends React.Component {
                     loading={loading} />
             </div>
         );
-
+        // debugger
+        // const artist = Object.values(artists)[0];
         if (artist === undefined || artist.albums === undefined) return null;
-        
+        // debugger
         const albums = Object.values(artist.albums).map(album => {
             return (
                 <AlbumIndexItem
