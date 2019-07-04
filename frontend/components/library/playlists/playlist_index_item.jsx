@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 class PlaylistIndexItem extends React.Component {  
 
     render() {
-
         const { playlist, remove, name } = this.props;
-        debugger
         return ( 
             <div className="playlist-div">
                 <button className="playlist-btn">

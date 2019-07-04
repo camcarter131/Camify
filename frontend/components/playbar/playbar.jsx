@@ -160,7 +160,7 @@ class PlayBar extends React.Component{
                     </div>
                 </div>
             );
-        } else {
+        } else if (user) {
             return (
                 <div id="play-bar">
                     <ReactPlayer
@@ -244,6 +244,8 @@ class PlayBar extends React.Component{
                     </div>
                 </div>
             );
+        } else {
+            return null;
         }
     }
 };

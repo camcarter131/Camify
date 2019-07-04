@@ -9,7 +9,5 @@ class Api::SongsController < ApplicationController
             album.artist
         end 
 
-        # debugger
-
     end
 end
