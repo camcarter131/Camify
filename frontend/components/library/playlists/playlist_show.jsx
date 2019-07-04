@@ -18,7 +18,7 @@ class PlaylistShow extends React.Component {
         this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
     };
 
-    componentDidMount() {
+    componentDidMount() { 
         this.props.receivePlaylist(this.props.playlistId);
         
     } 
@@ -48,7 +48,7 @@ class PlaylistShow extends React.Component {
         const { songs, playlist, name, remove, playPauseSong, playPlaylist, loading, isPlaying, currentSong } = this.props;
         if (loading) return (
             <div id="loader">
-                <GridLoader id="beatloader"
+                <GridLoader id="beatloader" 
                     color={'#DFE2E1'}
                     loading={loading} />
             </div>

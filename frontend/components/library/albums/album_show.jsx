@@ -20,7 +20,7 @@ class AlbumShow extends React.Component {
                 <GridLoader id="beatloader"
                     color={'#DFE2E1'}
                     loading={loading} />
-            </div>
+            </div> 
         );
         
         if (album === undefined) return null;

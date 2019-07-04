@@ -24,7 +24,7 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user).then(() => this.props.history.push("/collection/playlists"));
+        this.props.processForm(user).then(() => this.props.history.push("/collection/artists"));
 
     }
 
@@ -36,7 +36,7 @@ class SessionForm extends React.Component {
             username: demoUsername,
             password: demoPassword
         };
-        this.props.processForm(demoUser).then(() => this.props.history.push("/collection/playlists"));
+        this.props.processForm(demoUser).then(() => this.props.history.push("/collection/artists"));
     }
 
 

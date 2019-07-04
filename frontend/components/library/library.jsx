@@ -27,7 +27,7 @@ class Library extends React.Component {
     } 
 
     showLibrary(type) {
-        let playlistClass = "lib-link";
+        let playlistClass = "lib-link"; 
         let songClass = "lib-link";
         let albumClass = "lib-link";
         let artistClass = "lib-link"; 

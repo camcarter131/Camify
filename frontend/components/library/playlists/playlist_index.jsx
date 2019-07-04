@@ -29,7 +29,7 @@ class PlaylistIndex extends React.Component {
             return ( 
                 <PlaylistIndexItem
                     key={playlist.id}
-                    playlist={playlist}
+                    playlist={playlist} 
                     remove={this.props.remove}
                     name={this.props.name}
                 />

@@ -7,7 +7,7 @@ const msp = (state, ownProps) => {
     return {
         songs: Object.values(state.entities.songs),
         playlistId: ownProps.playlistId,
-        type: ownProps.match.params.type
+        type: ownProps.match.params.type 
     }
 };  
 

@@ -39,7 +39,7 @@ export const startLoading = () => ({
 
 export const create = playlist => dispatch => (
     PlaylistsAPIUtil.create(playlist).then(playlist => dispatch(createPlaylist(playlist)))
-);
+); 
 
 export const remove = id => dispatch => (
     PlaylistsAPIUtil.remove(id).then(() => dispatch(removePlaylist(id)))

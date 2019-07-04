@@ -10,7 +10,7 @@ json.songs do
                         json.albumPhotoUrl url_for(alb.photo)
                         json.artist art 
                     end
-                end
+                end 
             end
         end
     end
