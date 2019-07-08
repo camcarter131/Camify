@@ -14,4 +14,17 @@ VIEW LIVE: https://camify-13.herokuapp.com/#/
 
 #### Navigate seamlessly while playing music 
 
+![](./app/assets/images/CamifyTravisScott.png)
+
+#### Search
+
+![](./app/assets/images/CamifySearch.png)
+
+#### Create, delete, and add songs to playlists
+
+![](./app/assets/images/CamifyPlaylist.png)
+
+#### User authentication
+
+
 
