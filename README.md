@@ -92,9 +92,30 @@ The results are displayed identically to the resource index pages by taking adva
 
 #### Create, delete, and add songs to playlists
 
+Modals are used to create, delete, and add songs to playlists.
+
+```
+    <div id="library-main">
+        <PlaylistModalContainer show={this.state.show} handleClose={this.hidePlaylistModal}>
+            <p>Modal</p>
+            <p>Data</p>
+        </PlaylistModalContainer>
+```
+
+There is a piece of component state that is toggled in order to render the modals within their respective outer class components. Clicking on buttons within the modals dispatches actions which persist playlist data to the backend. 
+
 ![](./app/assets/images/CamifyPlaylist.png)
 
 #### User authentication
+
+Users can create a new account, log in with an existing one, or use a demo login. This is done using a Rails authentication pattern that utilizes both a user and session model, and the BCrypt gem to create encrypted password hashes.
+
+## Potential Future Releases
+
+In the future I would like to add:
+
+* The ability for users to save songs to their library
+* A genre attribute for songs, and randomly generated featured playlists organized by genre
 
 
 
