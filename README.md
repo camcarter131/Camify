@@ -4,7 +4,7 @@ Camify is a full-stack Spotify clone built using Ruby on Rails, React.js, Redux,
 
 VIEW LIVE: https://camify-13.herokuapp.com/#/
 
-![](./assets/images/Camify_splash.png)
+![](./app/assets/images/Camify_splash.png)
 
 * Playlist CRUD
 * User login and sign up
