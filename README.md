@@ -7,12 +7,42 @@ VIEW LIVE: https://camify-13.herokuapp.com/#/
 ![](./app/assets/images/Camify_splash.png)
 
 ## Features
+
 * Continuous play while navigating through the site
 * Search bar
 * Playlist CRUD
 * User login and sign up
 
 #### Navigate seamlessly while playing music 
+
+The playbar component's logic is handled in a 'UI' slice of the Redux state. Whenever another React component dispatches an action relevant to the playbar, the action changes the UI slice of state. This allows smooth navigating through the application while music is playing.
+
+```
+    export const UIReducer = (state = {}, action) => {
+        Object.freeze(state);
+        let nextState = merge({}, state);
+        switch (action.type) { 
+            case PLAY_PAUSE_SONG:
+                if (nextState['isPlaying'] && (action.song.id === nextState['currentSong'].id)) {
+                    nextState['isPlaying'] = false;
+                    return nextState;
+                } 
+                if (!nextState['isPlaying']) {
+                    nextState['currentSong'] = action.song;
+                    nextState['isPlaying'] = true;
+                } else if (nextState['isPlaying'] === false) {
+                    nextState['isPlaying'] = true;
+                }
+                else if (nextState['currentSong'] != action.song) {
+                    nextState['currentSong'] = action.song;
+                    nextState['isPlaying'] = true;
+                } else if (nextState['isPlaying']) { 
+                    nextState['isPlaying'] = false;
+                }
+                return nextState;
+```
+
+The UI Reducer returns a new state when a song playing action is dispatched.
 
 ![](./app/assets/images/CamifyTravisScott.png)
 
