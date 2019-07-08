@@ -6,8 +6,12 @@ VIEW LIVE: https://camify-13.herokuapp.com/#/
 
 ![](./app/assets/images/Camify_splash.png)
 
+## Features
+* Continuous play while navigating through the site
+* Search bar
 * Playlist CRUD
 * User login and sign up
-* Continuous play while navigating through the site
+
+#### Navigate seamlessly while playing music 
 
 
