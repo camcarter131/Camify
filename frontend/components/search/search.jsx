@@ -36,19 +36,15 @@ class Search extends React.Component {
         songs.forEach(song => {
             if (song.name.toLowerCase().startsWith(searchTerm.toLowerCase())) foundSongs.push(song);
         });
-        // console.log('Songs: ', foundSongs);
         artists.forEach(artist => {
             if (artist.name.toLowerCase().startsWith(searchTerm.toLowerCase())) foundArtists.push(artist);
         });
-        // console.log('Artists: ', foundArtists);
         albums.forEach(album => {
             if (album.name.toLowerCase().startsWith(searchTerm.toLowerCase())) foundAlbums.push(album);
         });
-        // console.log('Albums: ', foundAlbums);
         playlists.forEach(playlist => {
             if (playlist.name.toLowerCase().startsWith(searchTerm.toLowerCase())) foundPlaylists.push(playlist);
         })
-        // console.log('Playlists: ', foundPlaylists);
 
         let setNothingSearched = false;
         if (searchTerm === "") setNothingSearched = true;
